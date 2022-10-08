@@ -1,0 +1,8 @@
+{
+    "extends": ["next", "next/core-web-vitals", "prettier"]
+}
+
+// react
+// react-hooks
+// jsx-a11y
+// import

@@ -1,0 +1,14 @@
+.input {
+    all: inherit;
+    width: 100%;
+
+    resize: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.input::placeholder {
+    all: inherit;
+    opacity: 0.5;
+}
