@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/styles.css'
 import 'antd/dist/antd.css'
 import type { NextWebVitalsMetric } from 'next/app'
 // import type { AppProps } from 'next/app'

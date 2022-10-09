@@ -1,0 +1,59 @@
+.block1{
+    margin:0;
+    padding:0;
+    .image{
+        width: 1920px;
+        height: 700px;
+        background-image: url(./src/image_home_1@2x.png);
+        background-position: 0 -380px;
+        background-repeat: no-repeat;
+        background-size:1920px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .text{
+        position: absolute;
+        width: 430px;
+        height: 103px;
+        top: 90px;
+        left: 400px;
+        z-index: 9;
+        .title{
+            font: normal normal bold 40px/50px 'Roboto';
+            letter-spacing: 0px;
+            color: #562A7C;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+    }
+    .white-box{
+        width: 1200px;
+        height: 600px;
+        background-color: transparent;
+        border:31px solid white;
+        box-sizing: border-box;
+        z-index: 4;
+        overflow: hidden;
+        background-color: rgba(66,20,95,0.3);
+        .color-ball{
+            width: 670px;
+            height: 670px;
+            background-color: rgba(66,20,95,0.7);
+            border-radius: 0 0 670px 0;
+            margin: -30px;
+        }
+    }
+    .white-ball{
+        width: 600px;
+        height: 600px;
+        background-color: white;
+        border-radius: 0 0 600px 0;
+        margin: -30px;
+        position: absolute;
+        left: 390px;
+        z-index: 5;
+    }
+
+}
