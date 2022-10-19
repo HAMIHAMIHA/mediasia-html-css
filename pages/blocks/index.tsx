@@ -18,7 +18,7 @@ import Icon_open_photo from "../../styles/src/page2/icon_open_photo.svg"
 const Block = () => {
     return <>
         {/* page0 */}
-        <Block0_1 
+        <Block1_1 
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"LE BUREAU EN RÉGION PAR COGEDIM"} 
         text2={["Premier promoteur en immobilier d'entreprise à l'échelle nationale, ","Cogedim","développe des opérations de bureau partout en France autour de 3 pôles majeurs : ","la prestation de services, les immeubles clés en main utilisateur et l'investissement.","Le Groupe a pour vocation d'","accompagner les entreprises de toutes tailles","dans leur stratégie d'implantation régionale dans un contexte où les modes de travail se transforment et les enjeux de développement durable sont prépondérants."]}
@@ -28,7 +28,7 @@ const Block = () => {
         text4={"Découvrez nos projets immobiliers par région"}
         text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
         />
-        <Block0_2 
+        <Block1_2 
         number1={57}
         text1={"programmes en cours"}
         text2={[
@@ -40,7 +40,7 @@ const Block = () => {
         "Livraison","3e trimestre 2020"]}
         />
 
-        <Block0_3 
+        <Block1_3 
         text1={[
         "Une culture entrepreneuriale",
         "Animé par une véritable culture entrepreneuriale",
@@ -50,16 +50,16 @@ const Block = () => {
         ]}
         />
 
-        <Block0_4
+        <Block1_4
         text1={"Ils nous ont fait confiance"}
         />
-        <Block0_5
+        <Block1_5
         text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
         text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
         />
         {/* page1 */}
-        <Block1_1
+        <Block2_1
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"OCCITANIE"} 
         text2={["Filiale toulousaine du Groupe Altarea, notre Direction régionale est implantée au cœur de la ville de Toulouse.","Notre équipe de 52 collaborateurs est impliquée quotidiennement dans le développement de notre territoire. Nous développons localement des projets immobiliers qualitatifs empreints de l'identité architecturale et des spécificités de la métropole Toulousaine et des villes de la région Occitanie."]}
@@ -69,7 +69,7 @@ const Block = () => {
         text4={"Découvrez nos projets immobiliers par région"}
         text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
         />
-        <Block1_2
+        <Block2_2
         number1={57}
         text1={"programmes en cours"}
         text2={[
@@ -80,13 +80,13 @@ const Block = () => {
         "Surface","31 000 m2 SDP",
         "Livraison","3e trimestre 2020"]}
         />
-        <Block0_5
+        <Block1_5
         text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
         text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
         />
         {/* page2 */}
-        <Block2_1
+        <Block3_1
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"Idéalement situé face au Quartier Guillemet, Hill Side est à la croisée de l'hypercentre et des faubourgs de la ville."}
         text2={["Surface","Livraison","Stade","SDP","trimestre"]} 
@@ -96,47 +96,47 @@ const Block = () => {
         text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
         />
 
-        <Block2_2
+        <Block3_2
         text1={"Plan de situation"}
         text2={["Métro","Aéroport","TGV","Autoroute"]}
         text3={["Arrêt Jolimont, métro A 1 minute à pied","Aéroport Toulouse-Blagnac 15 minutes en voiture","Gare Toulouse Matabiau 5 minutes en métro","A61 5 minutes en voiture"]}
         />
 
-        <Block2_3
+        <Block3_3
         text1={["Adresse :","Promoteur :","Surface :","Parking :","Architecte :","Bureaux d'études :","Livraison prévisionnelle :","Labels et certifications :","Type de contrat :","Investisseur :","Stade :","A louer"]}
         text2={["53 rue Benjamin Baillaud, 31500 Toulouse","Cogedim","4 330 m² SDP","58 places en sous-sol","Devillers & Associés","OTEIS, Soconer, Bureau Veritas, Gambas Acoustique, Polyexpert Environnement","3e trimestre 2023","HQE® niveau excellent, BREEAM® niveau Very Good, RT 2012 -30%, E2C1","VEFA/BEFA","Tivoli Capital (quand a déjà été vendu / loué)","Travaux en cours",""]}
         text3={["Ce bien vous intéresse ?","Nous contacter"]}
         />
 
-        <Block2_4
+        <Block3_4
         text1={["Hill Side","Disposant d'une excellente accessibilité et visibilité, à proximité immédiate du nouveau quartier Guillemet, cet immeuble en R+5 bénéficie d'une flexibilité optimale grâce à la divisibilité des plateaux de bureaux en deux lots distincts sur chacun des niveaux. Hill Side a été conçu pour offrir des espaces de travail de haute qualité : hauteur libre des plateaux de bureaux de 2,70 m, avec l'ensemble des bureaux en premier jour et des ouvrant de confort par bureau.","Télécharger la brochure"]}
         />
 
-        <Block2_5
+        <Block3_5
         text1={["Plan de masse","Voir les plans"]}
         />
 
-        <Block0_5
+        <Block1_5
         text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
         text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
         />
 
-        <Block3_1
+        <Block4_1
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={["LE GROUPE ALTAREA","Fondé en 1994 par Alain Taravella, Altarea est aujourd'hui le premier développeur immobilier de France. Le Groupe a développé une plateforme de compétences immobilières et de développement unique au service de la transformation des villes, couvrant l'ensemble des classes d'actifs immobiliers (logement, commerce, bureau, logistique, hôtellerie, résidences services…). ","Cette spécificité lui permet de répondre efficacement et de manière globale aux enjeux de transformation des territoires et contribue à créer des villes agréables à vivre et ouvertes sur l'avenir."]}
         text4={"Découvrez nos projets immobiliers par région"}
         text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
         />
 
-        <Block3_2
+        <Block4_2
         text1={["Activité","Porté par son modèle intégré unique en France, Altarea a pris une longueur d'avance sur le marché de la transformation urbaine, fondement de sa croissance future, pérenne et solide. Le Groupe propose une offre sur mesure qui favorise la réussite des projets urbains grâce à l'articulation de tous les savoir-faire de l'immobilier. Acteur multi-métier, son modèle intégré lui permet de mobiliser toutes les compétences nécessaires, quelle que soit la classe d'actif concernée."]}
         text2={["promoteur en logement","d'actifs de commerce sous gestion, dont","promoteur d'immobilier d'entreprise (sièges sociaux, bureaux, campus, hôtels, logistique)","développeur de grands projets urbains mixtes","3 Mds€ de réservations","2,4 Mds€ en quote-part","15 projets en développement"]}
         text3={["CLIENT","2","e","Cogedim élu Service Client de l'Année","47 000","au classement de la relation client HCG - Les Echos","pour la 5e année consécutive","emplois directs, indirects et induits soutenus en France"]}
         text4={["COLLABORATEURS","Top Employer 2022","1996","(certification internationale qui reconnaît l'excellence des pratiques RH)","collaborateurs"]}
         text5={["CLIMAT","Confirmation du statut Green Star 5*","-67,3%","au GRESB (agence de notation extra-financière) pour la 6e année consécutive","d'émissions de CO2 sur le patrimoine Commerce depuis 2010"]}
         />
-        <Block3_3
+        <Block4_3
         text1={[
         "Marque historique du Groupe",
         "L'acteur incontournable de l'immobilier neuf depuis 1963. Cogedim réalise de nombreux programmes immobiliers à l'identité architecturale affirmée et développe partout en France des opérations d'envergure, garantes de la pluralité de ses savoir-faire.",
@@ -146,15 +146,68 @@ const Block = () => {
         "Cogedim a pour vocation d'accompagner les entreprises de toutes tailles dans leur stratégie d'implantation régionale dans un contexte où les modes de travail se transforment et les enjeux de développement durable sont prépondérants. Cogedim imagine ainsi le futur de l'immobilier de bureaux et s'adapte à ces changements pour en faire des lieux de rencontre plus attractifs et plus ouverts.",
         "L'immobilier d'entreprise en Régions regroupe une trentaine de collaborateurs répartis sur l'ensemble du territoire au sein des agences régionales de Cogedim. Ces implantations locales favorisent la connaissance des territoires, leurs spécificités et enjeux et permet ainsi de donner une réponse efficiente et adaptée aux mentalités et aux usages.",
         "EM Lyon, Lyon 7e"
-            
-    ]}
+    ]} />
+       <Block4_4
+       text1={["Évolution des usages","Développement Technologique","Délocalisation dans les métropoles régionales","Augmentation du nombre de télétravailleurs","Des enjeux environnementaux croissants","Évolution du management","La Tannerie, Lyon 7","White, Villeneuve d'Ascq","Uway, Toulouse"]}
+       text2={["La Tannerie, Lyon 7","White, Villeneuve d'Ascq","Uway, Toulouse"]}
+        />
+        <Block1_5
+        text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
+        text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
+        text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
+        />
+        <Block5_1 
+        text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
+        text1={"NOS RÉFÉRENCES"} 
+        text2={["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem."]}
+        text3={[
+        "       ",
+        "Découvrez nos projets immobiliers phares"]}
+        text4={"Découvrez nos projets immobiliers par région"}
+        text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
+        />
+        <Block5_2
+        text1={["#Community, Mérignac (33)","Un campus d'inspiration biophilique pour Groupama","L'inspiration biophilique est une démarche qui consiste à prendre en considération le lien entre l'homme et la nature dans la conception même des bâtiments. C'est le fil rouge qui a guidé Cogedim pour développer #Community, un campus tertiaire d'envergure conçu par Hubert Godet Architectes.","Découvrir ce projet"]}
+        text2={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        />
+        <Block5_3
+        text1={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        text2={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        />
+        <Block5_4
+        text1={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        />
+        <Block5_5
+        text1={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        text2={["Nom du projet","Sous-titre ici","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non nulla sit amet ante cursus commodo sit amet nec nisl. In eu nulla enim. Sed maximus nulla in nunc viverra scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dictum sed lorem id mattis. Ut lacinia sapien non blandit ornare. Duis vitae posuere lorem.","Découvrir ce projet"]}
+        />
+        <Block1_5
+        text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
+        text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
+        text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
         />
 
+        <Block6_1
+        text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
+        text1={["Nos références","#Community, Mérignac","L'inspiration biophilique est une démarche qui consiste à prendre en considération le lien entre l'homme et la nature dans la conception même des bâtiments. C'est le fil rouge qui a guidé Cogedim pour développer #Community, un campus tertiaire d'envergure conçu par Hubert Godet Architectes."]} 
+        text3={[
+        "       ",
+        "Un campus d'inspiration biophilique pour Groupama "]}
+        text4={"Découvrez nos projets immobiliers par région"}
+        text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
+        />
+        <Block6_2
+        text1={"#Community, Mérignac"} 
+        text2={["Adresse : ","Surface : ","Architecte : ","Livraison : ","Labels et certifications : ","Investisseur : ","Utilisateur : "]}
+        text3={["Chemin du Magret, Parc Innolin, Mérignac (33700) ","environ 15 000 m² ","Hubert Godet Architectes ","avril 2022 ","NF HQE® « Excellent », BREEAM® International New Construction 2016 « Very Good », RT 2012 - 20 %, Label BIODIVERSITY, WiredScore Silver ","ATREAM","Groupama"]}
+        text4={"Situé au cœur du parc d'activités Innolin, à Mérignac, en Gironde, s'inscrivant dans la philosophie et la trame verte de ce parc, le bâtiment de 15 000 m² regroupe depuis 2022 toutes les équipes bordelaises de Groupama, qui louera l'immeuble à hauteur de 80 %. Desservi par le futur tramway et la rocade bordelaise, il intègre de nombreux services, espaces collaboratifs et aménagements biophiliques contribuant au bien-être des futurs utilisateurs."}
+        />
+       
         <EmptyBlock />
     </>
 }
 
-interface Block0_1Props {
+interface Block1_1Props {
     text0: string[]
     text1: string
     text2: string[]
@@ -162,34 +215,20 @@ interface Block0_1Props {
     text4: string
     text5: string[]
 }
-interface Block0_2Props {
+interface Block1_2Props {
     number1: number
     text1: string
     text2: string[]
     text3: string[]
 }
-interface Block0_3Props {
+interface Block1_3Props {
     text1: string[]
 }
-interface Block0_4Props {
+interface Block1_4Props {
     text1: string
 }
-interface Block0_5Props {
+interface Block1_5Props {
     text1: string[]
-    text2: string[]
-    text3: string[]
-}
-interface Block1_1Props{
-    text0: string[]
-    text1: string
-    text2: string[]
-    text3: string[]
-    text4: string
-    text5: string[]
-}
-interface Block1_2Props{
-    number1: number
-    text1: string
     text2: string[]
     text3: string[]
 }
@@ -201,46 +240,99 @@ interface Block2_1Props{
     text3: string[]
     text4: string
     text5: string[]
-    number1:number[]
 }
 interface Block2_2Props{
+    number1: number
     text1: string
     text2: string[]
     text3: string[]
 }
-interface Block2_3Props{
+
+interface Block3_1Props{
+    text0: string[]
+    text1: string
+    text2: string[]
+    text3: string[]
+    text4: string
+    text5: string[]
+    number1:number[]
+}
+interface Block3_2Props{
+    text1: string
+    text2: string[]
+    text3: string[]
+}
+interface Block3_3Props{
     text1: string[]
     text2: string[]
     text3: string[]
 }
-interface Block2_4Props{
+interface Block3_4Props{
     text1: string[]
 }
-interface Block2_5Props{
+interface Block3_5Props{
     text1: string[]
 }
-interface Block3_1Props{
+interface Block4_1Props{
     text0: string[]
     text1: string[]
     text4: string
     text5: string[]
 }
-interface Block3_2Props{
+interface Block4_2Props{
     text1: string[]
     text2: string[]
     text3: string[]
     text4: string[]
     text5: string[]
 }
-interface Block3_3Props{
+interface Block4_3Props{
     text1: string[]
     text2: string[]
 }
+interface Block4_4Props{
+    text1: string[]
+    text2: string[]
+}
+interface Block5_1Props {
+    text0: string[]
+    text1: string
+    text2: string[]
+    text3: string[]
+    text4: string
+    text5: string[]
+}
+interface Block5_2Props{
+    text1: string[]
+    text2: string[]
+}
+interface Block5_3Props{
+    text1: string[]
+    text2: string[]
+}
+interface Block5_4Props{
+    text1: string[]
+}
+interface Block5_5Props{
+    text1: string[]
+    text2: string[]
+}
+interface Block6_1Props{
+    text0: string[]
+    text1: string[]
+    text3: string[]
+    text4: string
+    text5: string[]
+}
+interface Block6_2Props{
+    text1: string
+    text2: string[]
+    text3: string[]
+    text4: string
+}
 
-
-
-//page0
-const Block0_1 = ({text0, text1, text2, text3, text4, text5}: Block0_1Props) => {
+//page1
+const Block1_1 = ({text0, text1, text2, text3, text4, text5}: Block1_1Props) => {
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -301,7 +393,7 @@ const Block0_1 = ({text0, text1, text2, text3, text4, text5}: Block0_1Props) => 
     )
 }
 // let flag:boolean=true;
-const Block0_2 = ({number1, text1, text2, text3}: Block0_2Props) => {
+const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     const [open, setOpen] = useState(false)
     // const [ viewport, setViewport ] = useState({
     //     latitude:45.4211,
@@ -412,7 +504,7 @@ const Block0_2 = ({number1, text1, text2, text3}: Block0_2Props) => {
         </div>
     )
 }
-const Block0_3 = ({text1}: Block0_3Props) => {
+const Block1_3 = ({text1}: Block1_3Props) => {
     return (
     <div className="block3">
         <div className="left-box">
@@ -436,7 +528,7 @@ const Block0_3 = ({text1}: Block0_3Props) => {
     </div>
     )
 }
-const Block0_4 = ({text1}: Block0_4Props)=>{
+const Block1_4 = ({text1}: Block1_4Props)=>{
     let arr=[]
     for(let i=1;i<25;i++){
         let obj={ 'src':require(`../../styles/src/brand/logo_client_${i}@2x.png`).default}
@@ -467,7 +559,7 @@ const Block0_4 = ({text1}: Block0_4Props)=>{
         </div> 
     )
 }
-const Block0_5=({text1,text2,text3}: Block0_5Props)=>{
+const Block1_5=({text1,text2,text3}: Block1_5Props)=>{
     return(
         <div className="block5">
             <div className="block5-top">
@@ -503,8 +595,9 @@ const Block0_5=({text1,text2,text3}: Block0_5Props)=>{
         </div>
     )
 }
-//page1
-const Block1_1=({text0, text1, text2, text3, text4, text5}:Block1_1Props)=>{
+
+//page2
+const Block2_1=({text0, text1, text2, text3, text4, text5}:Block2_1Props)=>{
     const move_down=()=>{
         scrollTo({
             top:4900,left:0,behavior:"smooth"
@@ -515,7 +608,7 @@ const Block1_1=({text0, text1, text2, text3, text4, text5}:Block1_1Props)=>{
         setShow(!show)
     }
     return (
-    <div className="block1_1">
+    <div className="block2_1">
         <div className="image">
             <div className="top-box">
                 <div className="square"></div>
@@ -559,7 +652,7 @@ const Block1_1=({text0, text1, text2, text3, text4, text5}:Block1_1Props)=>{
     </div>
     )
 }
-const Block1_2=({number1, text1, text2, text3}:Block1_2Props)=>{
+const Block2_2=({number1, text1, text2, text3}:Block2_2Props)=>{
     let arr=[]
     let test=0
     while(test<10){
@@ -571,7 +664,7 @@ const Block1_2=({number1, text1, text2, text3}:Block1_2Props)=>{
         test++
     }
     return(
-        <div className="block1_2">
+        <div className="block2_2">
             <div className="scroll-box-outside">
                 <div className="scroll-box">
                     {arr.map((e, i) =>
@@ -622,14 +715,14 @@ const Block1_2=({number1, text1, text2, text3}:Block1_2Props)=>{
     )
 }
 
-//page2
-const Block2_1=({text0, text1, text2, text3, text4,text5, number1}:Block2_1Props)=>{
+//page3
+const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props)=>{
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
     }
     return (
-    <div className="block2_1">
+    <div className="block3_1">
         <div className="image">
         <div className="top-box">
                 <div className="square"></div>
@@ -692,7 +785,7 @@ const Block2_1=({text0, text1, text2, text3, text4,text5, number1}:Block2_1Props
     </div>
     )
 }
-const Block2_2=({text1,text2,text3}:Block2_2Props)=>{
+const Block3_2=({text1,text2,text3}:Block3_2Props)=>{
     let arr_name=["1","2","3","4","1","2","3"]
     let arr=[]
         for(let i of arr_name){
@@ -701,7 +794,7 @@ const Block2_2=({text1,text2,text3}:Block2_2Props)=>{
             arr.push(obj)
         }
     return(
-    <div className="block2_2">
+    <div className="block3_2">
         <div className="title">{text1}</div>
         <div className="map">
             <Image src={plan_situation} aria-label="aria-label" className="mapimg"></Image>
@@ -721,7 +814,7 @@ const Block2_2=({text1,text2,text3}:Block2_2Props)=>{
     </div>
     )
 }
-const Block2_3=({text1,text2,text3}:Block2_3Props)=>{ 
+const Block3_3=({text1,text2,text3}:Block3_3Props)=>{ 
     let src=require(`../../styles/src/page2/image_programme_2@2x.png`).default
     let arr=[]
     for(let a=0;a<text1.length;a++){
@@ -733,7 +826,7 @@ const Block2_3=({text1,text2,text3}:Block2_3Props)=>{
         setShow(!show)
     }
     return(
-        <div className="block2_3">
+        <div className="block3_3">
             <div className="inner_box">
                 <div className="leftBox">
                     <div className="image" onClick={show_box}>
@@ -775,10 +868,10 @@ const Block2_3=({text1,text2,text3}:Block2_3Props)=>{
         </div>
     )
 }
-const Block2_4=({text1}:Block2_4Props)=>{
+const Block3_4=({text1}:Block3_4Props)=>{
     let src=require(`../../styles/src/page2/image_programme_3@2x.png`).default
     return(
-        <div className="block2_4">
+        <div className="block3_4">
             <div className="left">
                 <div className="title">{text1[0]}</div>
                 <div className="content">{text1[1]}</div>
@@ -790,10 +883,10 @@ const Block2_4=({text1}:Block2_4Props)=>{
         </div>
     )
 }
-const Block2_5=({text1}:Block2_5Props)=>{
+const Block3_5=({text1}:Block3_5Props)=>{
     let src=require(`../../styles/src/page2/pland_de_masse@2x.png`).default
     return(
-        <div className="block2_5">
+        <div className="block3_5">
             <div className="title">{text1[0]}</div>
             <div className="picture">
                 <Image  src={src} alt="brand1" className="brand"/>
@@ -802,15 +895,16 @@ const Block2_5=({text1}:Block2_5Props)=>{
         </div>
     )  
 }
-//page3
-const Block3_1=({text0,text1,text4,text5}:Block3_1Props)=>{
+
+//page4
+const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
     }
     let src=require(`../../styles/src/page3/photo_alain_taravella@2x.png`).default
     return (
-    <div className="block3_1">
+    <div className="block4_1">
         <div className="image">
         <div className="top-box">
             <div className="square"></div>
@@ -852,11 +946,11 @@ const Block3_1=({text0,text1,text4,text5}:Block3_1Props)=>{
     </div>
     )
 }
-const Block3_2=({text1,text2,text3,text4,text5}:Block3_2Props)=>{
+const Block4_2=({text1,text2,text3,text4,text5}:Block4_2Props)=>{
     let src1=require(`../../styles/src/page3/graphique@2x.png`).default
     let src2=require(`../../styles/src/page3/organigrame@2x.png`).default
     return(
-        <div className="block3_2">
+        <div className="block4_2">
             <div className="ActivitePart">
                 <div className="left">
                     <Image  src={src1} alt="brand1" className="brand"/>
@@ -945,10 +1039,10 @@ const Block3_2=({text1,text2,text3,text4,text5}:Block3_2Props)=>{
         </div>
     )
 }
-const Block3_3=({text1,text2}:Block3_3Props)=>{
+const Block4_3=({text1,text2}:Block4_3Props)=>{
     let src=require(`../../styles/src/page3/image_page_groupe_1@2x.png`).default
     return(
-        <div className="block3_3">
+        <div className="block4_3">
             <div className="top">
                 <div className="left">
                     <div className="content">{text1[0]}</div>
@@ -966,7 +1060,7 @@ const Block3_3=({text1,text2}:Block3_3Props)=>{
                 </div>
                 <div className="right">
                     <div className="rightPicture">
-                        <Image  src={src} alt="brand1"/>
+                        <Image  src={src} alt="brand1" className="image"/>
                     </div>
                     <div className="smallText">{text2[3]}</div>
                 </div>
@@ -974,6 +1068,442 @@ const Block3_3=({text1,text2}:Block3_3Props)=>{
         </div>
     )
 }
+const Block4_4=({text1,text2}:Block4_4Props)=>{
+    let src2=require(`../../styles/src/page3/image_page_groupe_2@2x.png`).default
+    let src3=require(`../../styles/src/page3/image_page_groupe_3@2x.png`).default
+    let src4=require(`../../styles/src/page3/image_page_groupe_4@2x.png`).default
+    return(
+        <div className="block4_4">
+            <div className="arrows">
+                <div className="title">
+                    {text1[0]}
+                </div>
+                <div className="arrowsPart">
+                    <div className="left">
+                        <div className="line">{text1[1]}</div>
+                        <div className="line">{text1[2]}</div>
+                    </div>
+                    <div className="middle">
+                        <div className="vertical"></div>
+                        <div className="triangle"></div>
+                    </div>
+                    <div className="right">
+                        <div className="line">{text1[3]}</div>
+                        <div className="line">{text1[4]}</div>
+                    </div>
+                </div>
+                <div className="bottom">{text1[5]}</div>
+            </div>
+            <div className="pictures">
+                <div className="pictureBox">
+                    <Image  src={src2} alt="brand1" className="image" width={640} height={442}/>
+                    <div className="title">{text2[0]}</div>
+                </div>
+                <div className="pictureBox">
+                    <Image  src={src3} alt="brand1" className="image" width={640} height={442}/>
+                    <div className="title">{text2[1]}</div>
+                </div>
+                <div className="pictureBox">
+                    <Image  src={src4} alt="brand1" className="image" width={640} height={442}/>
+                    <div className="title">{text2[2]}</div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+//page5
+//page1
+const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => {
+    const move_down=()=>{
+        scrollTo({
+            top:17000,left:0,behavior:"smooth"
+        })
+    }
+    const [show, setShow] = useState(false)
+    const show_box=()=>{
+        setShow(!show)
+    }
+    return (
+    <div className="block5_1">
+        <div className="image">
+            <div className="top-box">
+                <div className="square"></div>
+                <div className="title-text">{text0[0]}</div>
+                <div className="title-text" onClick={show_box}>{text0[1]}</div>
+                <div className="title-text">{text0[2]}</div>
+                <div className="button">
+                    <div className="message-icon"></div>
+                    <div className="title-color-text">{text0[3]}</div>
+                </div>
+                <div className={(show ? 'chooseBox' : 'hidden')}>
+                    <div className="leftPart">{text4}</div>
+                    <div className="rightPart">
+                    {text5.map((e,i)=>
+                        <div className="choice">{e}</div>
+                    )}
+                    </div>
+                </div>
+            </div>
+            <div className="color-button" onClick={move_down}>
+                <Logo aria-label="aria-label"></Logo>
+            </div>
+            <div className="text">
+                <div className="title">{text1}</div>
+                <div className="content1">
+                    <text className="text-normal">{text2[0]}</text>             
+                </div>
+            </div>
+            <div className="white-ball"></div>
+            <div className="white-text">
+                <text>{text3[0]}</text>
+                <text>{text3[1]}</text>
+            </div>
+            <div className="white-box">
+                <div className="color-ball"></div>
+            </div>
+        </div>
+    </div>
+    )
+}
+const Block5_2=({text1,text2}:Block5_2Props)=>{
+    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
+    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    return(
+        <div className="block5_2">
+            <div className="community">
+                <div className='left'>
+                    <Image  src={src1} alt="brand1" width={940} height={500}/>
+                </div>
+                <div className='right'>
+                    <div className="title">{text1[0]}</div>
+                    <div className="introduce">{text1[1]}</div>
+                    <div className="content">{text1[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text1[3]}</div>
+                </div>
+            </div>
+            <div className="nom">
+                <div className="left">
+                    <div className="title">{text2[0]}</div>
+                    <div className="introduce">{text2[1]}</div>
+                    <div className="content">{text2[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text2[3]}</div>
+                </div>
+                <div className="right">
+                    <Image  src={src2} alt="brand1" width={580} height={500}/>
+                </div>
+
+            </div>
+
+        </div>
+    )
+}
+const Block5_3=({text1,text2}:Block5_3Props)=>{
+    let src1=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
+    let src2=require(`../../styles/src/page4/image_page_reference_5@2x.png`).default
+    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    return(
+        <div className="block5_3">
+            <div className="images">
+                <div className='left'>
+                    <Image  src={src1} alt="brand1" width={940} height={500}/>
+                </div>
+                <div className="right">
+                    <Image  src={src2} alt="brand1" width={940} height={500}/>
+                </div>
+            </div>
+            <div className="texts">
+                <div className="left">
+                    <div className="title">{text2[0]}</div>
+                    <div className="introduce">{text2[1]}</div>
+                    <div className="content">{text2[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text2[3]}</div>
+                </div>
+                <div className='right'>
+                    <div className="title">{text1[0]}</div>
+                    <div className="introduce">{text1[1]}</div>
+                    <div className="content">{text1[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text1[3]}</div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+const Block5_4=({text1}:Block5_4Props)=>{
+    let src1=require(`../../styles/src/page4/image_page_reference_6@2x.png`).default
+    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    return(
+        <div className="block5_4">
+            <div className="images">
+                <Image  src={src1} alt="brand1"/>
+            </div>
+            <div className="texts">
+                <div className="title">{text1[0]}</div>
+                <div className="introduce">{text1[1]}</div>
+                <div className="content">{text1[2]}</div>
+                <div className="brands">
+                    <div className="brand1">
+                    <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand2} alt="brand1" width={58} height={50} />
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand3} alt="brand1" width={68} height={50} />
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand4} alt="brand1" width={114} height={50} />
+                    </div>
+                </div>
+                <div className="button">{text1[3]}</div>
+            </div>
+        </div>
+    )
+}
+const Block5_5=({text1,text2}:Block5_5Props)=>{
+    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
+    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    return(
+        <div className="block5_5">
+            <div className="community">
+                <div className='left'>
+                    <div className="title">{text1[0]}</div>
+                    <div className="introduce">{text1[1]}</div>
+                    <div className="content">{text1[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text1[3]}</div>
+                </div>
+                <div className='right'>
+                    <Image  src={src1} alt="brand1" width={940} height={500}/>
+                </div>
+            </div>
+            <div className="nom">
+                <div className="left">
+                    <Image  src={src2} alt="brand1" width={580} height={500}/>
+                </div>
+                <div className="right">
+                    <div className="title">{text2[0]}</div>
+                    <div className="introduce">{text2[1]}</div>
+                    <div className="content">{text2[2]}</div>
+                    <div className="brands">
+                        <div className="brand1">
+                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand2} alt="brand1" width={58} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand3} alt="brand1" width={68} height={50} />
+                        </div>
+                        <div className="brand2">
+                        <Image  src={brand4} alt="brand1" width={114} height={50} />
+                        </div>
+                    </div>
+                    <div className="button">{text2[3]}</div>
+                </div>
+            </div>
+        </div>
+    )
+}
+//page6
+const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
+    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    const [show, setShow] = useState(false)
+    const show_box=()=>{
+        setShow(!show)
+    }
+    return (
+    <div className="block6_1">
+        <div className="image">
+            <div className="top-box">
+                <div className="square"></div>
+                <div className="title-text">{text0[0]}</div>
+                <div className="title-text" onClick={show_box}>{text0[1]}</div>
+                <div className="title-text">{text0[2]}</div>
+                <div className="button">
+                    <div className="message-icon"></div>
+                    <div className="title-color-text">{text0[3]}</div>
+                </div>
+                <div className={(show ? 'chooseBox' : 'hidden')}>
+                    <div className="leftPart">{text4}</div>
+                    <div className="rightPart">
+                    {text5.map((e,i)=>
+                        <div className="choice">{e}</div>
+                    )}
+                    </div>
+                </div>
+            </div>
+            <div className="text">
+                <div className="littleTitle">{text1[0]}</div>
+                <div className="Title">{text1[1]}</div>
+                <div className="content">{text1[2]}</div>
+                <div className="brands">
+                    <div className="brand1">
+                        <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand2} alt="brand1" width={58} height={50} />
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand3} alt="brand1" width={68} height={50} />
+                    </div>
+                    <div className="brand2">
+                    <Image  src={brand4} alt="brand1" width={114} height={50} />
+                    </div>
+                </div>
+                <div className="button">
+                    <div className="message-icon"></div>
+                    <div className="title-color-text">{text0[3]}</div>
+                </div>
+            </div>
+            <div className="white-ball"></div>
+            <div className="white-text">
+                <text>{text3[0]}</text>
+                <text>{text3[1]}</text>
+            </div>
+            <div className="white-box">
+                <div className="color-ball"></div>
+            </div>
+        </div>
+    </div>
+    )
+}
+const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
+    let arr=[];
+    for(let i=0;i<text2.length;i++){
+        // console.log(i,`../../styles/src/image_home_${i}@2x.png`)
+        let obj={ 'title':text2[i],"content":text3[i]}
+        arr.push(obj)
+    }
+    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../styles/src/page4/image_page_reference_7@2x.png`).default
+    let src3=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
+    let src4=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
+    return(
+        <div className="block6_2">
+            <div className="first">
+                <div className="left">
+                    <Image  src={src1} alt="brand1" width={940} height={500} className="brand1"/>
+                </div>
+                <div className="right">
+                    <Image  src={src2} alt="brand1" width={580} height={500} className="brand1"/>
+                </div>
+            </div>
+            <div className="second">
+                <div className="left">
+                    <Image  src={src3} alt="brand1" width={580} height={500} className="brand1"/>
+                </div>
+                <div className="right">
+                    <div className="title">{text1}</div>
+                    {  
+                    arr.map((e,i)=>
+                    <div className="line" key={i}>
+                        <text className="bold">{e.title}</text>
+                        <text className="content">{e.content}</text>
+                    </div>
+                    )}
+                </div>
+            </div>
+            <div className="third">
+                <div className="left">
+                    {text4}
+                </div>
+                <div className="right">
+                    <Image  src={src4} alt="brand1" width={940} height={500} className="brand1"/>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
 
 
 
