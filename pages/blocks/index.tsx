@@ -202,7 +202,11 @@ const Block = () => {
         text3={["Chemin du Magret, Parc Innolin, Mérignac (33700) ","environ 15 000 m² ","Hubert Godet Architectes ","avril 2022 ","NF HQE® « Excellent », BREEAM® International New Construction 2016 « Very Good », RT 2012 - 20 %, Label BIODIVERSITY, WiredScore Silver ","ATREAM","Groupama"]}
         text4={"Situé au cœur du parc d'activités Innolin, à Mérignac, en Gironde, s'inscrivant dans la philosophie et la trame verte de ce parc, le bâtiment de 15 000 m² regroupe depuis 2022 toutes les équipes bordelaises de Groupama, qui louera l'immeuble à hauteur de 80 %. Desservi par le futur tramway et la rocade bordelaise, il intègre de nombreux services, espaces collaboratifs et aménagements biophiliques contribuant au bien-être des futurs utilisateurs."}
         />
-       
+       <Block6_3
+       text1={"Un immeuble exemplaire sur le plan environnemental"}
+       text2={["Lumière naturelle et vue sur la nature","Toiture et façade végétalisées","Privilégier les solutions vertueuses pour l'environnement","Le Booster du Réemploi"]}
+       text3={["C'est l'un des piliers de la démarche biophilique. L'immeuble a été construit en H afin que la totalité des espaces tertiaires offre une vue sur la nature.","L'intégralité des 2 500 m² de terrasse est végétalisée, une première en France. Elle intègre des sols de natures diversifiées, afin qu'une flore spontanée s'adaptant naturellement aux conditions créées.","Tout au long du projet, les solutions les plus durables ont été favorisées quand plusieurs possibilités se présentaient : parking silo plutôt que souterrain pour éviter le pompage des sols, clôture végétalisée plutôt que clôture en dur pour permettre aux animaux de petite taille de circuler, 100% du mobilier extérieur est fabriqué avec du bois local etc …","Avec #Community, Cogedim a expérimenté les principes du Booster du Réemploi, une démarche d'économie circulaire vertueuse associant de nombreux promoteurs et entreprises. Son objectif : favoriser le réemploi des déchets et gravats produits par le secteur de la construction afin de réduire l'impact environnemental de l'immobilier. À Mérignac, plus de 2 800 m2 de faux planchers de l'immeuble sont ainsi issus du réemploi de matériaux. Ils ont été conditionnés, transportés stockés, préparés, assurés et fournis par l'entreprise spécialisée Mobius Réemploi."]}
+       />
         <EmptyBlock />
     </>
 }
@@ -329,6 +333,11 @@ interface Block6_2Props{
     text2: string[]
     text3: string[]
     text4: string
+}
+interface Block6_3Props{
+    text1: string
+    text2: string[]
+    text3: string[]
 }
 
 //page1
@@ -1499,6 +1508,30 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
                     <Image  src={src4} alt="brand1" width={940} height={500} className="brand1"/>
                 </div>
             </div>
+        </div>
+    )
+}
+const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
+    return(
+        <div className="block6_3">
+            <div className="headline">{text1}</div>
+            <div className="firstParagraph">
+                <div className="left">
+                    <div className="title">{text2[0]}</div>
+                    <div className="content">{text3[1]}</div>
+                    <div className="title">{text2[1]}</div>
+                    <div className="content">{text3[2]}</div>
+                    <div className="title">{text2[2]}</div>
+                    <div className="content">{text3[3]}</div>
+                </div>
+                <div className="right">
+                    <div className="title">{text2[3]}</div>
+                    <div className="brand"></div>
+                    <div className="content">{text3[4]}</div>
+                </div>
+            </div>
+            <div className="secondParagraph"></div>
+
         </div>
     )
 }
