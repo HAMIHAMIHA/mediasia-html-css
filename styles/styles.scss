@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 //page1
 .block1{
@@ -196,6 +196,163 @@
             left: 390px;
             bottom: 76px;
             z-index: 5;
+        }
+    }
+    .hidden{
+        display: none;
+    }
+    .inputBox{
+        position: absolute;
+        top: 0;
+        z-index: 15;
+        width: 1920px;
+        height:300%;
+        background-color: rgba(0,0,0,0.5);
+        .relativeBox{
+            position: relative;
+            margin:0 auto;
+            margin-top: 409px;
+            background-color: #42145F;
+            border-radius: 20px;
+            width: 800px;
+            height: 877px;
+            padding-top: 106px;
+            padding-left: 50px;
+            .circular{
+                position: absolute;
+                width: 146px;
+                height: 146px;
+                border-radius: 50%;
+                top: -70px;
+                left: calc(50% - 73px);
+                background-color: #fff;
+                padding:22px;
+            }
+            .title{
+                padding-left: 256px;
+                font: normal normal bold 30px/39px Roboto;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+            .close{
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: #fff;
+                font-size: 25px;
+                font-weight: 200;
+                cursor: pointer;
+            }
+            .programme{
+                margin-top: 39px;
+                display: flex;
+                align-items: center;
+                .text{
+                    text-align: right;
+                    font: normal normal normal 20px/26px Roboto;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                    opacity: 1;
+                    margin-left: 79px;
+                    margin-right: 18px;
+                }
+                .select{
+                    width: 368px;
+                    height: 40px;
+                    border-radius: 20px;
+                    padding-left: 20px;
+                    background: #EDE8F1 0% 0% no-repeat padding-box;
+                    .none{
+                        display: none;
+                    }
+                }
+
+            }
+            .selection{
+                color: #fff;
+                text-align: left;
+                font: normal normal normal 20px/26px Roboto;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                margin-left: 34px;
+                padding-top: 32px;
+                line-height: 25px;
+                .select{
+                    margin-left: 50px;
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 25px;
+                    padding-top: 20px;
+                    vertical-align: middle;
+                }
+            }
+            // input
+            .middle{
+                width: 330px;
+                height: 40px;
+                border-radius: 20px;
+                background-color:#EEE9F2;
+                margin-top: 30px;
+                margin-right: 40px;
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .middler{
+                width: 330px;
+                height: 40px;
+                border-radius: 20px;
+                background-color:#EEE9F2;
+                margin-top: 30px;
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .large{
+                width: 700px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: #EEE9F2;
+                margin-top: 30px;
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            // message
+            .message{
+                border-radius: 20px;
+                width: 700px;
+                height: 106px;
+                margin-top: 37px;
+                background-color:#EEE9F2;
+                padding-left: 20px;
+                padding-top: 10px;
+                resize:none;
+                font-size: 20px;
+
+            }
+            .envoyer{
+                width: 178px;
+                // height: 40px;
+                border-radius: 20px;
+                margin-left: 248px;
+                margin-top: 30px;
+                padding-right: 30px;
+                text-align: right;
+                font: normal normal bold 22px/36px Roboto;
+                letter-spacing: 0px;
+                color: #42145F;
+                opacity: 1;
+            }
+            .bottomText{
+                width: 700px;
+                margin-top: 40px;
+                text-align: center;
+                font: normal normal normal 11px/15px Roboto;
+                letter-spacing: 0px;
+                font-weight: 300;
+                color: #FFFFFF;
+                opacity: 1;
+            }
         }
     }
 }
@@ -3036,6 +3193,55 @@
         .right{
             width: 940px;
             height: 500px;
+        }
+    }
+}
+.block6_3{
+    width: 1920px;
+    .headline{
+        text-align: center;
+        font: normal normal bold 40px/60px Roboto;
+        letter-spacing: 0px;
+        color: #42145F;
+        opacity: 1;
+        margin-top: 40px;
+    }
+    .firstParagraph{
+        display: flex;
+        margin-top: 40px;
+        .left{
+            width: 580px;
+            margin-left: 360px;
+        }
+        .right{
+            width: 580px;
+            margin-left: 20px;
+        }
+        .title{
+            text-align: left;
+            font: normal normal bold 20px/26px Roboto;
+            letter-spacing: 0px;
+            color: #42145F;
+            opacity: 1;
+            margin-bottom: 10px;
+        }
+        .content{
+            text-align: left;
+            font: normal normal normal 16px/27px Roboto;
+            letter-spacing: 0px;
+            color: #555555;
+            opacity: 1;
+            margin-bottom: 20px;
+        }
+    }
+    .secondParagraph{
+        display: flex;
+        margin-top: 44px;
+        .left{
+            margin-left: 350px;
+        }
+        .right{
+            margin-left: 50px;
         }
     }
 }

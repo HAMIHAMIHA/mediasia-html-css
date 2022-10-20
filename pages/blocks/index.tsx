@@ -8,6 +8,7 @@ import Logo_hill_side from '../../styles/src/page2/logo_hill_side.svg'
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
 import Icon_open_photo from "../../styles/src/page2/icon_open_photo.svg"
+import StyledInput from '@components/StyledInput';
 // import { Divider } from 'antd';
 
 // import transport1 from '../../styles/src/page2/icone_transport_1.svg'
@@ -17,7 +18,7 @@ import Icon_open_photo from "../../styles/src/page2/icon_open_photo.svg"
 
 const Block = () => {
     return <>
-        {/* page0 */}
+        {/* page1 */}
         <Block1_1 
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"LE BUREAU EN RÉGION PAR COGEDIM"} 
@@ -27,7 +28,10 @@ const Block = () => {
         "Imaginer le futur de l'immobilier d'entreprise"]}
         text4={"Découvrez nos projets immobiliers par région"}
         text5={["Auvergne Rhône-Alpes", "Bourgogne Franche-Comté","Bretagne", "Centre Val de Loire","Grand Est","Hauts-de-France","Normandie","Nouvelle Aquitaine","Occitanie","Pays de la Loire","Provence Alpes Côte d'Azur"]}
+        propramme={["program1","program2","program3"]}
+        introduce={"Les données recueillies ci-dessus sont nécessaires pour nous permettre de répondre à votre demande de renseignement dans le cadre de la commercialisation des programmes par Cogedim Provence. Pour en savoir plus sur le traitement de vos données et vos droits, cliquer ici."}
         />
+
         <Block1_2 
         number1={57}
         text1={"programmes en cours"}
@@ -58,7 +62,9 @@ const Block = () => {
         text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
         />
-        {/* page1 */}
+    
+
+        {/* page2 */}
         <Block2_1
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"OCCITANIE"} 
@@ -207,6 +213,11 @@ const Block = () => {
        text2={["Lumière naturelle et vue sur la nature","Toiture et façade végétalisées","Privilégier les solutions vertueuses pour l'environnement","Le Booster du Réemploi"]}
        text3={["C'est l'un des piliers de la démarche biophilique. L'immeuble a été construit en H afin que la totalité des espaces tertiaires offre une vue sur la nature.","L'intégralité des 2 500 m² de terrasse est végétalisée, une première en France. Elle intègre des sols de natures diversifiées, afin qu'une flore spontanée s'adaptant naturellement aux conditions créées.","Tout au long du projet, les solutions les plus durables ont été favorisées quand plusieurs possibilités se présentaient : parking silo plutôt que souterrain pour éviter le pompage des sols, clôture végétalisée plutôt que clôture en dur pour permettre aux animaux de petite taille de circuler, 100% du mobilier extérieur est fabriqué avec du bois local etc …","Avec #Community, Cogedim a expérimenté les principes du Booster du Réemploi, une démarche d'économie circulaire vertueuse associant de nombreux promoteurs et entreprises. Son objectif : favoriser le réemploi des déchets et gravats produits par le secteur de la construction afin de réduire l'impact environnemental de l'immobilier. À Mérignac, plus de 2 800 m2 de faux planchers de l'immeuble sont ainsi issus du réemploi de matériaux. Ils ont été conditionnés, transportés stockés, préparés, assurés et fournis par l'entreprise spécialisée Mobius Réemploi."]}
        />
+        <Block1_5
+        text1={["UNE MARQUE ALTAREA","Vous avez besoin de plus d'informations ?","Nous contacter"]}
+        text2={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
+        text3={["Visitez le site"," Altarea"," et le site"," Cogedim pour les Particuliers","Copyright Altarea 2022 - Mentions Légales"]}
+        />
         <EmptyBlock />
     </>
 }
@@ -218,6 +229,8 @@ interface Block1_1Props {
     text3: string[]
     text4: string
     text5: string[]
+    propramme: string[]
+    introduce: string
 }
 interface Block1_2Props {
     number1: number
@@ -340,8 +353,9 @@ interface Block6_3Props{
     text3: string[]
 }
 
+
 //page1
-const Block1_1 = ({text0, text1, text2, text3, text4, text5}: Block1_1Props) => {
+const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block1_1Props) => {
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -351,6 +365,16 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5}: Block1_1Props) => 
     const show_box=()=>{
         setShow(!show)
     }
+    let src=require(`../../styles/src/LOGO/LOGO.png`).default
+    const [showi,showInput] =useState(false)
+    const show_input=()=>{
+        showInput(!showi)
+    }
+    let arr=[];
+    for(let i=0;i<propramme.length;i++){
+        let obj={ 'selections':propramme[i]}
+        arr.push(obj)
+    }
     return (
     <div className="block1">
         <div className="image">
@@ -359,7 +383,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5}: Block1_1Props) => 
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
-                <div className="button">
+                <div className="button" onClick={show_input}>
                     <div className="message-icon"></div>
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
@@ -397,6 +421,52 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5}: Block1_1Props) => 
             <div className="white-box">
                 <div className="color-ball"></div>
             </div>
+        </div>
+        <div className={(showi ? "inputBox":"hidden")}>
+            <form action="submit" className="relativeBox">
+                <div className="circular">
+                    <Image src={src} className="logo" width={100} height={100}></Image>
+                </div>
+                <div className="close" onClick={show_input}>
+                    X
+                </div>
+                <div className="title">En savoir plus</div>
+                <div className="programme">
+                    <div className="text">Programme</div>
+                    <select className="select">
+                        <option className="option none"></option>
+                        {arr.map((e, i) =>
+                            <option className="option" key={i}>{e.selections}</option>
+                            )
+                        }
+                    </select>
+                </div>
+                <div className="selection">
+                    <input type="radio" name="radio" value="Acheter" className="select" checked></input>Acheter
+                    <input type="radio" name="radio" value="Louer" className="select" ></input>Louer
+                    <input type="radio" name="radio" value="Demande d'information" className="select"></input>Demande d'information
+                </div>
+                <div className="nompre">
+                    <input type="text" name="firstname" placeholder="*Nom" className="middle nom"></input>
+                    <input type="text" name="firstname" placeholder="*Prénom" className="middler pre"></input>
+                </div>
+                <input type="text" name="firstname" placeholder="*Email" className="large email"></input>
+                <input type="text" name="firstname" placeholder="*Téléphone" className="large telephone"></input>
+                <div className="code">
+                    <input type="text" name="firstname" placeholder="*Code Postal" className="middle nom"></input>
+                    <input type="text" name="firstname" placeholder="*Ville" className="middler pre"></input>
+                </div>
+                <textarea name="message" id="" cols={30} rows={10} placeholder="Message" className="message"></textarea>
+                <button type="submit" className="envoyer" >Envoyer</button>
+                <div className="bottomText" >{introduce}</div>
+            </form> 
+            <div className="merci">
+                <div className="circular">
+                    <Image src={src} className="logo" width={100} height={100}></Image>
+                </div>
+                <button type="submit" className="fermer" onClick={show_input}>Fermer</button>
+                <div className="bottomText">{introduce}</div>
+            </div> 
         </div>
     </div>
     )
@@ -1512,25 +1582,37 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
     )
 }
 const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
+    let src=require(`../../styles/src/page5/logo_page_projet_reference@2x.png`).default
+    let src1=require(`../../styles/src/page5/image_page_projet_reference_2@2x.png`).default
+    let src2=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
     return(
         <div className="block6_3">
             <div className="headline">{text1}</div>
             <div className="firstParagraph">
                 <div className="left">
                     <div className="title">{text2[0]}</div>
-                    <div className="content">{text3[1]}</div>
+                    <div className="content">{text3[0]}</div>
                     <div className="title">{text2[1]}</div>
-                    <div className="content">{text3[2]}</div>
+                    <div className="content">{text3[1]}</div>
                     <div className="title">{text2[2]}</div>
-                    <div className="content">{text3[3]}</div>
+                    <div className="content">{text3[2]}</div>
                 </div>
                 <div className="right">
                     <div className="title">{text2[3]}</div>
-                    <div className="brand"></div>
-                    <div className="content">{text3[4]}</div>
+                    <div className="brand">
+                        <Image  src={src} alt="brand1" className="image" width={208} height={100}/>
+                    </div>
+                    <div className="content">{text3[3]}</div>
                 </div>
             </div>
-            <div className="secondParagraph"></div>
+            <div className="secondParagraph">
+                <div className="left">
+                    <Image  src={src1} alt="brand1" className="image" width={580} height={500}/>
+                </div>
+                <div className="right">
+                    <Image  src={src2} alt="brand1" className="image" width={940} height={500}/>
+                </div>
+            </div>
 
         </div>
     )

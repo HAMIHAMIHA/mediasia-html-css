@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .block1 .image {
   margin: 0;
   padding: 0;
@@ -215,6 +215,176 @@
   left: 390px;
   bottom: 76px;
   z-index: 5;
+}
+
+.block1 .hidden {
+  display: none;
+}
+
+.block1 .inputBox {
+  position: absolute;
+  top: 0;
+  z-index: 15;
+  width: 1920px;
+  height: 300%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.block1 .inputBox .relativeBox {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 409px;
+  background-color: #42145F;
+  border-radius: 20px;
+  width: 800px;
+  height: 877px;
+  padding-top: 106px;
+  padding-left: 50px;
+}
+
+.block1 .inputBox .relativeBox .circular {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  border-radius: 50%;
+  top: -70px;
+  left: calc(50% - 73px);
+  background-color: #fff;
+  padding: 22px;
+}
+
+.block1 .inputBox .relativeBox .title {
+  padding-left: 256px;
+  font: normal normal bold 30px/39px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.block1 .inputBox .relativeBox .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.block1 .inputBox .relativeBox .programme {
+  margin-top: 39px;
+  display: flex;
+  align-items: center;
+}
+
+.block1 .inputBox .relativeBox .programme .text {
+  text-align: right;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  margin-left: 79px;
+  margin-right: 18px;
+}
+
+.block1 .inputBox .relativeBox .programme .select {
+  width: 368px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 20px;
+  background: #EDE8F1 0% 0% no-repeat padding-box;
+}
+
+.block1 .inputBox .relativeBox .programme .select .none {
+  display: none;
+}
+
+.block1 .inputBox .relativeBox .selection {
+  color: #fff;
+  text-align: left;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  margin-left: 34px;
+  padding-top: 32px;
+  line-height: 25px;
+}
+
+.block1 .inputBox .relativeBox .selection .select {
+  margin-left: 50px;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  padding-top: 20px;
+  vertical-align: middle;
+}
+
+.block1 .inputBox .relativeBox .middle {
+  width: 330px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #EEE9F2;
+  margin-top: 30px;
+  margin-right: 40px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.block1 .inputBox .relativeBox .middler {
+  width: 330px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #EEE9F2;
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.block1 .inputBox .relativeBox .large {
+  width: 700px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #EEE9F2;
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.block1 .inputBox .relativeBox .message {
+  border-radius: 20px;
+  width: 700px;
+  height: 106px;
+  margin-top: 37px;
+  background-color: #EEE9F2;
+  padding-left: 20px;
+  padding-top: 10px;
+  resize: none;
+  font-size: 20px;
+}
+
+.block1 .inputBox .relativeBox .envoyer {
+  width: 178px;
+  border-radius: 20px;
+  margin-left: 248px;
+  margin-top: 30px;
+  padding-right: 30px;
+  text-align: right;
+  font: normal normal bold 22px/36px Roboto;
+  letter-spacing: 0px;
+  color: #42145F;
+  opacity: 1;
+}
+
+.block1 .inputBox .relativeBox .bottomText {
+  width: 700px;
+  margin-top: 40px;
+  text-align: center;
+  font: normal normal normal 11px/15px Roboto;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .block2 {
@@ -3367,6 +3537,65 @@
 .block6_2 .third .right {
   width: 940px;
   height: 500px;
+}
+
+.block6_3 {
+  width: 1920px;
+}
+
+.block6_3 .headline {
+  text-align: center;
+  font: normal normal bold 40px/60px Roboto;
+  letter-spacing: 0px;
+  color: #42145F;
+  opacity: 1;
+  margin-top: 40px;
+}
+
+.block6_3 .firstParagraph {
+  display: flex;
+  margin-top: 40px;
+}
+
+.block6_3 .firstParagraph .left {
+  width: 580px;
+  margin-left: 360px;
+}
+
+.block6_3 .firstParagraph .right {
+  width: 580px;
+  margin-left: 20px;
+}
+
+.block6_3 .firstParagraph .title {
+  text-align: left;
+  font: normal normal bold 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #42145F;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+.block6_3 .firstParagraph .content {
+  text-align: left;
+  font: normal normal normal 16px/27px Roboto;
+  letter-spacing: 0px;
+  color: #555555;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.block6_3 .secondParagraph {
+  display: flex;
+  margin-top: 44px;
+}
+
+.block6_3 .secondParagraph .left {
+  margin-left: 350px;
+}
+
+.block6_3 .secondParagraph .right {
+  margin-left: 50px;
 }
 
 .EmptyBlock {
