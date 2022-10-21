@@ -59,11 +59,7 @@
 }
 
 .block1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block1 .image .top-box .button .title-color-text {
@@ -526,21 +522,11 @@
   height: 60px;
   width: 533px;
   padding: 10px;
+  padding-top: 15px;
   align-items: center;
 }
 
 .block2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px #42145F solid;
-  margin-left: 20px;
-  margin-right: 5px;
-}
-
-.block2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Livraison-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px #42145F solid;
   margin-left: 20px;
   margin-right: 5px;
 }
@@ -694,9 +680,6 @@
 
 .block3 .left-box .text-box .text-box-button .letter-box {
   margin-right: 10px;
-  width: 29px;
-  height: 13px;
-  border: 1px white solid;
 }
 
 .block3 .right-box {
@@ -805,11 +788,9 @@
 }
 
 .block5 .block5-top .top-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px black solid;
   margin: 0 auto;
   margin-bottom: 5px;
+  display: block;
 }
 
 .block5 .block5-top .top-name {
@@ -852,11 +833,7 @@
 }
 
 .block5 .block5-middle .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px black solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block5 .block5-middle .button .title-color-text {
@@ -985,11 +962,7 @@
 }
 
 .block2_1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block2_1 .image .top-box .button .title-color-text {
@@ -1366,11 +1339,7 @@
 }
 
 .block3_1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block3_1 .image .top-box .button .title-color-text {
@@ -1498,11 +1467,7 @@
 }
 
 .block3_1 .image .text .button .message-icon {
-  width: 29px;
-  height: 15px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block3_1 .image .text .button .title-color-text {
@@ -1712,11 +1677,7 @@
 }
 
 .block3_3 .inner_box .rightBox .bottom .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block3_3 .inner_box .rightBox .bottom .button .title-color-text {
@@ -1876,11 +1837,7 @@
 }
 
 .block4_1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block4_1 .image .top-box .button .title-color-text {
@@ -2531,11 +2488,7 @@
 }
 
 .block5_1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block5_1 .image .top-box .button .title-color-text {
@@ -3269,11 +3222,7 @@
 }
 
 .block6_1 .image .top-box .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block6_1 .image .top-box .button .title-color-text {
@@ -3405,11 +3354,7 @@
 }
 
 .block6_1 .image .text .button .message-icon {
-  width: 29px;
-  height: 13px;
-  padding: 5px 20px;
-  border: 1px #fff solid;
-  margin: auto 0;
+  margin-top: 10px;
 }
 
 .block6_1 .image .text .button .title-color-text {

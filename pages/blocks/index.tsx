@@ -2,9 +2,14 @@ import {useEffect, useState} from 'react';
 import Map,{Marker} from 'react-map-gl';
 import Script from 'next/script'
 import Image from "next/image";
-import Logo from '../../styles/src/Composant11_2.svg';
-import Altarea from '../../styles/src/gps_altarea.svg';
+import Email from "../../styles/src/svg/mail.svg"
+import Logo from '../../styles/src/svg/Composant11_2.svg';
+import Altarea from '../../styles/src/svg/gps_altarea.svg';
 import Logo_hill_side from '../../styles/src/page2/logo_hill_side.svg'
+import Icon_surface from '../../styles/src/svg/icon_surface.svg'
+import Icon_calendrier from '../../styles/src/svg/icon_calendrier.svg'
+import Groupe_395 from '../../styles/src/svg/Groupe_395.svg'
+// import Logo_purple from '../../styles/src/svg/Logo_purple.svg'
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
 import Icon_open_photo from "../../styles/src/page2/icon_open_photo.svg"
@@ -356,6 +361,7 @@ interface Block6_3Props{
 
 //page1
 const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block1_1Props) => {
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -379,12 +385,14 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     <div className="block1">
         <div className="image">
             <div className="top-box">
-                <div className="square"></div>
+                <div className="square">
+                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+                </div>
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
                 <div className="button" onClick={show_input}>
-                    <div className="message-icon"></div>
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
                 <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -457,16 +465,16 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <input type="text" name="firstname" placeholder="*Ville" className="middler pre"></input>
                 </div>
                 <textarea name="message" id="" cols={30} rows={10} placeholder="Message" className="message"></textarea>
-                <button type="submit" className="envoyer" >Envoyer</button>
+                <button type="submit" className="envoyer" onClick={show_input}>Envoyer</button>
                 <div className="bottomText" >{introduce}</div>
             </form> 
-            <div className="merci">
+            {/* <div className="merci">
                 <div className="circular">
                     <Image src={src} className="logo" width={100} height={100}></Image>
                 </div>
                 <button type="submit" className="fermer" onClick={show_input}>Fermer</button>
                 <div className="bottomText">{introduce}</div>
-            </div> 
+            </div>  */}
         </div>
     </div>
     )
@@ -546,14 +554,14 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
 
                                 <div className="white-bottom-box flex">
                                     <div className="Surface flex">
-                                        <div className="Surface-icon"></div>
+                                        <Icon_surface className="Surface-icon"></Icon_surface>
                                         <div className="Surface-name">
                                             <div className="Surface-Surface">{text3[0]}</div>
                                             <div className="Surface-info">{text3[1]}</div>
                                         </div>
                                     </div>
                                     <div className="Livraison flex">
-                                        <div className="Livraison-icon"></div>
+                                        <Icon_calendrier className="Surface-icon"></Icon_calendrier>
                                         <div className="Livraison-name">
                                             <div className="Surface-Surface">{text3[2]}</div>
                                             <div className="Surface-info">{text3[3]}</div>
@@ -594,7 +602,8 @@ const Block1_3 = ({text1}: Block1_3Props) => {
                     <text className="text2">{text1[2]}</text>
                 </div>
                 <div className="text-box-button">
-                    <div className="letter-box"></div>
+                    {/* <div className="letter-box"></div> */}
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="letter-box"></Email>
                     <div>{text1[3]}</div>
                 </div>
             </div>
@@ -642,13 +651,13 @@ const Block1_5=({text1,text2,text3}: Block1_5Props)=>{
     return(
         <div className="block5">
             <div className="block5-top">
-                <div className="top-icon"></div>
+                <Groupe_395 aria-label="aria-label" className="top-icon"></Groupe_395>
                 <text className="top-name">{text1[0]}</text>
             </div>
             <div className="block5-middle">
                 <div className="question">{text1[1]}</div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                    <Email aria-label="aria-label" fill="#42145F" stroke="#42145F" className="message-icon"></Email>
                     <div className="title-color-text">{text1[2]}</div>
                 </div>
             </div>
@@ -677,6 +686,7 @@ const Block1_5=({text1,text2,text3}: Block1_5Props)=>{
 
 //page2
 const Block2_1=({text0, text1, text2, text3, text4, text5}:Block2_1Props)=>{
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:4900,left:0,behavior:"smooth"
@@ -690,12 +700,16 @@ const Block2_1=({text0, text1, text2, text3, text4, text5}:Block2_1Props)=>{
     <div className="block2_1">
         <div className="image">
             <div className="top-box">
-                <div className="square"></div>
+                <div className="square">
+                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+
+                </div>
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
                 <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -796,6 +810,7 @@ const Block2_2=({number1, text1, text2, text3}:Block2_2Props)=>{
 
 //page3
 const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props)=>{
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -804,12 +819,16 @@ const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props
     <div className="block3_1">
         <div className="image">
         <div className="top-box">
-                <div className="square"></div>
+                <div className="square">
+                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+                    
+                </div>
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
                 <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -852,7 +871,8 @@ const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props
                     </div>
                 </div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
             </div>
@@ -927,7 +947,6 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                         {/* <Logo_hill_png aria-label="aria-label">
                         </Logo_hill_png> */}
                         <Image src={Logo_hill_png} aria-label="aria-label" className="logoHill"></Image>
-                        
                     </div>
                     {arr.map((e,i)=>
                         <div className="messages">
@@ -938,7 +957,8 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                     <div className="bottom">
                         <div className="question">{text3[0]}</div>
                         <div className="button">
-                            <div className="message-icon"></div>
+                            <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+                            
                             <div className="title-color-text">{text3[1]}</div>
                         </div>
                     </div>
@@ -977,6 +997,7 @@ const Block3_5=({text1}:Block3_5Props)=>{
 
 //page4
 const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -986,12 +1007,16 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
     <div className="block4_1">
         <div className="image">
         <div className="top-box">
-            <div className="square"></div>
+            <div className="square">
+                <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+
+            </div>
             <div className="title-text">{text0[0]}</div>
             <div className="title-text" onClick={show_box}>{text0[1]}</div>
             <div className="title-text">{text0[2]}</div>
             <div className="button">
-                <div className="message-icon"></div>
+            <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                 <div className="title-color-text">{text0[3]}</div>
             </div>
             <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -1194,6 +1219,7 @@ const Block4_4=({text1,text2}:Block4_4Props)=>{
 //page5
 //page1
 const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => {
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:17000,left:0,behavior:"smooth"
@@ -1207,12 +1233,16 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
     <div className="block5_1">
         <div className="image">
             <div className="top-box">
-                <div className="square"></div>
+                <div className="square">
+                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+
+                </div>
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
                 <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -1470,6 +1500,7 @@ const Block5_5=({text1,text2}:Block5_5Props)=>{
 }
 //page6
 const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
     let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
     let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
@@ -1482,12 +1513,16 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
     <div className="block6_1">
         <div className="image">
             <div className="top-box">
-                <div className="square"></div>
+                <div className="square">
+                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+
+                </div>
                 <div className="title-text">{text0[0]}</div>
                 <div className="title-text" onClick={show_box}>{text0[1]}</div>
                 <div className="title-text">{text0[2]}</div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
                 <div className={(show ? 'chooseBox' : 'hidden')}>
@@ -1518,7 +1553,8 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
                     </div>
                 </div>
                 <div className="button">
-                    <div className="message-icon"></div>
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
             </div>
