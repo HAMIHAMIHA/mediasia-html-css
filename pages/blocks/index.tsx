@@ -9,6 +9,8 @@ import Logo_hill_side from '../../styles/src/page2/logo_hill_side.svg'
 import Icon_surface from '../../styles/src/svg/icon_surface.svg'
 import Icon_calendrier from '../../styles/src/svg/icon_calendrier.svg'
 import Groupe_395 from '../../styles/src/svg/Groupe_395.svg'
+import Groupe_314 from '../../styles/src/svg/Groupe_314.svg'
+import Groupe_315 from '../../styles/src/svg/Groupe_315.svg'
 // import Logo_purple from '../../styles/src/svg/Logo_purple.svg'
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
@@ -465,7 +467,12 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <input type="text" name="firstname" placeholder="*Ville" className="middler pre"></input>
                 </div>
                 <textarea name="message" id="" cols={30} rows={10} placeholder="Message" className="message"></textarea>
-                <button type="submit" className="envoyer" onClick={show_input}>Envoyer</button>
+                <button type="submit" className="envoyer" onClick={show_input}>
+                    <div className="email">
+                        <Email aria-label="aria-label" fill="#42145F" stroke="#42145F" className="message-icon"></Email>
+                    </div>
+                    <div>Envoyer</div>
+                </button>
                 <div className="bottomText" >{introduce}</div>
             </form> 
             {/* <div className="merci">
@@ -535,7 +542,12 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     {`console.log("1")`}
                 </Script>
             </div>
-            <div className={"click-move" + (open ? ' click-move-click' : '') } style={{}} onClick={change_map_size}>{'<'}</div>
+            <div className={"click-move" + (open ? ' hidden' : ' ') } style={{}} onClick={change_map_size}>
+                <Groupe_314 aria-label="aria-label" className="arrows"></Groupe_314>
+            </div>
+            <div className={"click-move" + (open ? ' click-move-click' : ' hidden') } style={{}} onClick={change_map_size}>
+                <Groupe_315 aria-label="aria-label" className="arrows"></Groupe_315>
+            </div>
             <div className="scroll-box-outside">
                 <div className={"scroll-box" + (open ? ' box-show' : '') }>
                     {/* <Image
@@ -552,15 +564,15 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                                     <div className="picture-text2">{text2[3]}</div>
                                 </div>
 
-                                <div className="white-bottom-box flex">
-                                    <div className="Surface flex">
+                                <div className="white-bottom-box">
+                                    <div className="Surface-flex">
                                         <Icon_surface className="Surface-icon"></Icon_surface>
                                         <div className="Surface-name">
                                             <div className="Surface-Surface">{text3[0]}</div>
                                             <div className="Surface-info">{text3[1]}</div>
                                         </div>
                                     </div>
-                                    <div className="Livraison flex">
+                                    <div className="Surface-flex">
                                         <Icon_calendrier className="Surface-icon"></Icon_calendrier>
                                         <div className="Livraison-name">
                                             <div className="Surface-Surface">{text3[2]}</div>
@@ -648,6 +660,7 @@ const Block1_4 = ({text1}: Block1_4Props)=>{
     )
 }
 const Block1_5=({text1,text2,text3}: Block1_5Props)=>{
+    let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
     return(
         <div className="block5">
             <div className="block5-top">
@@ -665,7 +678,9 @@ const Block1_5=({text1,text2,text3}: Block1_5Props)=>{
                 <div className="options">
                     <div className="option">{text2[0]}</div>
                     <div className="option">{text2[1]}</div>
-                    <div className="brand"></div>
+                    <div className="brand">
+                        <Image src={src_logo_purple} width={80} height={80}></Image>
+                    </div>
                     <div className="option">{text2[2]}</div>
                     <div className="option">{text2[3]}</div>
                 </div>
@@ -771,15 +786,15 @@ const Block2_2=({number1, text1, text2, text3}:Block2_2Props)=>{
                                 </div>
 
                                 <div className="white-bottom-box flex">
-                                    <div className="Surface flex">
-                                        <div className="Surface-icon"></div>
+                                    <div className="Surface-flex">
+                                        <Icon_surface className="Surface-icon"></Icon_surface>
                                         <div className="Surface-name">
                                             <div className="Surface-Surface">{text3[0]}</div>
                                             <div className="Surface-info">{text3[1]}</div>
                                         </div>
                                     </div>
-                                    <div className="Livraison flex">
-                                        <div className="Livraison-icon"></div>
+                                    <div className="Surface-flex">
+                                        <Icon_calendrier className="Surface-icon"></Icon_calendrier>
                                         <div className="Livraison-name">
                                             <div className="Surface-Surface">{text3[2]}</div>
                                             <div className="Surface-info">{text3[3]}</div>
@@ -811,6 +826,8 @@ const Block2_2=({number1, text1, text2, text3}:Block2_2Props)=>{
 //page3
 const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props)=>{
     let src_logo_purple=require(`../../styles/src/LOGO/LOGO_purple@2x.png`).default
+    let label_1=require(`../../styles/src/page3/label_1@2x.png`)
+    let label_2=require(`../../styles/src/page3/label_2@2x.png`)
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -819,67 +836,68 @@ const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props
     <div className="block3_1">
         <div className="image">
         <div className="top-box">
-                <div className="square">
-                    <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
-                    
-                </div>
-                <div className="title-text">{text0[0]}</div>
-                <div className="title-text" onClick={show_box}>{text0[1]}</div>
-                <div className="title-text">{text0[2]}</div>
-                <div className="button">
+            <div className="square">
+                <Image src={src_logo_purple} className="logo_purple" width={100} height={100}></Image>
+            </div>
+            <div className="title-text">{text0[0]}</div>
+            <div className="title-text" onClick={show_box}>{text0[1]}</div>
+            <div className="title-text">{text0[2]}</div>
+            <div className="button">
                 <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
-
-                    <div className="title-color-text">{text0[3]}</div>
-                </div>
-                <div className={(show ? 'chooseBox' : 'hidden')}>
-                    <div className="leftPart">{text4}</div>
-                    <div className="rightPart">
-                    {text5.map((e,i)=>
-                        <div className="choice">{e}</div>
-                    )}
-                    </div>
+                <div className="title-color-text">{text0[3]}</div>
+            </div>
+            <div className={(show ? 'chooseBox' : 'hidden')}>
+                <div className="leftPart">{text4}</div>
+                <div className="rightPart">
+                {text5.map((e,i)=>
+                    <div className="choice">{e}</div>
+                )}
                 </div>
             </div>
-            <div className="text">
-                <div className="brand">
-                    <Logo_hill_side aria-label="aria-label"></Logo_hill_side>
+        </div>
+        <div className="text">
+            <div className="brand">
+                <Logo_hill_side aria-label="aria-label"></Logo_hill_side>
+            </div>
+            <div className="text1">
+                {text1}
+            </div>
+            <div className="icons">
+                <div className="icon-lower">
+                    <Image src={label_1} width={100} height={24}></Image>
                 </div>
-                <div className="text1">
-                    {text1}
+                <div className="icon">
+                    <Image src={label_2} width={57} height={50}></Image>
                 </div>
-                <div className="icons">
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
+                <div className="icon"></div>
+            </div>
+            <div className="infos">
+                <div className="line1">
+                    <text className="title">{text2[0]}:</text>
+                    <text className="content"> {number1[0]}</text>
+                    <text className="content"> m<sup>2</sup></text>
+                    <text className="content"> {text2[3]}</text>
                 </div>
-                <div className="infos">
-                    <div className="line1">
-                        <text className="title">{text2[0]}:</text>
-                        <text className="content"> {number1[0]}</text>
-                        <text className="content"> m<sup>2</sup></text>
-                        <text className="content"> {text2[3]}</text>
-                    </div>
-                    <div className="line2">
-                        <text className="title">{text2[1]}:</text>
-                        <text className="content"> {number1[1]}<sup>e</sup></text>
-                        <text className="content"> {text2[4]}</text>
-                        <text className="content"> {number1[2]}</text>
-                    </div>
-                    <div className="line3">
-                        <text className="title">{text2[2]}:</text>
-                        <text className="content"> {text3[0]}</text>
-                    </div>
+                <div className="line2">
+                    <text className="title">{text2[1]}:</text>
+                    <text className="content"> {number1[1]}<sup>e</sup></text>
+                    <text className="content"> {text2[4]}</text>
+                    <text className="content"> {number1[2]}</text>
                 </div>
-                <div className="button">
+                <div className="line3">
+                    <text className="title">{text2[2]}:</text>
+                    <text className="content"> {text3[0]}</text>
+                </div>
+            </div>
+            <div className="button">
                 <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
-
-                    <div className="title-color-text">{text0[3]}</div>
-                </div>
+                <div className="title-color-text">{text0[3]}</div>
             </div>
-            <div className="white-ball"></div>
-            <div className="white-box OccitanieBackground3">
-                <div className="color-ball OccitanieBackground7"></div>
-            </div>
+        </div>
+        <div className="white-ball"></div>
+        <div className="white-box OccitanieBackground3">
+            <div className="color-ball OccitanieBackground7"></div>
+        </div>
         </div>
     </div>
     )
@@ -1653,8 +1671,6 @@ const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
         </div>
     )
 }
-
-
 
 
 
