@@ -3,14 +3,17 @@ import Map,{Marker} from 'react-map-gl';
 import Script from 'next/script'
 import Image from "next/image";
 import Email from "../../styles/src/svg/mail.svg"
+import Emailm from "../../styles/src/svg/mailm.svg"
 import Logo from '../../styles/src/svg/Composant11_2.svg';
 import Altarea from '../../styles/src/svg/gps_altarea.svg';
 import Logo_hill_side from '../../styles/src/page2/logo_hill_side.svg'
+// import Logom from '../../styles/src/svg/Logom.svg'
 import Icon_surface from '../../styles/src/svg/icon_surface.svg'
 import Icon_calendrier from '../../styles/src/svg/icon_calendrier.svg'
 import Groupe_395 from '../../styles/src/svg/Groupe_395.svg'
 import Groupe_314 from '../../styles/src/svg/Groupe_314.svg'
 import Groupe_315 from '../../styles/src/svg/Groupe_315.svg'
+import Burger_menu from '../../styles/src/svg/burger_menu.svg'
 // import Logo_purple from '../../styles/src/svg/Logo_purple.svg'
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
@@ -406,30 +409,72 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     </div>
                 </div>
             </div>
-            <div className="color-button" onClick={move_down}>
-                <Logo aria-label="aria-label"></Logo>
-            </div>
-            <div className="text">
-                <div className="title">{text1}</div>
-                <div className="content1">
-                    <text className="text-normal">{text2[0]}</text>
-                    <text className="text-color">{text2[1]}</text>
-                    <text className="text-normal">{text2[2]}</text>
-                    <text className="text-color">{text2[3]}</text>             
+            <div className="text-box">
+                <div className="text">
+                    <div className="title">{text1}</div>
+                    <div className="content1">
+                        <text className="text-normal">{text2[0]}</text>
+                        <text className="text-color">{text2[1]}</text>
+                        <text className="text-normal">{text2[2]}</text>
+                        <text className="text-color">{text2[3]}</text>             
+                    </div>
+                    <div className="content2">
+                        <text className="text-normal">{text2[4]}</text>
+                        <text className="text-color">{text2[5]}</text>
+                        <text className="text-normal">{text2[6]}</text>
+                    </div>
                 </div>
-                <div className="content2">
-                    <text className="text-normal">{text2[4]}</text>
-                    <text className="text-color">{text2[5]}</text>
-                    <text className="text-normal">{text2[6]}</text>
+                <div className="color-button" onClick={move_down}>
+                    <Logo aria-label="aria-label"></Logo>
                 </div>
             </div>
-            <div className="white-ball"></div>
-            <div className="white-text">
-                <text>{text3[0]}</text>
-                <text>{text3[1]}</text>
+            <div className="white-text-box">
+                <div className="white-text">
+                    <text>{text3[0]}</text>
+                    <text>{text3[1]}</text>
+                </div>
+            </div>
+            <div className="white-ball-box">
+                <div className="white-ball"></div>
             </div>
             <div className="white-box">
                 <div className="color-ball"></div>
+            </div>
+            <div className="mtop-box">
+                <div className="left">
+                    <div className="square">
+                        <Image src={src_logo_purple} className="logo_purple" width={65} height={65}></Image>
+                    </div>
+                    <div className="burger">
+                        <Burger_menu></Burger_menu>
+                    </div>
+                </div>
+                <div className="buttonm" onClick={show_input}>
+                    <Emailm aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Emailm>
+                    <div className="title-color-text">{text0[3]}</div>
+                </div>
+
+            </div>
+            <div className="mtext-box">
+                <div className="mtop-box">
+                    <div className="text">
+                        <div className="title">{text1}</div>
+                        <div className="content1">
+                            <text className="text-normal">{text2[0] } </text>
+                            <text className="text-color">{text2[1] } </text>
+                            <text className="text-normal">{text2[2] } </text>
+                            <text className="text-color">{text2[3] } </text>             
+                        </div>
+                        <div className="content2">
+                            <text className="text-normal">{text2[4] } </text>
+                            <text className="text-color">{text2[5] } </text>
+                            <text className="text-normal">{text2[6] } </text>
+                        </div>
+                    </div>
+                    <div className="color-button" onClick={move_down}>
+                        <Logo aria-label="aria-label"></Logo>
+                    </div>
+                </div>
             </div>
         </div>
         <div className={(showi ? "inputBox":"hidden")}>
@@ -542,12 +587,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     {`console.log("1")`}
                 </Script>
             </div>
-            <div className={"click-move" + (open ? ' hidden' : ' ') } style={{}} onClick={change_map_size}>
-                <Groupe_314 aria-label="aria-label" className="arrows"></Groupe_314>
-            </div>
-            <div className={"click-move" + (open ? ' click-move-click' : ' hidden') } style={{}} onClick={change_map_size}>
-                <Groupe_315 aria-label="aria-label" className="arrows"></Groupe_315>
-            </div>
+
             <div className="scroll-box-outside">
                 <div className={"scroll-box" + (open ? ' box-show' : '') }>
                     {/* <Image
@@ -598,6 +638,12 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     <div className="selection">5</div>
                     <div className="selection">6</div>
                     <div className="selection">{">"}</div>
+                </div>
+                <div className={"click-move" + (open ? ' hidden' : '') } style={{}} onClick={change_map_size}>
+                    <Groupe_314 aria-label="aria-label" className="arrows"></Groupe_314>
+                </div>
+                <div className={"click-move" + (open ? '' : ' hidden') } style={{}} onClick={change_map_size}>
+                    <Groupe_315 aria-label="aria-label" className="arrows"></Groupe_315>
                 </div>
             </div>
         </div>
@@ -736,22 +782,28 @@ const Block2_1=({text0, text1, text2, text3, text4, text5}:Block2_1Props)=>{
                     </div>
                 </div>
             </div>
-            <div className="color-button" onClick={move_down}>
-                <Logo aria-label="aria-label"></Logo>
-            </div>
-            <div className="text">
-                <div className="title Occitanie">{text1}</div>
-                <div className="content1">
-                    <text className="text-normal">{text2[0]}</text>
+            <div className="text-box">
+                <div className="text">
+                    <div className="title Occitanie">{text1}</div>
+                    <div className="content1">
+                        <text className="text-normal">{text2[0]}</text>
+                    </div>
+                    <div className="content2">
+                        <text className="text-normal">{text2[1]}</text>
+                    </div>
                 </div>
-                <div className="content2">
-                    <text className="text-normal">{text2[1]}</text>
+                <div className="color-button" onClick={move_down}>
+                    <Logo aria-label="aria-label"></Logo>
                 </div>
             </div>
-            <div className="white-ball"></div>
-            <div className="white-text">
-                <text>{text3[0]}</text>
-                <text>{text3[1]}</text>
+            <div className="white-ball-box">
+                <div className="white-ball"></div>
+            </div>
+            <div className="white-text-box">
+                <div className="white-text">
+                    <text>{text3[0]}</text>
+                    <text>{text3[1]}</text>
+                </div>
             </div>
             <div className="white-box OccitanieBackground3">
                 <div className="color-ball OccitanieBackground7"></div>
@@ -855,46 +907,50 @@ const Block3_1=({text0, text1, text2, text3, text4,text5, number1}:Block3_1Props
                 </div>
             </div>
         </div>
-        <div className="text">
-            <div className="brand">
-                <Logo_hill_side aria-label="aria-label"></Logo_hill_side>
-            </div>
-            <div className="text1">
-                {text1}
-            </div>
-            <div className="icons">
-                <div className="icon-lower">
-                    <Image src={label_1} width={100} height={24}></Image>
+        <div className="text-box">
+            <div className="text">
+                <div className="brand">
+                    <Logo_hill_side aria-label="aria-label"></Logo_hill_side>
                 </div>
-                <div className="icon">
-                    <Image src={label_2} width={57} height={50}></Image>
+                <div className="text1">
+                    {text1}
                 </div>
-                <div className="icon"></div>
-            </div>
-            <div className="infos">
-                <div className="line1">
-                    <text className="title">{text2[0]}:</text>
-                    <text className="content"> {number1[0]}</text>
-                    <text className="content"> m<sup>2</sup></text>
-                    <text className="content"> {text2[3]}</text>
+                <div className="icons">
+                    <div className="icon-lower">
+                        <Image src={label_1} width={100} height={24}></Image>
+                    </div>
+                    <div className="icon">
+                        <Image src={label_2} width={57} height={50}></Image>
+                    </div>
+                    <div className="icon"></div>
                 </div>
-                <div className="line2">
-                    <text className="title">{text2[1]}:</text>
-                    <text className="content"> {number1[1]}<sup>e</sup></text>
-                    <text className="content"> {text2[4]}</text>
-                    <text className="content"> {number1[2]}</text>
+                <div className="infos">
+                    <div className="line1">
+                        <text className="title">{text2[0]}:</text>
+                        <text className="content"> {number1[0]}</text>
+                        <text className="content"> m<sup>2</sup></text>
+                        <text className="content"> {text2[3]}</text>
+                    </div>
+                    <div className="line2">
+                        <text className="title">{text2[1]}:</text>
+                        <text className="content"> {number1[1]}<sup>e</sup></text>
+                        <text className="content"> {text2[4]}</text>
+                        <text className="content"> {number1[2]}</text>
+                    </div>
+                    <div className="line3">
+                        <text className="title">{text2[2]}:</text>
+                        <text className="content"> {text3[0]}</text>
+                    </div>
                 </div>
-                <div className="line3">
-                    <text className="title">{text2[2]}:</text>
-                    <text className="content"> {text3[0]}</text>
+                <div className="button">
+                    <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
+                    <div className="title-color-text">{text0[3]}</div>
                 </div>
-            </div>
-            <div className="button">
-                <Email aria-label="aria-label" fill="white" stroke="white" className="message-icon"></Email>
-                <div className="title-color-text">{text0[3]}</div>
             </div>
         </div>
-        <div className="white-ball"></div>
+        <div className="white-ball-box">
+            <div className="white-ball"></div>
+        </div>
         <div className="white-box OccitanieBackground3">
             <div className="color-ball OccitanieBackground7"></div>
         </div>
@@ -995,7 +1051,7 @@ const Block3_4=({text1}:Block3_4Props)=>{
                 <div className="button">{text1[2]}</div>
             </div>
             <div className="right">
-                <Image  src={src} alt="brand1" className="brand"/>
+                <Image  src={src} alt="brand1" width={960} height={500} className="brand"/>
             </div>
         </div>
     )
@@ -1046,18 +1102,22 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
                 </div>
             </div>
         </div>
-        <div className="text">
-            <div className="title1">
-                {text1[0]}
-            </div>
-            <div className="paragraph">
-                {text1[1]}
-            </div>
-            <div className="paragraph">
-                {text1[2]}
+        <div className="text-box">
+            <div className="text">
+                <div className="title1">
+                    {text1[0]}
+                </div>
+                <div className="paragraph">
+                    {text1[1]}
+                </div>
+                <div className="paragraph">
+                    {text1[2]}
+                </div>
             </div>
         </div>
-        <div className="white-ball"></div>
+        <div className="white-ball-box">
+            <div className="white-ball"></div>
+        </div>
         <div className="white-box">
             <div className="color-ball"></div>
             <div className="picture">
@@ -1175,17 +1235,19 @@ const Block4_3=({text1,text2}:Block4_3Props)=>{
                 </div>
             </div>
             <div className="bottom">
-                <div className="left">
-                    <div className="title">{text2[0]}</div>
-                    <div className="content">{text2[1]}</div>
-                    <div className="content">{text2[2]}</div>
+                <div className="bottom-box">
+                    <div className="left">
+                        <div className="title">{text2[0]}</div>
+                        <div className="content">{text2[1]}</div>
+                        <div className="content">{text2[2]}</div>
+                    </div>
                 </div>
                 <div className="right">
-                    <div className="rightPicture">
-                        <Image  src={src} alt="brand1" className="image"/>
+                        <div className="rightPicture">
+                            <Image  src={src} alt="brand1" className="image"/>
+                        </div>
+                        <div className="smallText">{text2[3]}</div>
                     </div>
-                    <div className="smallText">{text2[3]}</div>
-                </div>
             </div>
         </div>
     )
@@ -1218,15 +1280,15 @@ const Block4_4=({text1,text2}:Block4_4Props)=>{
             </div>
             <div className="pictures">
                 <div className="pictureBox">
-                    <Image  src={src2} alt="brand1" className="image" width={640} height={442}/>
+                    <Image  src={src2} alt="brand1" className="image" width={800} height={552}/>
                     <div className="title">{text2[0]}</div>
                 </div>
                 <div className="pictureBox">
-                    <Image  src={src3} alt="brand1" className="image" width={640} height={442}/>
+                    <Image  src={src3} alt="brand1" className="image" width={800} height={552}/>
                     <div className="title">{text2[1]}</div>
                 </div>
                 <div className="pictureBox">
-                    <Image  src={src4} alt="brand1" className="image" width={640} height={442}/>
+                    <Image  src={src4} alt="brand1" className="image" width={800} height={552}/>
                     <div className="title">{text2[2]}</div>
                 </div>
             </div>
@@ -1272,20 +1334,27 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
                     </div>
                 </div>
             </div>
-            <div className="color-button" onClick={move_down}>
-                <Logo aria-label="aria-label"></Logo>
-            </div>
-            <div className="text">
-                <div className="title">{text1}</div>
-                <div className="content1">
-                    <text className="text-normal">{text2[0]}</text>             
+            <div className="text-box">
+                <div className="text">
+                    <div className="title">{text1}</div>
+                    <div className="content1">
+                        <text className="text-normal">{text2[0]}</text>             
+                    </div>
+                </div>
+                <div className="color-button" onClick={move_down}>
+                    <Logo aria-label="aria-label"></Logo>
                 </div>
             </div>
-            <div className="white-ball"></div>
-            <div className="white-text">
-                <text>{text3[0]}</text>
-                <text>{text3[1]}</text>
+            <div className="white-ball-box">
+                <div className="white-ball"></div>
             </div>
+            <div className="white-text-box">
+                <div className="white-text">
+                    <text>{text3[0]}</text>
+                    <text>{text3[1]}</text>
+                </div>
+            </div>
+
             <div className="white-box">
                 <div className="color-ball"></div>
             </div>
@@ -1328,25 +1397,27 @@ const Block5_2=({text1,text2}:Block5_2Props)=>{
                 </div>
             </div>
             <div className="nom">
-                <div className="left">
-                    <div className="title">{text2[0]}</div>
-                    <div className="introduce">{text2[1]}</div>
-                    <div className="content">{text2[2]}</div>
-                    <div className="brands">
-                        <div className="brand1">
-                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                <div className="left-box">
+                    <div className="left">
+                        <div className="title">{text2[0]}</div>
+                        <div className="introduce">{text2[1]}</div>
+                        <div className="content">{text2[2]}</div>
+                        <div className="brands">
+                            <div className="brand1">
+                                <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand2} alt="brand1" width={58} height={50} />
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand3} alt="brand1" width={68} height={50} />
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand4} alt="brand1" width={114} height={50} />
+                            </div>
                         </div>
-                        <div className="brand2">
-                        <Image  src={brand2} alt="brand1" width={58} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand3} alt="brand1" width={68} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand4} alt="brand1" width={114} height={50} />
-                        </div>
+                        <div className="button">{text2[3]}</div>
                     </div>
-                    <div className="button">{text2[3]}</div>
                 </div>
                 <div className="right">
                     <Image  src={src2} alt="brand1" width={580} height={500}/>
@@ -1375,25 +1446,27 @@ const Block5_3=({text1,text2}:Block5_3Props)=>{
                 </div>
             </div>
             <div className="texts">
-                <div className="left">
-                    <div className="title">{text2[0]}</div>
-                    <div className="introduce">{text2[1]}</div>
-                    <div className="content">{text2[2]}</div>
-                    <div className="brands">
-                        <div className="brand1">
-                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                <div className="leftBox">
+                    <div className="left">
+                        <div className="title">{text2[0]}</div>
+                        <div className="introduce">{text2[1]}</div>
+                        <div className="content">{text2[2]}</div>
+                        <div className="brands">
+                            <div className="brand1">
+                                <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand2} alt="brand1" width={58} height={50} />
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand3} alt="brand1" width={68} height={50} />
+                            </div>
+                            <div className="brand2">
+                            <Image  src={brand4} alt="brand1" width={114} height={50} />
+                            </div>
                         </div>
-                        <div className="brand2">
-                        <Image  src={brand2} alt="brand1" width={58} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand3} alt="brand1" width={68} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand4} alt="brand1" width={114} height={50} />
-                        </div>
+                        <div className="button">{text2[3]}</div>
                     </div>
-                    <div className="button">{text2[3]}</div>
                 </div>
                 <div className='right'>
                     <div className="title">{text1[0]}</div>
@@ -1464,25 +1537,27 @@ const Block5_5=({text1,text2}:Block5_5Props)=>{
     return(
         <div className="block5_5">
             <div className="community">
-                <div className='left'>
-                    <div className="title">{text1[0]}</div>
-                    <div className="introduce">{text1[1]}</div>
-                    <div className="content">{text1[2]}</div>
-                    <div className="brands">
-                        <div className="brand1">
-                            <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                <div className="leftBox">
+                    <div className='left'>
+                        <div className="title">{text1[0]}</div>
+                        <div className="introduce">{text1[1]}</div>
+                        <div className="content">{text1[2]}</div>
+                        <div className="brands">
+                            <div className="brand1">
+                                <Image  src={brand1} alt="brand1" width={100} height={24} className="brand1"/>
+                            </div>
+                            <div className="brand2">
+                                <Image  src={brand2} alt="brand1" width={58} height={50} />
+                            </div>
+                            <div className="brand2">
+                                <Image  src={brand3} alt="brand1" width={68} height={50} />
+                            </div>
+                            <div className="brand2">
+                                <Image  src={brand4} alt="brand1" width={114} height={50} />
+                            </div>
                         </div>
-                        <div className="brand2">
-                        <Image  src={brand2} alt="brand1" width={58} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand3} alt="brand1" width={68} height={50} />
-                        </div>
-                        <div className="brand2">
-                        <Image  src={brand4} alt="brand1" width={114} height={50} />
-                        </div>
+                        <div className="button">{text1[3]}</div>
                     </div>
-                    <div className="button">{text1[3]}</div>
                 </div>
                 <div className='right'>
                     <Image  src={src1} alt="brand1" width={940} height={500}/>
@@ -1552,7 +1627,8 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
                     </div>
                 </div>
             </div>
-            <div className="text">
+            <div className="text-box">
+                <div className="text">
                 <div className="littleTitle">{text1[0]}</div>
                 <div className="Title">{text1[1]}</div>
                 <div className="content">{text1[2]}</div>
@@ -1575,11 +1651,16 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
 
                     <div className="title-color-text">{text0[3]}</div>
                 </div>
+                </div>
             </div>
-            <div className="white-ball"></div>
-            <div className="white-text">
-                <text>{text3[0]}</text>
-                <text>{text3[1]}</text>
+            <div className="white-ball-box">
+                <div className="white-ball"></div>
+            </div>
+            <div className="white-text-box">
+                <div className="white-text">
+                    <text>{text3[0]}</text>
+                    <text>{text3[1]}</text>
+                </div>
             </div>
             <div className="white-box">
                 <div className="color-ball"></div>
@@ -1610,8 +1691,10 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
                 </div>
             </div>
             <div className="second">
-                <div className="left">
-                    <Image  src={src3} alt="brand1" width={580} height={500} className="brand1"/>
+                <div className="leftBox">
+                    <div className="left">
+                        <Image  src={src3} alt="brand1" width={580} height={500} className="brand1"/>
+                    </div>
                 </div>
                 <div className="right">
                     <div className="title">{text1}</div>
@@ -1625,8 +1708,10 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
                 </div>
             </div>
             <div className="third">
-                <div className="left">
-                    {text4}
+                <div className="leftBox">
+                    <div className="left">
+                        {text4}
+                    </div>
                 </div>
                 <div className="right">
                     <Image  src={src4} alt="brand1" width={940} height={500} className="brand1"/>
@@ -1660,8 +1745,10 @@ const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
                 </div>
             </div>
             <div className="secondParagraph">
-                <div className="left">
-                    <Image  src={src1} alt="brand1" className="image" width={580} height={500}/>
+                <div className="leftBox">                
+                    <div className="left">
+                        <Image  src={src1} alt="brand1" className="image" width={580} height={500}/>
+                    </div>
                 </div>
                 <div className="right">
                     <Image  src={src2} alt="brand1" className="image" width={940} height={500}/>
