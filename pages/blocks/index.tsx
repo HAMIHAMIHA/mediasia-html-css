@@ -16,7 +16,7 @@ const Block = () => {
         <Block1_1 
         text0={["Le Groupe Altarea","Nos programmes","Nos références","Nous contacter"]}
         text1={"LE BUREAU EN RÉGION PAR COGEDIM"} 
-        text2={["Premier promoteur en immobilier d'entreprise à l'échelle nationale, ","Cogedim","développe des opérations de bureau partout en France autour de 3 pôles majeurs : ","la prestation de services, les immeubles clés en main utilisateur et l'investissement.","Le Groupe a pour vocation d'","accompagner les entreprises de toutes tailles","dans leur stratégie d'implantation régionale dans un contexte où les modes de travail se transforment et les enjeux de développement durable sont prépondérants."]}
+        text2={["Premier promoteur en immobilier d'entreprise à l'échelle nationale, ","Cogedim ","développe des opérations de bureau partout en France autour de 3 pôles majeurs : ","la prestation de services, les immeubles clés en main utilisateur et l'investissement.","Le Groupe a pour vocation d'","accompagner les entreprises de toutes tailles ","dans leur stratégie d'implantation régionale dans un contexte où les modes de travail se transforment et les enjeux de développement durable sont prépondérants."]}
         text3={[
         "       ",
         "Imaginer le futur de l'immobilier d'entreprise"]}
@@ -441,21 +441,12 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     </div>
                 </div>
             </div>
-            <div className="mtext-box">
+            <div className="text-box">
                 <div className="mtop-box">
-                    <div className="text">
+                    <div className="mtext">
                         <div className="title">{text1}</div>
-                        <div className="content1">
-                            <text className="text-normal">{text2[0] } </text>
-                            <text className="text-color">{text2[1] } </text>
-                            <text className="text-normal">{text2[2] } </text>
-                            <text className="text-color">{text2[3] } </text>             
-                        </div>
-                        <div className="content2">
-                            <text className="text-normal">{text2[4] } </text>
-                            <text className="text-color">{text2[5] } </text>
-                            <text className="text-normal">{text2[6] } </text>
-                        </div>
+                        <p className="content1">{text2[0]}<strong>{text2[1]}</strong>{text2[2]}<strong>{text2[3]}</strong></p>          
+                        <p className="content2">{text2[4]}<strong>{text2[5]}</strong>{text2[6]}</p>
                     </div>
                     <div className="colorButton" onClick={move_down}>
                         <div className="icon-composant">
@@ -464,24 +455,13 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                         </div>
                     </div>
                 </div>
-                <div className="whiteText">
+                <div className="mwhiteText">
                     {text3[1]}
                 </div>
-            </div>
-            <div className="text-box">
                 <div className="text">
                     <div className="title">{text1}</div>
-                    <div className="content1">
-                        <text className="text-normal">{text2[0]}</text>
-                        <text className="text-color">{text2[1]}</text>
-                        <text className="text-normal">{text2[2]}</text>
-                        <text className="text-color">{text2[3]}</text>             
-                    </div>
-                    <div className="content2">
-                        <text className="text-normal">{text2[4]}</text>
-                        <text className="text-color">{text2[5]}</text>
-                        <text className="text-normal">{text2[6]}</text>
-                    </div>
+                    <p className="content1">{text2[0]}<strong>{text2[1]}</strong>{text2[2]}<strong>{text2[3]}</strong></p>          
+                    <p className="content2">{text2[4]}<strong>{text2[5]}</strong>{text2[6]}</p>
                 </div>
                 <div className="color-button" onClick={move_down}>
                     <div className="icon-composant">
@@ -529,164 +509,168 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     arrm.push(obj1)
     return (
         <div className="block1_2">
-            <div className="mblock2-map">
-                <div className="title">
-                    {number1} {text1}
-                </div>
-                <Map
-                    // {...viewport}
-                    initialViewState={{
-                        longitude: 0.6,
-                        latitude: 47.18,
-                        zoom: 6.06
-                    }}
-                    style={{width: '100%', height: '400px'}}
-                    mapStyle="mapbox://styles/mapbox/streets-v9"
-                    mapboxAccessToken="pk.eyJ1IjoicGl6enVwIiwiYSI6ImNsOTNtN3FzbzA1b3Mzdm9lZXpvcG94OXQifQ.PT2kirQB9_9_8By1AT41uQ"
-                    // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-                    // onViewportChange={ viewport=>{
-                    //         setViewport(viewport);
-                    //     }}
-                >
-                    <Marker longitude={6} latitude={54} anchor="bottom" >
-                        <div className="icon-gps_altarea">
-                            <span className="path1"></span>
-                            <span className="path2"></span>
-                            <span className="path3"></span>
-                        </div>
-                    </Marker>
-                    <Marker longitude={8} latitude={53.8} anchor="bottom" >
-                        <div className="number-ball" aria-label="aria-label">
-                            13
-                        </div>
-                    </Marker>
-                </Map>
-            </div>
-            <div className={"block2-map" + (open ? ' open' : '') } id="block2-id">
-                <Map
-                    // {...viewport}
-                    initialViewState={{
-                        longitude: 0.6,
-                        latitude: 47.18,
-                        zoom: 6.06
-                    }}
-                    style={{width: '960px', height: '1200px'}}
-                    mapStyle="mapbox://styles/mapbox/streets-v9"
-                    mapboxAccessToken="pk.eyJ1IjoicGl6enVwIiwiYSI6ImNsOTNtN3FzbzA1b3Mzdm9lZXpvcG94OXQifQ.PT2kirQB9_9_8By1AT41uQ"
-                    // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-                    // onViewportChange={ viewport=>{
-                    //         setViewport(viewport);
-                    //     }}
-                >
-                    <Marker longitude={6} latitude={54} anchor="bottom" >
-                        <div className="icon-gps_altarea">
-                            <span className="path1"></span>
-                            <span className="path2"></span>
-                            <span className="path3"></span>
-                        </div>
-                    </Marker>
-                    <Marker longitude={8} latitude={53.8} anchor="bottom" >
-                        <div className="number-ball" aria-label="aria-label">
-                            13
-                        </div>
-                    </Marker>
-                </Map>
-                <Script id="show-scroll" strategy="lazyOnload">
-                    {`console.log("1")`}
-                </Script>
-            </div>
-            <div className="scroll-boxm">
-                {arrm.map((e, i) =>
-                    <div className="show-box">
-                        <div className="picture-title">
-                            <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
-                        </div>
-                        <div className="picture-box picture-box1">
-                            <div className="bgc"> 
-                                <Image key={i} src={ e.src} alt="brand1" width={600} height={450} className="picture"/>
-                                <div className="picture-text1">{text2[0]}</div>
-                                <div className="picture-text2">{text2[3]}</div>
-                            </div>
-                            <div className="white-bottom-box">
-                                <div className="Surface-flex">
-                                    <div className="icon-calendrier"></div>
-                                    <div className="Surface-name">
-                                        <div className="Surface-Surface">{text3[0]}</div>
-                                        <div className="Surface-info">{text3[1]}</div>
-                                    </div>
-                                </div>
-                                <div className="Surface-flex">
-                                    <div className="icon-surface"></div>
-                                    <div className="Livraison-name">
-                                        <div className="Surface-Surface">{text3[2]}</div>
-                                        <div className="Surface-info">{text3[3]}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="Decouvrir">
-                            <div>Découvrir</div>  
-                            <div className="icon-right"></div>
-                        </div>
+            <div className="map">
+                <div className="mblock2-map">
+                    <div className="title">
+                        {number1} {text1}
                     </div>
-                )}
-                <div className="voir">
-                    Voir plus de projets
+                    <Map
+                        // {...viewport}
+                        initialViewState={{
+                            longitude: 0.6,
+                            latitude: 47.18,
+                            zoom: 6.06
+                        }}
+                        style={{width: '100%', height: '400px'}}
+                        mapStyle="mapbox://styles/mapbox/streets-v9"
+                        mapboxAccessToken="pk.eyJ1IjoicGl6enVwIiwiYSI6ImNsOTNtN3FzbzA1b3Mzdm9lZXpvcG94OXQifQ.PT2kirQB9_9_8By1AT41uQ"
+                        // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                        // onViewportChange={ viewport=>{
+                        //         setViewport(viewport);
+                        //     }}
+                    >
+                        <Marker longitude={6} latitude={54} anchor="bottom" >
+                            <div className="icon-gps_altarea">
+                                <span className="path1"></span>
+                                <span className="path2"></span>
+                                <span className="path3"></span>
+                            </div>
+                        </Marker>
+                        <Marker longitude={8} latitude={53.8} anchor="bottom" >
+                            <div className="number-ball" aria-label="aria-label">
+                                13
+                            </div>
+                        </Marker>
+                    </Map>
+                </div>
+                <div className={"block2-map" + (open ? ' open' : '') } id="block2-id">
+                    <Map
+                        // {...viewport}
+                        initialViewState={{
+                            longitude: 0.6,
+                            latitude: 47.18,
+                            zoom: 6.06
+                        }}
+                        style={{width: '960px', height: '1200px'}}
+                        mapStyle="mapbox://styles/mapbox/streets-v9"
+                        mapboxAccessToken="pk.eyJ1IjoicGl6enVwIiwiYSI6ImNsOTNtN3FzbzA1b3Mzdm9lZXpvcG94OXQifQ.PT2kirQB9_9_8By1AT41uQ"
+                        // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                        // onViewportChange={ viewport=>{
+                        //         setViewport(viewport);
+                        //     }}
+                    >
+                        <Marker longitude={6} latitude={54} anchor="bottom" >
+                            <div className="icon-gps_altarea">
+                                <span className="path1"></span>
+                                <span className="path2"></span>
+                                <span className="path3"></span>
+                            </div>
+                        </Marker>
+                        <Marker longitude={8} latitude={53.8} anchor="bottom" >
+                            <div className="number-ball" aria-label="aria-label">
+                                13
+                            </div>
+                        </Marker>
+                    </Map>
+                    {/* <Script id="show-scroll" strategy="lazyOnload">
+                        {`console.log("1")`}
+                    </Script> */}
                 </div>
             </div>
-            <div className="scroll-box-outside">
-                <div className={"scroll-box" + (open ? ' box-show' : '') }>
-                    <div className="scroll-title">{number1} {text1}</div>
-                    {arr.map((e, i) =>
+            <div className="scrollBox">
+                <div className="scroll-boxm">
+                    {arrm.map((e, i) =>
                         <div className="show-box">
-                            <div className="picture-title">title</div>
+                            <div className="picture-title">
+                                <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
+                            </div>
                             <div className="picture-box picture-box1">
                                 <div className="bgc"> 
-                                    <Image key={i} src={ e.src} alt="brand1" className="picture"/>
+                                    <Image key={i} src={ e.src} alt="brand1" width={600} height={450} className="picture"/>
                                     <div className="picture-text1">{text2[0]}</div>
                                     <div className="picture-text2">{text2[3]}</div>
                                 </div>
-
                                 <div className="white-bottom-box">
                                     <div className="Surface-flex">
-                                        <div className="surface"></div>
+                                        <div className="icon-calendrier"></div>
                                         <div className="Surface-name">
                                             <div className="Surface-Surface">{text3[0]}</div>
                                             <div className="Surface-info">{text3[1]}</div>
                                         </div>
                                     </div>
                                     <div className="Surface-flex">
-                                        <div className="calendrier"></div>
+                                        <div className="icon-surface"></div>
                                         <div className="Livraison-name">
                                             <div className="Surface-Surface">{text3[2]}</div>
                                             <div className="Surface-info">{text3[3]}</div>
                                         </div>
                                     </div>
-                                    <div className="Decouvrir">
-                                    Découvrir <div className="icon-right"></div>
-                                    </div>
                                 </div>
+                            </div>
+                            <div className="Decouvrir">
+                                <div>Découvrir</div>  
+                                <div className="icon-right"></div>
                             </div>
                         </div>
                     )}
+                    <div className="voir">
+                        Voir plus de projets
+                    </div>
                 </div>
-                <div className={"border-bottom" + (open ? ' border-bottom-click' : '') }>
-                </div>
-                <div className="border-selection">
-                    <div className="icon_left"></div>
-                    <div className="selection selected">1</div>
-                    <div className="selection">2</div>
-                    <div className="selection">3</div>
-                    <div className="selection">4</div>
-                    <div className="selection">5</div>
-                    <div className="selection">6</div>
-                    <div className="icon_right"></div>
-                </div>
-                <div className={"click-move" + (open ? ' hidden' : '') } style={{}} onClick={change_map_size}>
-                    <div className="icon-left"></div>
-                </div>
-                <div className={"click-move" + (open ? '' : ' hidden') } style={{}} onClick={change_map_size}>
-                    <div className="icon-right"></div>
+                <div className="scroll-box-outside">
+                    <div className={"scroll-box" + (open ? ' box-show' : '') }>
+                        <div className="scroll-title">{number1} {text1}</div>
+                        {arr.map((e, i) =>
+                            <div className="show-box">
+                                <div className="picture-title">title</div>
+                                <div className="picture-box picture-box1">
+                                    <div className="bgc"> 
+                                        <Image key={i} src={ e.src} alt="brand1" className="picture"/>
+                                        <div className="picture-text1">{text2[0]}</div>
+                                        <div className="picture-text2">{text2[3]}</div>
+                                    </div>
+
+                                    <div className="white-bottom-box">
+                                        <div className="Surface-flex">
+                                            <div className="icon-surface"></div>
+                                            <div className="Surface-name">
+                                                <div className="Surface-Surface">{text3[0]}</div>
+                                                <div className="Surface-info">{text3[1]}</div>
+                                            </div>
+                                        </div>
+                                        <div className="Surface-flex">
+                                            <div className="icon-calendrier"></div>
+                                            <div className="Livraison-name">
+                                                <div className="Surface-Surface">{text3[2]}</div>
+                                                <div className="Surface-info">{text3[3]}</div>
+                                            </div>
+                                        </div>
+                                        <div className="Decouvrir">
+                                        Découvrir <div className="icon-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    <div className={"border-bottom" + (open ? ' border-bottom-click' : '') }>
+                    </div>
+                    <div className="border-selection">
+                        <div className="icon-left"></div>
+                        <div className="selection selected">1</div>
+                        <div className="selection">2</div>
+                        <div className="selection">3</div>
+                        <div className="selection">4</div>
+                        <div className="selection">5</div>
+                        <div className="selection">6</div>
+                        <div className="icon-right"></div>
+                    </div>
+                    <div className={"click-move" + (open ? ' hidden' : '') } style={{}} onClick={change_map_size}>
+                        <div className="icon-left"></div>
+                    </div>
+                    <div className={"click-move" + (open ? '' : ' hidden') } style={{}} onClick={change_map_size}>
+                        <div className="icon-right"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -987,7 +971,7 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
     arrm.push(obj1)
     return (
         <div className="block2_2">
-            <div className="scroll-boxm">
+            <div className="scroll-box-outside">
                 {arrm.map((e, i) =>
                     <div className="show-box">
                         <div className="picture-title">
@@ -1025,10 +1009,7 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                 <div className="voir">
                     Voir plus de projets
                 </div>
-            </div>
-            <div className="scroll-box-outside">
                 <div className={"scroll-box" + (open ? ' box-show' : '') }>
-                    <div className="scroll-title">{number1} {text1}</div>
                     {arr.map((e, i) =>
                         <div className="show-box">
                             <div className="picture-title">title</div>
@@ -1065,19 +1046,13 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                 <div className={"border-bottom" + (open ? ' border-bottom-click' : '') }>
                 </div>
                 <div className="border-selection">
-                    <div className="icon_left"></div>
+                    <div className="icon-left"></div>
                     <div className="selection selected">1</div>
                     <div className="selection">2</div>
                     <div className="selection">3</div>
                     <div className="selection">4</div>
                     <div className="selection">5</div>
                     <div className="selection">6</div>
-                    <div className="icon_right"></div>
-                </div>
-                <div className={"click-move" + (open ? ' hidden' : '') } style={{}} onClick={change_map_size}>
-                    <div className="icon-left"></div>
-                </div>
-                <div className={"click-move" + (open ? '' : ' hidden') } style={{}} onClick={change_map_size}>
                     <div className="icon-right"></div>
                 </div>
             </div>
@@ -1424,54 +1399,8 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
     return (
     <div className="block4_1">
         <div className="imageBox">
-        <div className="mHeader">
-                <div className="left">
-                    <div className="icon-logo_purple">
-                        <span className="path1"></span>
-                        <span className="path2"></span>
-                        <span className="path3"></span>
-                        <span className="path4"></span>
-                        <span className="path5"></span>
-                        <span className="path6"></span>
-                        <span className="path7"></span>
-                        <span className="path8"></span>
-                        <span className="path9"></span>
-                        <span className="path10"></span>
-                    </div>
-                    <div className="icon-burger_menu" onClick={show_box}></div>
-                </div>
-                <div className="buttonm" onClick={show_input}>
-                    <div className="icon-mail"></div>
-                    <div className="title-color-text">{text0[3]}</div>
-                </div>
-                <div className={(show ? 'chooseBox' : 'hidden')}>
-                    <div className="Part">
-                        <div className="leftPart"></div>
-                        <div className="rightPart">
-                        <div className="titleText">{text0[0]}</div>
-                        <div className="titleText " onClick={show_box2}>{text0[1]}
-                        </div>
-                            <div className={(show2 ? 'contentText' : 'hidden')}>
-                                <div className="text5 dark_red">{text5[0]}</div>
-                                <div className="text5 purple">{text5[1]}</div>
-                                <div className="text5 blue">{text5[2]}</div>
-                                <div className="text5 light_blue">{text5[3]}</div>
-                                <div className="text5 green">{text5[4]}</div>
-                                <div className="text5 dark_yellow">{text5[5]}</div>
-                                <div className="text5 medium_yellow">{text5[6]}</div>
-                                <div className="text5 lemon">{text5[7]}</div>
-                                <div className="text5 yellow">{text5[8]}</div>
-                                <div className="text5 orange">{text5[9]}</div>
-                                <div className="text5 red">{text5[10]}</div>
-                            </div>
-                        <div className="titleText">{text0[2]}</div>
-                        <div className="titleText">{text0[3]}</div>
-                        </div>
-                    </div>
-                </div>
-        </div>
         <div className="Header">
-            <div className="square">
+            <div className="left">
                 <div className="icon-logo_purple">
                     <span className="path1"></span>
                     <span className="path2"></span>
@@ -1484,26 +1413,54 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
                     <span className="path9"></span>
                     <span className="path10"></span>
                 </div>
+                <div className="icon-burger_menu" onClick={show_box}></div>
             </div>
             <div className="title-text">{text0[0]}</div>
             <div className="title-text" onClick={show_box}>{text0[1]}</div>
             <div className="title-text">{text0[2]}</div>
-            <div className="button">
+            <div className="button" onClick={show_input}>
                 <div className="icon-mail"></div>
                 <div className="title-color-text">{text0[3]}</div>
             </div>
+            <div className={(show ? 'mchooseBox' : 'hidden')}>
+                <div className="Part">
+                    <div className="leftPart"></div>
+                    <div className="rightPart">
+                    <div className="titleText">{text0[0]}</div>
+                    <div className="titleText " onClick={show_box2}>{text0[1]}
+                    </div>
+                        <div className={(show2 ? 'contentText' : 'hidden')}>
+                            <div className="text5 dark_red">{text5[0]}</div>
+                            <div className="text5 purple">{text5[1]}</div>
+                            <div className="text5 blue">{text5[2]}</div>
+                            <div className="text5 light_blue">{text5[3]}</div>
+                            <div className="text5 green">{text5[4]}</div>
+                            <div className="text5 dark_yellow">{text5[5]}</div>
+                            <div className="text5 medium_yellow">{text5[6]}</div>
+                            <div className="text5 lemon">{text5[7]}</div>
+                            <div className="text5 yellow">{text5[8]}</div>
+                            <div className="text5 orange">{text5[9]}</div>
+                            <div className="text5 red">{text5[10]}</div>
+                        </div>
+                    <div className="titleText">{text0[2]}</div>
+                    <div className="titleText">{text0[3]}</div>
+                    </div>
+                </div>
+            </div>
             <div className={(show ? 'chooseBox' : 'hidden')}>
-                <div className="leftPart">{text4}</div>
-                <div className="rightPart">
-                {text5.map((e,i)=>
-                    <div className="choice">{e}</div>
-                )}
+                <div className="chooseBoxinner">
+                    <div className="leftPart">{text4}</div>
+                    <div className="rightPart">
+                        {text5.map((e,i)=>
+                            <div className="choice">{e}</div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
-        <div className="mtext-box">
+        <div className="text-box">
             <div className="mtop-box">
-                <div className="text">
+                <div className="mtext">
                     <div className="title">{text1[0]}</div>
                     <div className="content1">
                         <text className="text-normal">{text1[1] } </text>            
@@ -1513,21 +1470,13 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
                     </div>
                 </div>
             </div>
-            <div className="picture">
+            <div className="mpicture">
                 <Image  src={src} />
             </div>
-        </div>
-        <div className="text-box">
             <div className="text">
-                <div className="title1">
-                    {text1[0]}
-                </div>
-                <div className="paragraph">
-                    {text1[1]}
-                </div>
-                <div className="paragraph">
-                    {text1[2]}
-                </div>
+                <div className="title1">{text1[0]}</div>
+                <div className="paragraph">{text1[1]}</div>
+                <div className="paragraph">{text1[2]}</div>
             </div>
         </div>
         <div className="white-ball-box">

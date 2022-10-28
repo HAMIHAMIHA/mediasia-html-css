@@ -24,11 +24,11 @@
   }
 }
 
-.block1_1 .imageBox .text-box, .block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
+.block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
   display: none;
 }
 
-.block1_1 .imageBox .mtext-box {
+.block1_1 .imageBox .text-box {
   margin: 20px 10px 0 10px;
   height: 634px;
   border: 10px solid #FFFFFF;
@@ -37,7 +37,11 @@
   position: relative;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box {
+.block1_1 .imageBox .text-box .text, .block1_1 .imageBox .text-box .color-button {
+  display: none;
+}
+
+.block1_1 .imageBox .text-box .mtop-box {
   position: absolute;
   z-index: 3;
   top: -1px;
@@ -48,13 +52,13 @@
   background-color: #fff;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .text {
+.block1_1 .imageBox .text-box .mtop-box .mtext {
   padding-left: 10px;
   padding-right: 12px;
   margin-top: 10px;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .text .title {
+.block1_1 .imageBox .text-box .mtop-box .mtext .title {
   font: normal normal bold 30px/40px 'Roboto';
   letter-spacing: 0px;
   color: #562A7C;
@@ -62,7 +66,7 @@
   opacity: 1;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .text .content1, .block1_1 .imageBox .mtext-box .mtop-box .text .content2 {
+.block1_1 .imageBox .text-box .mtop-box .mtext .content1, .block1_1 .imageBox .text-box .mtop-box .mtext .content2 {
   margin-top: 10px;
   text-align: left;
   font-family: Roboto;
@@ -73,23 +77,23 @@
   font-weight: 300;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .text .text-color {
+.block1_1 .imageBox .text-box .mtop-box .mtext strong {
   color: #42145F;
   font-weight: 500;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .colorButton {
+.block1_1 .imageBox .text-box .mtop-box .colorButton {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
   width: fit-content;
 }
 
-.block1_1 .imageBox .mtext-box .mtop-box .colorButton .icon-composant {
+.block1_1 .imageBox .text-box .mtop-box .colorButton .icon-composant {
   font-size: 60px;
 }
 
-.block1_1 .imageBox .mtext-box .whiteText {
+.block1_1 .imageBox .text-box .mwhiteText {
   position: absolute;
   width: 70%;
   font-family: Roboto;
@@ -103,22 +107,26 @@
 }
 
 @media (min-width: 1200px) {
-  .block1_1 .imageBox .mtext-box {
+  .block1_1 .imageBox .mtop-box, .block1_1 .imageBox .mwhiteText {
     display: none;
   }
-  .block1_1 .imageBox .text-box, .block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
+  .block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
     display: block;
   }
   .block1_1 .imageBox .text-box {
+    margin: 0;
+    border: 0;
     width: 1200px;
     height: 600px;
     top: 150px;
+    background-color: transparent;
     transform: translate(-50%);
     left: 50%;
     position: absolute;
     z-index: 9;
   }
   .block1_1 .imageBox .text-box .text {
+    display: block;
     width: 430px;
     height: 392px;
     margin-left: 40px;
@@ -148,11 +156,12 @@
     letter-spacing: 0px;
     color: #555555;
   }
-  .block1_1 .imageBox .text-box .text .text-color {
+  .block1_1 .imageBox .text-box .text strong {
     color: #42145F;
     font: normal normal bold 16px/27px Roboto;
   }
   .block1_1 .imageBox .text-box .color-button {
+    display: block;
     margin-top: 20px;
     margin-left: 40px;
     width: fit-content;
@@ -443,15 +452,15 @@
   }
 }
 
-.block1_2 .block2-map {
+.block1_2 .map .block2-map {
   display: none;
 }
 
-.block1_2 .mblock2-map {
+.block1_2 .map .mblock2-map {
   overflow: hidden;
 }
 
-.block1_2 .mblock2-map .title {
+.block1_2 .map .mblock2-map .title {
   margin-top: 10px;
   text-align: center;
   font-size: 25px;
@@ -463,21 +472,17 @@
 }
 
 @media (min-width: 1200px) {
-  .block1_2 {
-    margin-top: 50px;
-    display: flex;
-    position: relative;
-  }
-  .block1_2 .mblock2-map {
+  .block1_2 .map .mblock2-map {
     display: none;
   }
-  .block1_2 .block2-map {
+  .block1_2 .map .block2-map {
+    display: block;
     position: relative;
     width: 960px;
     height: 1200px;
     overflow: hidden;
   }
-  .block1_2 .block2-map .number-ball {
+  .block1_2 .map .block2-map .number-ball {
     width: fit-content;
     height: fit-content;
     padding: 10px 20px;
@@ -489,24 +494,27 @@
     background: #42145F 0% 0% no-repeat padding-box;
     opacity: 0.8;
   }
+  .block1_2 .map .open {
+    width: 381px;
+  }
 }
 
-.block1_2 .scroll-box-outside {
+.block1_2 .scrollBox .scroll-box-outside {
   display: none;
 }
 
-.block1_2 .scroll-boxm .show-box {
+.block1_2 .scrollBox .scroll-boxm .show-box {
   margin-top: 30px;
   width: 100vw;
   display: inline-block;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-title {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-title {
   text-align: right;
   font-size: 20px;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box {
   height: 292px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -515,18 +523,18 @@
   position: relative;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .bgc {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .bgc {
   height: 292px;
   background: transparent linear-gradient(180deg, #000000 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
   position: relative;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .bgc .picture {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .bgc .picture {
   height: 292px;
   opacity: 0.8;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .bgc .picture-text1 {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .bgc .picture-text1 {
   padding-top: 20px;
   padding-left: 30px;
   text-align: left;
@@ -538,7 +546,7 @@
   top: 0px;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .bgc .picture-text2 {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .bgc .picture-text2 {
   padding-left: 30px;
   text-align: left;
   font: normal normal bold 18px/24px Roboto;
@@ -549,7 +557,7 @@
   opacity: 1;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box {
   position: absolute;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 0.9;
@@ -563,24 +571,24 @@
   white-space: nowrap;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box .icon-calendrier, .block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box .icon-surface {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box .icon-calendrier, .block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box .icon-surface {
   font-size: 40px;
   margin-right: 5px;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-flex {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-flex {
   display: flex;
   margin: 0 4%;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-Surface {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-Surface {
   text-align: left;
   font: normal normal bold 16px/21px Roboto;
   letter-spacing: 0px;
   color: #42145F;
 }
 
-.block1_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Serface-info {
+.block1_2 .scrollBox .scroll-boxm .show-box .picture-box .white-bottom-box .Serface-info {
   text-align: left;
   font: normal normal normal 16px/21px Roboto;
   letter-spacing: 0px;
@@ -588,7 +596,7 @@
   white-space: nowrap;
 }
 
-.block1_2 .scroll-boxm .show-box .Decouvrir {
+.block1_2 .scrollBox .scroll-boxm .show-box .Decouvrir {
   margin: 0 auto;
   margin-top: 20px;
   display: flex;
@@ -605,12 +613,12 @@
   cursor: pointer;
 }
 
-.block1_2 .scroll-boxm .show-box .Decouvrir .icon-right {
+.block1_2 .scrollBox .scroll-boxm .show-box .Decouvrir .icon-right {
   font-size: 16px;
   margin-left: 10px;
 }
 
-.block1_2 .scroll-boxm .voir {
+.block1_2 .scrollBox .scroll-boxm .voir {
   text-align: center;
   text-decoration: underline;
   font: normal normal bold 22px/29px Roboto;
@@ -620,43 +628,43 @@
 }
 
 @media (min-width: 1200px) {
-  .block1_2 .scroll-boxm {
+  .block1_2 .scrollBox .scroll-boxm {
     display: none;
   }
-  .block1_2 .open {
+  .block1_2 .scrollBox .open {
     width: 381px;
   }
-  .block1_2 .hidden {
+  .block1_2 .scrollBox .hidden {
     visibility: hidden;
   }
-  .block1_2 .scroll-box-outside {
+  .block1_2 .scrollBox .scroll-box-outside {
     display: block;
     position: relative;
   }
-  .block1_2 .scroll-box-outside .scroll-box {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box {
     width: 600px;
     height: 1110px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  .block1_2 .scroll-box-outside .scroll-box .scroll-title {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .scroll-title {
     margin-left: 40px;
     text-align: left;
     font: normal normal bold 35px/46px Roboto;
     letter-spacing: 0px;
     color: #562A7C;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box {
     margin-top: 40px;
     width: 533px;
     display: inline-block;
     margin-left: 20px;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-title {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-title {
     text-align: right;
     font-size: 20px;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box {
     width: 533px;
     height: 292px;
     overflow: hidden;
@@ -665,18 +673,18 @@
     border-radius: 50px 0px 0px 0px;
     position: relative;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .bgc {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .bgc {
     width: 533px;
     height: 292px;
     background: transparent linear-gradient(180deg, #000000 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
     position: relative;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture {
     width: 533px;
     height: 292px;
     opacity: 0.8;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture-text1 {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture-text1 {
     padding-top: 20px;
     padding-left: 30px;
     text-align: left;
@@ -687,7 +695,7 @@
     position: absolute;
     top: 0px;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture-text2 {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .bgc .picture-text2 {
     padding-left: 30px;
     text-align: left;
     font: normal normal bold 18px/24px Roboto;
@@ -697,7 +705,7 @@
     top: 60px;
     opacity: 1;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box {
     position: absolute;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 0.9;
@@ -709,27 +717,32 @@
     align-items: center;
     display: flex;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-icon {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-icon {
     margin-left: 20px;
     margin-right: 5px;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex {
     display: flex;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-Surface {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex .icon-calendrier, .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex .icon-surface {
+    font-size: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-Surface {
     text-align: left;
     font: normal normal bold 16px/21px Roboto;
     letter-spacing: 0px;
     color: #42145F;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Serface-info {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Serface-info {
     text-align: left;
     font: normal normal normal 16px/21px Roboto;
     letter-spacing: 0px;
     color: #555555;
     white-space: nowrap;
   }
-  .block1_2 .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir {
     width: 120px;
     height: 30px;
     margin-left: 10px;
@@ -744,10 +757,10 @@
     opacity: 1;
     cursor: pointer;
   }
-  .block1_2 .scroll-box-outside .box-show {
+  .block1_2 .scrollBox .scroll-box-outside .box-show {
     width: 1169px;
   }
-  .block1_2 .scroll-box-outside .border-bottom {
+  .block1_2 .scrollBox .scroll-box-outside .border-bottom {
     position: absolute;
     width: 533px;
     height: 2px;
@@ -755,23 +768,24 @@
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 50px;
+    bottom: -40px;
     border-bottom: 1px solid #C3C3C3;
     opacity: 1;
   }
-  .block1_2 .scroll-box-outside .border-bottom-click {
+  .block1_2 .scrollBox .scroll-box-outside .border-bottom-click {
     width: 1116px;
   }
-  .block1_2 .scroll-box-outside .border-selection {
+  .block1_2 .scrollBox .scroll-box-outside .border-selection {
     position: absolute;
-    bottom: 10px;
+    bottom: -90px;
     width: fit-content;
     left: 0;
     right: 0;
     margin: auto;
     display: flex;
+    align-items: center;
   }
-  .block1_2 .scroll-box-outside .border-selection .selection {
+  .block1_2 .scrollBox .scroll-box-outside .border-selection .selection {
     width: 30px;
     height: 30px;
     background-color: #fff;
@@ -781,11 +795,18 @@
     border-radius: 50%;
     margin-right: 10px;
   }
-  .block1_2 .scroll-box-outside .border-selection .selected {
+  .block1_2 .scrollBox .scroll-box-outside .border-selection .selected {
     background-color: #42145F;
     color: #fff;
   }
-  .block1_2 .scroll-box-outside .click-move {
+  .block1_2 .scrollBox .scroll-box-outside .border-selection .icon-left, .block1_2 .scrollBox .scroll-box-outside .border-selection .icon-right {
+    font-size: 20px;
+    color: #42145F;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .border-selection .icon-left {
+    padding-right: 15px;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .click-move {
     left: -20px;
     top: 0px;
     width: 40px;
@@ -798,6 +819,20 @@
     box-shadow: 0px 0px 10px #000040;
     cursor: pointer;
     position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .click-move .icon-left, .block1_2 .scrollBox .scroll-box-outside .click-move .icon-right {
+    color: #562A7C;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block1_2 {
+    margin-top: 50px;
+    display: flex;
+    position: relative;
   }
 }
 
@@ -1223,6 +1258,7 @@
     margin-top: 80px;
   }
   .Footer .block5Top {
+    width: 100%;
     height: 100px;
     background: #E6E6E6 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -1249,16 +1285,19 @@
     align-items: center;
   }
   .Footer .block5Middle .question {
+    width: fit-content;
     text-align: center;
     font: normal normal bold 28px/37px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    margin: 0;
   }
   .Footer .block5Middle .button {
     /* UI Properties */
     height: 40px;
     text-align: left;
+    width: fit-content;
     font: normal normal bold 22px/40px Roboto;
     letter-spacing: 0px;
     color: #42145F;
@@ -1556,22 +1595,22 @@
   }
 }
 
-.block2_2 .scroll-box-outside {
+.block2_2 .scroll-box, .block2_2 .border-bottom, .block2_2 .border-selection {
   display: none;
 }
 
-.block2_2 .scroll-boxm .show-box {
+.block2_2 .show-box {
   margin-top: 30px;
   width: 100vw;
   display: inline-block;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-title {
+.block2_2 .show-box .picture-title {
   text-align: right;
   font-size: 20px;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box {
+.block2_2 .show-box .picture-box {
   height: 292px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -1580,18 +1619,18 @@
   position: relative;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .bgc {
+.block2_2 .show-box .picture-box .bgc {
   height: 292px;
   background: transparent linear-gradient(180deg, #000000 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
   position: relative;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .bgc .picture {
+.block2_2 .show-box .picture-box .bgc .picture {
   height: 292px;
   opacity: 0.8;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .bgc .picture-text1 {
+.block2_2 .show-box .picture-box .bgc .picture-text1 {
   padding-top: 20px;
   padding-left: 30px;
   text-align: left;
@@ -1603,7 +1642,7 @@
   top: 0px;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .bgc .picture-text2 {
+.block2_2 .show-box .picture-box .bgc .picture-text2 {
   padding-left: 30px;
   text-align: left;
   font: normal normal bold 18px/24px Roboto;
@@ -1614,7 +1653,7 @@
   opacity: 1;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box {
+.block2_2 .show-box .picture-box .white-bottom-box {
   position: absolute;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 0.9;
@@ -1628,24 +1667,24 @@
   white-space: nowrap;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box .icon-calendrier, .block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box .icon-surface {
+.block2_2 .show-box .picture-box .white-bottom-box .icon-calendrier, .block2_2 .show-box .picture-box .white-bottom-box .icon-surface {
   font-size: 40px;
   margin-right: 5px;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-flex {
+.block2_2 .show-box .picture-box .white-bottom-box .Surface-flex {
   display: flex;
   margin: 0 4%;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Surface-Surface {
+.block2_2 .show-box .picture-box .white-bottom-box .Surface-Surface {
   text-align: left;
   font: normal normal bold 16px/21px Roboto;
   letter-spacing: 0px;
   color: #42145F;
 }
 
-.block2_2 .scroll-boxm .show-box .picture-box .white-bottom-box .Serface-info {
+.block2_2 .show-box .picture-box .white-bottom-box .Serface-info {
   text-align: left;
   font: normal normal normal 16px/21px Roboto;
   letter-spacing: 0px;
@@ -1653,7 +1692,7 @@
   white-space: nowrap;
 }
 
-.block2_2 .scroll-boxm .show-box .Decouvrir {
+.block2_2 .show-box .Decouvrir {
   margin: 0 auto;
   margin-top: 20px;
   display: flex;
@@ -1670,12 +1709,12 @@
   cursor: pointer;
 }
 
-.block2_2 .scroll-boxm .show-box .Decouvrir .icon-right {
+.block2_2 .show-box .Decouvrir .icon-right {
   font-size: 16px;
   margin-left: 10px;
 }
 
-.block2_2 .scroll-boxm .voir {
+.block2_2 .voir {
   text-align: center;
   text-decoration: underline;
   font: normal normal bold 22px/29px Roboto;
@@ -1685,7 +1724,10 @@
 }
 
 @media (min-width: 1200px) {
-  .block2_2 .scroll-boxm {
+  .block2_2 .scroll-box, .block2_2 .border-bottom, .block2_2 .border-selection {
+    display: block;
+  }
+  .block2_2 .show-box, .block2_2 .voir {
     display: none;
   }
   .block2_2 .open {
@@ -1697,25 +1739,19 @@
   .block2_2 .scroll-box-outside {
     display: block;
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
   }
   .block2_2 .scroll-box-outside .scroll-box {
-    width: 600px;
-    height: 1110px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .block2_2 .scroll-box-outside .scroll-box .scroll-title {
-    margin-left: 40px;
-    text-align: left;
-    font: normal normal bold 35px/46px Roboto;
-    letter-spacing: 0px;
-    color: #562A7C;
+    width: 1400px;
+    height: 780px;
+    overflow: hidden;
   }
   .block2_2 .scroll-box-outside .scroll-box .show-box {
     margin-top: 40px;
     width: 533px;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 6.7%;
   }
   .block2_2 .scroll-box-outside .scroll-box .show-box .picture-title {
     text-align: right;
@@ -1770,16 +1806,22 @@
     height: 60px;
     width: 533px;
     padding: 10px;
-    padding-top: 15px;
     align-items: center;
+    display: flex;
+  }
+  .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex {
     display: flex;
   }
   .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-icon {
     margin-left: 20px;
     margin-right: 5px;
   }
-  .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex {
-    display: flex;
+  .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Livraison-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px #42145F solid;
+    margin-left: 20px;
+    margin-right: 5px;
   }
   .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-Surface {
     text-align: left;
@@ -1812,29 +1854,15 @@
   .block2_2 .scroll-box-outside .box-show {
     width: 1169px;
   }
-  .block2_2 .scroll-box-outside .border-bottom {
-    position: absolute;
-    width: 533px;
-    height: 2px;
-    /* UI Properties */
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: 50px;
-    border-bottom: 1px solid #C3C3C3;
-    opacity: 1;
-  }
-  .block2_2 .scroll-box-outside .border-bottom-click {
-    width: 1116px;
-  }
   .block2_2 .scroll-box-outside .border-selection {
     position: absolute;
-    bottom: 10px;
+    bottom: -35px;
     width: fit-content;
     left: 0;
     right: 0;
     margin: auto;
     display: flex;
+    align-items: center;
   }
   .block2_2 .scroll-box-outside .border-selection .selection {
     width: 30px;
@@ -1850,19 +1878,12 @@
     background-color: #42145F;
     color: #fff;
   }
-  .block2_2 .scroll-box-outside .click-move {
-    left: -20px;
-    top: 0px;
-    width: 40px;
-    height: 40px;
-    z-index: 5;
-    border-radius: 50%;
-    background-color: #fff;
-    padding-bottom: 25px;
-    font-size: 25px;
-    box-shadow: 0px 0px 10px #000040;
-    cursor: pointer;
-    position: absolute;
+  .block2_2 .scroll-box-outside .border-selection .icon-left, .block2_2 .scroll-box-outside .border-selection .icon-right {
+    font-size: 20px;
+    color: #42145F;
+  }
+  .block2_2 .scroll-box-outside .border-selection .icon-left {
+    padding-right: 15px;
   }
 }
 
@@ -2719,11 +2740,11 @@
   }
 }
 
-.block4_1 .imageBox .text-box, .block4_1 .imageBox .white-text-box, .block4_1 .imageBox .white-box, .block4_1 .imageBox .white-ball-box {
+.block4_1 .imageBox .white-text-box, .block4_1 .imageBox .white-box, .block4_1 .imageBox .white-ball-box {
   display: none;
 }
 
-.block4_1 .imageBox .mtext-box {
+.block4_1 .imageBox .text-box {
   margin: 20px 10px 0 10px;
   height: 681px;
   border: 10px solid #FFFFFF;
@@ -2733,7 +2754,7 @@
   overflow: hidden;
 }
 
-.block4_1 .imageBox .mtext-box .mtop-box {
+.block4_1 .imageBox .text-box .mtop-box {
   position: absolute;
   z-index: 3;
   top: -1px;
@@ -2744,14 +2765,14 @@
   background-color: #fff;
 }
 
-.block4_1 .imageBox .mtext-box .mtop-box .text {
+.block4_1 .imageBox .text-box .mtop-box .mtext {
   padding-left: 10px;
   padding-right: 12px;
   margin-top: 10px;
   padding-bottom: 20px;
 }
 
-.block4_1 .imageBox .mtext-box .mtop-box .text .title {
+.block4_1 .imageBox .text-box .mtop-box .mtext .title {
   font: normal normal bold 30px/40px 'Roboto';
   letter-spacing: 0px;
   color: #562A7C;
@@ -2759,7 +2780,7 @@
   opacity: 1;
 }
 
-.block4_1 .imageBox .mtext-box .mtop-box .text .content1, .block4_1 .imageBox .mtext-box .mtop-box .text .content2 {
+.block4_1 .imageBox .text-box .mtop-box .mtext .content1, .block4_1 .imageBox .text-box .mtop-box .mtext .content2 {
   margin-top: 10px;
   text-align: left;
   font-family: Roboto;
@@ -2770,12 +2791,12 @@
   font-weight: 300;
 }
 
-.block4_1 .imageBox .mtext-box .mtop-box .text .text-color {
+.block4_1 .imageBox .text-box .mtop-box .mtext .text-color {
   color: #42145F;
   font-weight: 500;
 }
 
-.block4_1 .imageBox .mtext-box .picture {
+.block4_1 .imageBox .text-box .mpicture {
   width: 125%;
   position: absolute;
   bottom: -17%;
@@ -2837,6 +2858,9 @@
     left: 50%;
     position: absolute;
     z-index: 9;
+  }
+  .block4_1 .imageBox .text-box .mtop-box, .block4_1 .imageBox .text-box .mpicture {
+    display: none;
   }
   .block4_1 .imageBox .text-box .text {
     width: 430px;
