@@ -4,6 +4,8 @@ import Script from 'next/script'
 import Image from "next/image";
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
+// import { text } from 'stream/consumers';
+
 
 //1.拆分元素不要大块重写。
 //2.多个段落用p标签
@@ -355,7 +357,19 @@ interface Block6_3Props{
 
 //page1
 const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block1_1Props) => {
-    //title: text/
+    const block1={  'colorBar':true,
+                    'textTitle':true,
+                    'logo':false,
+                    'roundButton':true,
+                    "brands":false,
+                    "infos":false,
+                    "button":false,
+                    "whiteText":true,
+                    "person":false}
+    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -373,6 +387,11 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     const show_input=()=>{
         showInput(!showi)
     }
+    let [typeColors,changeType] =useState('dark_purple')
+    // const changeColor=(e:string)=>{
+    // changeType(typeColors=e)
+    // console.log(typeColors)
+    // }
     let arr=[];
     for(let i=0;i<propramme.length;i++){
         let obj={ 'selections':propramme[i]}
@@ -440,33 +459,74 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     </div>
                 </div>
             </div>
+            <div className={(block1.colorBar ? ('colorBar ' + (typeColors)+"_bgc"): 'hidden') }>
+                <div className="typebox">
+                    <div className="type">test{" > "}</div>
+                    <div className="type">test</div>
+                </div>
+            </div>
             <div className="text-box">
-                <div className="mtop-box">
-                    <div className="mtext">
-                        <div className="title">{text1}</div>
-                        <p className="content1">{text2[0]}<strong>{text2[1]}</strong>{text2[2]}<strong>{text2[3]}</strong></p>          
-                        <p className="content2">{text2[4]}<strong>{text2[5]}</strong>{text2[6]}</p>
-                    </div>
-                    <div className="colorButton" onClick={move_down}>
-                        <div className="icon-composant">
+                <div className="text">
+                    <div className={(block1.textTitle ? 'textTitle' : 'hidden')}>{text1}</div>
+                    <div className={(block1.logo ? 'logo' : 'hidden')}>
+                        <div className="icon-logo_hill_side">
                             <span className="path1"></span>
                             <span className="path2"></span>
+                            <span className="path3"></span>
+                            <span className="path4"></span>
+                            <span className="path5"></span>
+                            <span className="path6"></span>
+                            <span className="path7"></span>
                         </div>
                     </div>
+                    <p className="content">{text2[0]}<strong>{text2[1]}</strong>{text2[2]}<strong>{text2[3]}</strong></p>          
+                    <p className="content">{text2[4]}<strong>{text2[5]}</strong>{text2[6]}</p>
                 </div>
-                <div className="mwhiteText">
-                    {text3[1]}
-                </div>
-                <div className="text">
-                    <div className="title">{text1}</div>
-                    <p className="content1">{text2[0]}<strong>{text2[1]}</strong>{text2[2]}<strong>{text2[3]}</strong></p>          
-                    <p className="content2">{text2[4]}<strong>{text2[5]}</strong>{text2[6]}</p>
-                </div>
-                <div className="color-button" onClick={move_down}>
+                <div className={(block1.roundButton ? 'roundButton' : 'hidden')} onClick={move_down}>
                     <div className="icon-composant">
                         <span className="path1"></span>
                         <span className="path2"></span>
                     </div>
+                </div>
+                <div className={(block1.brands ? 'brands' : 'hidden')}>
+                    <div className="icon-lower">
+                        <Image src={label_1} width={100} height={24}></Image>
+                    </div>
+                    <div className="icon">
+                        <Image src={label_2} ></Image>
+                    </div>
+                    <div className="icon">
+                        <Image src={label_3} ></Image>
+                    </div>
+                    <div className="icon">
+                        <Image src={label_4} ></Image>
+                    </div>
+                </div>
+                <div className={(block1.infos ? 'infos' : 'hidden') }>
+                    <div className="line1">
+                        <text className="title">title:</text>
+                        <text className="content"> content</text>
+                    </div>
+                    <div className="line2">
+                    <text className="title">title:</text>
+                        <text className="content"> content</text>
+                    </div>
+                    <div className="line3">
+                    <text className="title">title:</text>
+                        <text className="content"> content</text>
+                    </div>
+                </div>
+                <div className={(block1.button ? 'button':'hidden')}>
+                    <div className="icon-mail"></div>
+                    <div className="title-color-text">button</div>
+                </div>
+            </div>
+            <div className={"arcBox " + (typeColors)+"_bgc07"}>
+                <div className={(block1.person ? 'hidden' : 'mwhiteText')}>
+                    {text3[1]}
+                </div>
+                <div className={(block1.person ? 'person' : 'hidden')}>
+                        <Image src={label_1}></Image>
                 </div>
             </div>
             <div className="white-text-box">
