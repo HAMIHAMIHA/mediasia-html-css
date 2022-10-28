@@ -355,7 +355,7 @@ interface Block6_3Props{
 
 //page1
 const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block1_1Props) => {
-    // let backgroundImage=require(`../../styles/src/image_home_1@2x.png`).default
+    //title: text/
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -380,7 +380,6 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     }
     return (
     <div className="block1_1">
-        {/* <Image src={backgroundImage} width={1920} height={1200}></Image> */}
         <div className="imageBox">
             <div className="Header">
                 <div className="left">
@@ -509,7 +508,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     arrm.push(obj1)
     return (
         <div className="block1_2">
-            <div className="map">
+            <div className={"map" + (open ? ' open' : '') }>
                 <div className="mblock2-map">
                     <div className="title">
                         {number1} {text1}
@@ -618,8 +617,8 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     </div>
                 </div>
                 <div className="scroll-box-outside">
+                    <div className="scroll-title">{number1} {text1}</div>
                     <div className={"scroll-box" + (open ? ' box-show' : '') }>
-                        <div className="scroll-title">{number1} {text1}</div>
                         {arr.map((e, i) =>
                             <div className="show-box">
                                 <div className="picture-title">title</div>
@@ -629,7 +628,6 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                                         <div className="picture-text1">{text2[0]}</div>
                                         <div className="picture-text2">{text2[3]}</div>
                                     </div>
-
                                     <div className="white-bottom-box">
                                         <div className="Surface-flex">
                                             <div className="icon-surface"></div>
@@ -646,7 +644,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                                             </div>
                                         </div>
                                         <div className="Decouvrir">
-                                        Découvrir <div className="icon-right"></div>
+                                        <div>Découvrir</div> <div className="icon-right"></div>
                                         </div>
                                     </div>
                                 </div>

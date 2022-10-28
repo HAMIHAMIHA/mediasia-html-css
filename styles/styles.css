@@ -472,13 +472,16 @@
 }
 
 @media (min-width: 1200px) {
+  .block1_2 .map {
+    width: 50%;
+  }
   .block1_2 .map .mblock2-map {
     display: none;
   }
   .block1_2 .map .block2-map {
     display: block;
     position: relative;
-    width: 960px;
+    width: 100%;
     height: 1200px;
     overflow: hidden;
   }
@@ -494,9 +497,10 @@
     background: #42145F 0% 0% no-repeat padding-box;
     opacity: 0.8;
   }
-  .block1_2 .map .open {
-    width: 381px;
-  }
+}
+
+.block1_2 .open {
+  width: 350px;
 }
 
 .block1_2 .scrollBox .scroll-box-outside {
@@ -641,21 +645,22 @@
     display: block;
     position: relative;
   }
-  .block1_2 .scrollBox .scroll-box-outside .scroll-box {
-    width: 600px;
-    height: 1110px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .block1_2 .scrollBox .scroll-box-outside .scroll-box .scroll-title {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-title {
     margin-left: 40px;
     text-align: left;
     font: normal normal bold 35px/46px Roboto;
     letter-spacing: 0px;
     color: #562A7C;
   }
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box {
+    width: 600px;
+    height: 1050px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 10px;
+  }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 533px;
     display: inline-block;
     margin-left: 20px;
@@ -727,7 +732,7 @@
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex .icon-calendrier, .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-flex .icon-surface {
     font-size: 40px;
     margin-right: 5px;
-    margin-left: 5px;
+    margin-left: 15px;
   }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .white-bottom-box .Surface-Surface {
     text-align: left;
@@ -743,19 +748,24 @@
     white-space: nowrap;
   }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir {
-    width: 120px;
-    height: 30px;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
     background: #42145F 0% 0% no-repeat padding-box;
     border-radius: 27px;
     opacity: 1;
     text-align: center;
-    padding-left: 15px;
     font: normal normal bold 16px/30px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
     cursor: pointer;
+    padding: 0 15px;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir .icon-right {
+    line-height: 20px;
+    padding-left: 10px;
   }
   .block1_2 .scrollBox .scroll-box-outside .box-show {
     width: 1169px;
@@ -1004,7 +1014,6 @@
   .block1_3 .right-box .white-border .text {
     padding-left: 20px;
     height: 190px;
-    padding-top: 190px;
     text-align: left;
     font: normal normal bold 40px/50px Roboto;
     letter-spacing: 0px;
@@ -1123,6 +1132,14 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .Footer {
+    width: 100%;
+    height: 415px;
+    margin-top: 80px;
+  }
+}
+
 .Footer .block5Top {
   width: 100vw;
   margin-top: 50px;
@@ -1145,6 +1162,14 @@
   letter-spacing: 0px;
   color: #4E2076;
   opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .Footer .block5Top {
+    width: 100%;
+    height: 100px;
+    padding-top: 15px;
+  }
 }
 
 .Footer .block5Middle {
@@ -1193,6 +1218,55 @@
   letter-spacing: 0px;
   color: #42145F;
   opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .Footer .block5Middle {
+    height: 100px;
+    background: #42145F 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Footer .block5Middle .question {
+    width: fit-content;
+    text-align: center;
+    font: normal normal bold 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+  }
+  .Footer .block5Middle .button {
+    margin: 0;
+    /* UI Properties */
+    height: 40px;
+    text-align: left;
+    width: fit-content;
+    font: normal normal bold 22px/40px Roboto;
+    letter-spacing: 0px;
+    color: #42145F;
+    opacity: 1;
+    display: flex;
+    background-color: #fff;
+    margin-left: 100px;
+    margin-right: 0;
+    border-radius: 27px;
+    padding: 0 20px;
+  }
+  .Footer .block5Middle .button .message-icon {
+    margin-top: 10px;
+  }
+  .Footer .block5Middle .button .title-color-text {
+    margin-left: 10px;
+    text-align: center;
+    font: normal normal bold 22px/42px Roboto;
+    letter-spacing: 0px;
+    color: #42145F;
+    opacity: 1;
+  }
 }
 
 .Footer .block5Bottom {
@@ -1252,83 +1326,19 @@
 }
 
 @media (min-width: 1200px) {
-  .Footer {
-    width: 100%;
-    height: 415px;
-    margin-top: 80px;
-  }
-  .Footer .block5Top {
-    width: 100%;
-    height: 100px;
-    background: #E6E6E6 0% 0% no-repeat padding-box;
-    opacity: 1;
-    text-align: center;
-    padding-top: 15px;
-  }
-  .Footer .block5Top .top-icon {
-    margin: 0 auto;
-    margin-bottom: 5px;
-    display: block;
-  }
-  .Footer .block5Top .topName {
-    font: normal normal bold 22px/29px Roboto;
-    letter-spacing: 0px;
-    color: #4E2076;
-    opacity: 1;
-  }
-  .Footer .block5Middle {
-    height: 100px;
-    background: #42145F 0% 0% no-repeat padding-box;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Footer .block5Middle .question {
-    width: fit-content;
-    text-align: center;
-    font: normal normal bold 28px/37px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    margin: 0;
-  }
-  .Footer .block5Middle .button {
-    /* UI Properties */
-    height: 40px;
-    text-align: left;
-    width: fit-content;
-    font: normal normal bold 22px/40px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-    display: flex;
-    background-color: #fff;
-    margin-left: 100px;
-    border-radius: 27px;
-    padding: 0 20px;
-  }
-  .Footer .block5Middle .button .message-icon {
-    margin-top: 10px;
-  }
-  .Footer .block5Middle .button .title-color-text {
-    margin-left: 10px;
-    text-align: center;
-    font: normal normal bold 22px/42px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-  }
   .Footer .block5Bottom {
     height: 215px;
     background: #E6E6E6 0% 0% no-repeat padding-box;
     opacity: 1;
-    padding-top: 50px;
+    padding-top: 40px;
   }
   .Footer .block5Bottom .options {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .Footer .block5Bottom .options .brandm {
+    display: none;
   }
   .Footer .block5Bottom .options .option {
     text-align: center;
@@ -1339,11 +1349,14 @@
     width: 174px;
   }
   .Footer .block5Bottom .options .brand {
+    display: block;
     width: 80px;
     height: 80px;
     background-color: #42145F;
   }
   .Footer .block5Bottom .declaration {
+    width: 378px;
+    margin: 0 auto;
     margin-top: 20px;
     text-align: center;
   }
