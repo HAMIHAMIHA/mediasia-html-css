@@ -3,7 +3,7 @@
   display: none;
 }
 
-.block1_1 .imageBox {
+.imageBox {
   margin: 0;
   padding: 0 0 20px 0;
   width: 100vw;
@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 1200px) {
-  .block1_1 .imageBox {
+  .imageBox {
     width: 100%;
     height: 800px;
     background-position: 0 -320px;
@@ -23,11 +23,11 @@
   }
 }
 
-.block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
+.imageBox .white-text-box, .imageBox .white-box, .imageBox .white-ball-box {
   display: none;
 }
 
-.block1_1 .imageBox .colorBar .typebox {
+.imageBox .colorBar .typebox {
   display: flex;
   width: 100vw;
   height: fit-content;
@@ -36,13 +36,13 @@
   padding: 5px;
 }
 
-.block1_1 .imageBox .text-box {
+.imageBox .text-box {
   margin: 20px 10px 0 10px;
   background-color: #fff;
   padding: 20px;
 }
 
-.block1_1 .imageBox .text-box .textTitle {
+.imageBox .text-box .textTitle {
   font: normal normal bold 30px/40px 'Roboto';
   letter-spacing: 0px;
   color: #562A7C;
@@ -50,11 +50,11 @@
   opacity: 1;
 }
 
-.block1_1 .imageBox .text-box .logo {
+.imageBox .text-box .logo {
   font-size: 60px;
 }
 
-.block1_1 .imageBox .text-box .content {
+.imageBox .text-box .content {
   margin-top: 10px;
   text-align: left;
   font-family: Roboto;
@@ -65,57 +65,58 @@
   font-weight: 300;
 }
 
-.block1_1 .imageBox .text-box strong {
+.imageBox .text-box strong {
   color: #42145F;
   font-weight: 500;
 }
 
-.block1_1 .imageBox .text-box .roundButton {
+.imageBox .text-box .roundButton {
   margin-top: 20px;
   width: fit-content;
 }
 
-.block1_1 .imageBox .text-box .roundButton .icon-composant {
+.imageBox .text-box .roundButton .icon-composant {
   font-size: 60px;
 }
 
-.block1_1 .imageBox .text-box .brands {
+.imageBox .text-box .brands {
   margin-top: 30px;
   display: flex;
 }
 
-.block1_1 .imageBox .text-box .brands .icon-lower {
+.imageBox .text-box .brands .icon-lower {
   width: 100px;
   height: 24px;
   padding-top: 12px;
   margin-right: 10px;
 }
 
-.block1_1 .imageBox .text-box .brands .icon {
+.imageBox .text-box .brands .icon {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
 
-.block1_1 .imageBox .text-box .infos {
+.imageBox .text-box .infos {
   margin-top: 30px;
 }
 
-.block1_1 .imageBox .text-box .infos .title {
+.imageBox .text-box .infos .title {
   text-align: left;
   font: normal normal bold 20px/26px Roboto;
   letter-spacing: 0px;
   color: #42145F;
 }
 
-.block1_1 .imageBox .text-box .infos .content {
+.imageBox .text-box .infos .content {
   text-align: left;
   font: normal normal normal 20px/26px Roboto;
   letter-spacing: 0px;
   color: #555555;
+  font-weight: 300;
 }
 
-.block1_1 .imageBox .text-box .button {
+.imageBox .text-box .button {
   /* UI Properties */
   height: 30px;
   text-align: left;
@@ -129,17 +130,16 @@
   padding: 0 15px;
   margin-right: 12px;
   width: fit-content;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 10px;
-  margin-bottom: 15px;
 }
 
-.block1_1 .imageBox .text-box .button .icon-mail {
+.imageBox .text-box .button .icon-mail {
   font-size: 16px;
   line-height: 30px;
 }
 
-.block1_1 .imageBox .text-box .button .title-color-text {
+.imageBox .text-box .button .title-color-text {
   margin-left: 10px;
   text-align: center;
   font: normal normal bold 14px/30px Roboto;
@@ -148,7 +148,7 @@
   opacity: 1;
 }
 
-.block1_1 .imageBox .arcBox {
+.imageBox .arcBox {
   margin: 0px 10px 0 10px;
   border: 10px solid #fff;
   border-top: transparent;
@@ -156,7 +156,7 @@
   overflow: hidden;
 }
 
-.block1_1 .imageBox .arcBox .mwhiteText {
+.imageBox .arcBox .mwhiteText {
   margin-top: -1px;
   padding: 30px 0 50px 0;
   padding-left: 10px;
@@ -168,23 +168,23 @@
   font-weight: 500;
 }
 
-.block1_1 .imageBox .arcBox .person {
+.imageBox .arcBox .person {
   width: 125%;
 }
 
 @media (min-width: 1200px) {
-  .block1_1 .imageBox .arcBox {
+  .imageBox .arcBox {
     display: none;
   }
-  .block1_1 .imageBox .white-text-box, .block1_1 .imageBox .white-box, .block1_1 .imageBox .white-ball-box {
+  .imageBox .white-text-box, .imageBox .white-box, .imageBox .white-ball-box {
     display: block;
   }
-  .block1_1 .imageBox .colorBar .typebox {
+  .imageBox .colorBar .typebox {
     width: calc(1040px + 11%);
     display: flex;
     margin: 0 auto;
   }
-  .block1_1 .imageBox .text-box {
+  .imageBox .text-box {
     margin: 0;
     padding: 0;
     border: 0;
@@ -197,21 +197,21 @@
     position: absolute;
     z-index: 9;
   }
-  .block1_1 .imageBox .text-box .text {
+  .imageBox .text-box .text {
     display: block;
     width: 430px;
     margin-left: 40px;
     margin-top: 30px;
     z-index: 9;
   }
-  .block1_1 .imageBox .text-box .text .textTitle {
+  .imageBox .text-box .text .textTitle {
     font: normal normal bold 40px/50px 'Roboto';
     letter-spacing: 0px;
     color: #562A7C;
     text-transform: uppercase;
     opacity: 1;
   }
-  .block1_1 .imageBox .text-box .text .content {
+  .imageBox .text-box .text .content {
     width: 400px;
     margin-top: 10px;
     text-align: left;
@@ -219,37 +219,37 @@
     letter-spacing: 0px;
     color: #555555;
   }
-  .block1_1 .imageBox .text-box .text strong {
+  .imageBox .text-box .text strong {
     color: #42145F;
     font: normal normal bold 16px/27px Roboto;
   }
-  .block1_1 .imageBox .text-box .text .logo {
+  .imageBox .text-box .text .logo {
     margin-top: 20px;
   }
-  .block1_1 .imageBox .text-box .roundButton {
+  .imageBox .text-box .roundButton {
     margin-left: 40px;
   }
-  .block1_1 .imageBox .text-box .roundButton .icon-composant {
+  .imageBox .text-box .roundButton .icon-composant {
     font-size: 80px;
   }
-  .block1_1 .imageBox .text-box .brands {
+  .imageBox .text-box .brands {
     margin-left: 40px;
   }
-  .block1_1 .imageBox .text-box .infos {
+  .imageBox .text-box .infos {
     margin-left: 40px;
   }
-  .block1_1 .imageBox .text-box .button {
+  .imageBox .text-box .button {
     height: 40px;
     font: normal normal bold 22px/40px Roboto;
     margin-left: 40px;
     padding: 0 30px;
   }
-  .block1_1 .imageBox .text-box .button .icon-mail {
+  .imageBox .text-box .button .icon-mail {
     font-size: 22px;
     line-height: 40px;
     padding-right: 5px;
   }
-  .block1_1 .imageBox .text-box .button .title-color-text {
+  .imageBox .text-box .button .title-color-text {
     margin-left: 10px;
     text-align: center;
     font: normal normal bold 22px/42px Roboto;
@@ -257,7 +257,7 @@
     color: #fff;
     opacity: 1;
   }
-  .block1_1 .imageBox .white-text-box {
+  .imageBox .white-text-box {
     width: 1200px;
     height: 600px;
     top: 150px;
@@ -266,7 +266,7 @@
     position: absolute;
     z-index: 7;
   }
-  .block1_1 .imageBox .white-text-box .white-text {
+  .imageBox .white-text-box .white-text {
     text-align: right;
     width: 740px;
     height: 166px;
@@ -279,7 +279,7 @@
     color: #FFFFFF;
     opacity: 1;
   }
-  .block1_1 .imageBox .white-box {
+  .imageBox .white-box {
     width: 1200px;
     height: 600px;
     top: 150px;
@@ -293,14 +293,14 @@
     background-color: rgba(66, 20, 95, 0.3);
     position: absolute;
   }
-  .block1_1 .imageBox .white-box .color-ball {
+  .imageBox .white-box .color-ball {
     width: 660px;
     height: 660px;
     background-color: rgba(66, 20, 95, 0.7);
     border-radius: 0 0 660px 0;
     margin: -30px;
   }
-  .block1_1 .imageBox .white-ball-box {
+  .imageBox .white-ball-box {
     width: 1200px;
     height: 600px;
     top: 150px;
@@ -309,7 +309,7 @@
     position: absolute;
     z-index: 7;
   }
-  .block1_1 .imageBox .white-ball-box .white-ball {
+  .imageBox .white-ball-box .white-ball {
     width: 600px;
     height: 600px;
     background-color: white;
@@ -328,7 +328,7 @@
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Header {
     width: 100%;
     height: 100px;
@@ -353,7 +353,7 @@
   font-weight: 100;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Header .left {
     width: 100px;
     height: 100px;
@@ -372,7 +372,7 @@
   display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Header .title-text {
     display: block;
     margin-left: 4%;
@@ -415,7 +415,7 @@
   opacity: 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Header .button {
     height: 40px;
     font: normal normal bold 22px/40px Roboto;
@@ -489,7 +489,7 @@
   margin-top: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Header .mchooseBox {
     display: none;
   }
@@ -537,6 +537,311 @@
     letter-spacing: 0px;
     color: #707070;
     cursor: pointer;
+  }
+}
+
+.inputBox {
+  position: absolute;
+  top: 0;
+  z-index: 15;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inputBox .relativeBox {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20%;
+  background-color: #42145F;
+  border-radius: 20px;
+  width: 95%;
+  height: 887px;
+  padding-top: 61px;
+}
+
+.inputBox .relativeBox .circular {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: -40px;
+  left: calc(50% - 40px);
+  background-color: #fff;
+  padding: 15px;
+  font-size: 50px;
+}
+
+.inputBox .relativeBox .title {
+  text-align: center;
+  font: normal normal bold 30px/39px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.inputBox .relativeBox .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.inputBox .relativeBox .programme {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.inputBox .relativeBox .programme .text {
+  display: none;
+}
+
+.inputBox .relativeBox .programme .select {
+  width: 96%;
+  height: 40px;
+  border-radius: 20px;
+  background: #EDE8F1 0% 0% no-repeat padding-box;
+  margin-left: 2%;
+}
+
+.inputBox .relativeBox .programme .select .none {
+  display: none;
+}
+
+.inputBox .relativeBox .selection {
+  width: 280px;
+  color: #fff;
+  text-align: left;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  padding-top: 12px;
+  line-height: 25px;
+  margin: 0 auto;
+}
+
+.inputBox .relativeBox .selection .select {
+  margin-left: 30px;
+  margin-right: 10px;
+  width: 25px;
+  height: 40px;
+  padding-top: 20px;
+  vertical-align: middle;
+}
+
+.inputBox .relativeBox .middle, .inputBox .relativeBox .middler, .inputBox .relativeBox .large {
+  width: 96%;
+  margin-left: 2%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #EEE9F2;
+  margin-top: 20px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+
+.inputBox .relativeBox .message {
+  border-radius: 20px;
+  width: 96%;
+  margin-left: 2%;
+  height: 106px;
+  margin-top: 20px;
+  background-color: #EEE9F2;
+  padding-left: 20px;
+  padding-top: 10px;
+  resize: none;
+  font-size: 20px;
+}
+
+.inputBox .relativeBox .envoyer {
+  width: fit-content;
+  padding: 3px 20px;
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 30px;
+  text-align: right;
+  font: normal normal bold 22px/36px Roboto;
+  letter-spacing: 0px;
+  color: #42145F;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputBox .relativeBox .envoyer .email .icon-mail {
+  margin-right: 10px;
+  line-height: 30px;
+}
+
+.inputBox .relativeBox .bottomText {
+  text-align: center;
+  font: normal normal normal 11px/15px Roboto;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #FFFFFF;
+  opacity: 1;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .inputBox {
+    width: 100%;
+    height: 300%;
+  }
+  .inputBox .relativeBox {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 409px;
+    background-color: #42145F;
+    border-radius: 20px;
+    width: 800px;
+    height: 877px;
+    padding-top: 106px;
+    padding-left: 50px;
+  }
+  .inputBox .relativeBox .circular {
+    position: absolute;
+    width: 146px;
+    height: 146px;
+    border-radius: 50%;
+    top: -70px;
+    left: calc(50% - 73px);
+    background-color: #fff;
+    padding: 22px;
+    font-size: 100px;
+  }
+  .inputBox .relativeBox .title {
+    padding-left: 256px;
+    font: normal normal bold 30px/39px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  .inputBox .relativeBox .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+    cursor: pointer;
+  }
+  .inputBox .relativeBox .programme {
+    margin-top: 39px;
+    display: flex;
+    align-items: center;
+  }
+  .inputBox .relativeBox .programme .text {
+    text-align: right;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-left: 79px;
+    margin-right: 18px;
+  }
+  .inputBox .relativeBox .programme .select {
+    width: 368px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    background: #EDE8F1 0% 0% no-repeat padding-box;
+  }
+  .inputBox .relativeBox .programme .select .none {
+    display: none;
+  }
+  .inputBox .relativeBox .selection {
+    color: #fff;
+    text-align: left;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-left: 34px;
+    padding-top: 32px;
+    line-height: 25px;
+  }
+  .inputBox .relativeBox .selection .select {
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    padding-top: 20px;
+    vertical-align: middle;
+  }
+  .inputBox .relativeBox .middle {
+    width: 330px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #EEE9F2;
+    margin-top: 30px;
+    margin-right: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .inputBox .relativeBox .middler {
+    width: 330px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #EEE9F2;
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .inputBox .relativeBox .large {
+    width: 700px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #EEE9F2;
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .inputBox .relativeBox .message {
+    border-radius: 20px;
+    width: 700px;
+    height: 106px;
+    margin-top: 37px;
+    background-color: #EEE9F2;
+    padding-left: 20px;
+    padding-top: 10px;
+    resize: none;
+    font-size: 20px;
+  }
+  .inputBox .relativeBox .envoyer {
+    width: 178px;
+    border-radius: 20px;
+    margin-left: 248px;
+    margin-top: 30px;
+    text-align: right;
+    font: normal normal bold 22px/36px Roboto;
+    letter-spacing: 0px;
+    color: #42145F;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inputBox .relativeBox .envoyer .email .icon-mail {
+    margin-right: 10px;
+    line-height: 30px;
+  }
+  .inputBox .relativeBox .bottomText {
+    width: 700px;
+    margin-top: 40px;
+    text-align: center;
+    font: normal normal normal 11px/15px Roboto;
+    letter-spacing: 0px;
+    font-weight: 300;
+    color: #FFFFFF;
+    opacity: 1;
   }
 }
 
@@ -926,7 +1231,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block1_2 {
     margin-top: 50px;
     display: flex;
@@ -1061,7 +1366,7 @@
 .block1_3 .right-box .white-border {
   position: absolute;
   left: -10px;
-  top: 25px;
+  top: 10%;
   z-index: 5;
   width: 94%;
   height: 78%;
@@ -1169,7 +1474,7 @@
   margin-right: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block1_4 {
     width: 100%;
     height: 650px;
@@ -1220,7 +1525,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Footer {
     width: 100%;
     height: 415px;
@@ -1252,7 +1557,7 @@
   opacity: 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Footer .block5Top {
     width: 100%;
     height: 100px;
@@ -1308,7 +1613,7 @@
   opacity: 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Footer .block5Middle {
     height: 100px;
     background: #42145F 0% 0% no-repeat padding-box;
@@ -1413,7 +1718,7 @@
   color: #555555;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .Footer .block5Bottom {
     height: 215px;
     background: #E6E6E6 0% 0% no-repeat padding-box;
@@ -1476,14 +1781,10 @@
 }
 
 .block2_1 .imageBox {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 791px;
   background-image: url(./src/image_home_1@2x.png);
   background-position: -350px 0;
   background-repeat: no-repeat;
-  background-size: 1265.6px;
+  background-size: fit-content;
 }
 
 @media (min-width: 1200px) {
@@ -1497,202 +1798,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-}
-
-.block2_1 .imageBox .text-box, .block2_1 .imageBox .white-text-box, .block2_1 .imageBox .white-box, .block2_1 .imageBox .white-ball-box {
-  display: none;
-}
-
-.block2_1 .imageBox .mtext-box {
-  margin: 20px 10px 0 10px;
-  height: 574px;
-  border: 10px solid #FFFFFF;
-  border-radius: 0 0 180px 0;
-  background-color: rgba(66, 20, 95, 0.7);
-  position: relative;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box {
-  position: absolute;
-  z-index: 3;
-  top: -1px;
-  left: -1px;
-  right: 1px;
-  width: 102%;
-  height: fit-content;
-  background-color: #fff;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .text {
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-top: 10px;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .text .title {
-  font: normal normal bold 30px/40px 'Roboto';
-  letter-spacing: 0px;
-  color: #562A7C;
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .text .content1, .block2_1 .imageBox .mtext-box .mtop-box .text .content2 {
-  margin-top: 10px;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0px;
-  color: #555555;
-  font-weight: 300;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .text .text-color {
-  color: #42145F;
-  font-weight: 500;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .colorButton {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  width: fit-content;
-}
-
-.block2_1 .imageBox .mtext-box .mtop-box .colorButton .icon-composant {
-  font-size: 60px;
-}
-
-.block2_1 .imageBox .mtext-box .whiteText {
-  position: absolute;
-  width: 70%;
-  font-family: Roboto;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  bottom: 60px;
-  left: 10px;
-}
-
-@media (min-width: 1200px) {
-  .block2_1 .imageBox .mtext-box {
-    display: none;
-  }
-  .block2_1 .imageBox .text-box, .block2_1 .imageBox .white-text-box, .block2_1 .imageBox .white-box, .block2_1 .imageBox .white-ball-box {
-    display: block;
-  }
-  .block2_1 .imageBox .text-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 9;
-  }
-  .block2_1 .imageBox .text-box .text {
-    width: 430px;
-    height: 392px;
-    margin-left: 40px;
-    margin-top: 30px;
-    z-index: 9;
-  }
-  .block2_1 .imageBox .text-box .text .title {
-    font: normal normal bold 40px/50px 'Roboto';
-    letter-spacing: 0px;
-    color: #562A7C;
-    text-transform: uppercase;
-    opacity: 1;
-  }
-  .block2_1 .imageBox .text-box .text .content1 {
-    width: 400px;
-    margin-top: 10px;
-    text-align: left;
-    font: normal normal normal 16px/27px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-  }
-  .block2_1 .imageBox .text-box .text .content2 {
-    width: 400px;
-    margin-top: 10px;
-    text-align: left;
-    font: normal normal normal 16px/27px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-  }
-  .block2_1 .imageBox .text-box .text .text-color {
-    color: #42145F;
-    font: normal normal bold 16px/27px Roboto;
-  }
-  .block2_1 .imageBox .text-box .color-button {
-    margin-top: 20px;
-    margin-left: 40px;
-    width: fit-content;
-  }
-  .block2_1 .imageBox .text-box .color-button .icon-composant {
-    font-size: 80px;
-  }
-  .block2_1 .imageBox .white-text-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 7;
-  }
-  .block2_1 .imageBox .white-text-box .white-text {
-    text-align: right;
-    width: 740px;
-    height: 166px;
-    z-index: 10;
-    text-align: right;
-    margin-left: 430px;
-    margin-top: 410px;
-    font: normal normal bold 65px/80px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-  }
-  .block2_1 .imageBox .white-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    background-color: transparent;
-    border: 31px solid white;
-    box-sizing: border-box;
-    z-index: 4;
-    overflow: hidden;
-    background-color: rgba(66, 20, 95, 0.3);
-    position: absolute;
-  }
-  .block2_1 .imageBox .white-box .color-ball {
-    width: 660px;
-    height: 660px;
-    background-color: rgba(66, 20, 95, 0.7);
-    border-radius: 0 0 660px 0;
-    margin: -30px;
-  }
-  .block2_1 .imageBox .white-ball-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 7;
-  }
-  .block2_1 .imageBox .white-ball-box .white-ball {
-    width: 600px;
-    height: 600px;
-    background-color: white;
-    border-radius: 0 0 600px 0;
   }
 }
 
@@ -1852,7 +1957,7 @@
     margin-top: 40px;
     width: 533px;
     display: inline-block;
-    margin-left: 6.7%;
+    margin: 0 3vw;
   }
   .block2_2 .scroll-box-outside .scroll-box .show-box .picture-title {
     text-align: right;
@@ -1993,14 +2098,10 @@
 }
 
 .block3_1 .imageBox {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 791px;
   background-image: url(./src/page2/image_programme_1@2x.png);
   background-position: -350px 0;
   background-repeat: no-repeat;
-  background-size: 1265.6px;
+  background-size: fit-content;
 }
 
 @media (min-width: 1200px) {
@@ -2013,337 +2114,11 @@
     background-position: 0 -20px;
     background-repeat: no-repeat;
     background-size: 100% 1200px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
   }
 }
 
-.block3_1 .imageBox .text-box, .block3_1 .imageBox .white-text-box, .block3_1 .imageBox .white-box, .block3_1 .imageBox .white-ball-box, .block3_1 .imageBox .colorItem {
-  display: none;
-}
-
-.block3_1 .imageBox .mcolorItem {
-  display: flex;
-  width: 100vw;
-  height: fit-content;
-  line-height: 20px;
-  color: white;
-  padding: 5px;
-}
-
-.block3_1 .imageBox .mtext-box {
-  margin: 20px 10px 0 10px;
-  height: 554px;
-  border: 10px solid #FFFFFF;
-  border-radius: 0 0 180px 0;
-  background-color: rgba(66, 20, 95, 0.7);
-  position: relative;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox {
-  position: absolute;
-  z-index: 3;
-  top: -1px;
-  left: -1px;
-  right: 1px;
-  width: 102%;
-  height: fit-content;
-  background-color: #fff;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text {
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-top: 10px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .brand {
-  font-size: 60px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .content1 {
-  width: 95%;
-  font: normal normal normal 15px/20px Roboto;
-  letter-spacing: 0px;
-  color: #555555;
-  opacity: 1;
-  margin-top: 20px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .icons {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .icons .icon-lower {
-  padding-right: 10px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .infos {
-  margin-top: 20px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .infos .title {
-  font: normal normal bold 15px/20px Roboto;
-  letter-spacing: 0px;
-  color: #555555;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .text .infos .content {
-  font: normal normal normal 15px/20px Roboto;
-  font-weight: 300;
-  letter-spacing: 0px;
-  color: #555555;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .buttonm {
-  /* UI Properties */
-  height: 30px;
-  text-align: left;
-  font: normal normal bold 15px/20px Roboto;
-  letter-spacing: 0px;
-  color: #fff;
-  opacity: 1;
-  display: flex;
-  background-color: #42145F;
-  border-radius: 27px;
-  padding: 0 15px;
-  margin-right: 12px;
-  width: fit-content;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .buttonm .icon-mail {
-  font-size: 16px;
-  line-height: 30px;
-}
-
-.block3_1 .imageBox .mtext-box .mFirstBox .buttonm .title-color-text {
-  margin-left: 10px;
-  text-align: center;
-  font: normal normal bold 14px/30px Roboto;
-  letter-spacing: 0px;
-  color: #fff;
-  opacity: 1;
-}
-
-@media (min-width: 1200px) {
-  .block3_1 .imageBox .top-box {
-    width: 100%;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .block3_1 .imageBox .top-box .square {
-    width: 100px;
-    height: 100px;
-    background-color: #42145F;
-    margin-right: 37px;
-  }
-  .block3_1 .imageBox .top-box .title-text {
-    margin-left: 4%;
-    height: 100px;
-    text-align: center;
-    font: normal normal normal 23px/100px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-    cursor: pointer;
-  }
-  .block3_1 .imageBox .top-box .button {
-    /* UI Properties */
-    height: 40px;
-    text-align: left;
-    font: normal normal bold 22px/40px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-    display: flex;
-    background-color: #42145F;
-    margin-left: 100px;
-    border-radius: 27px;
-    padding: 0 20px;
-  }
-  .block3_1 .imageBox .top-box .button .message-icon {
-    margin-top: 10px;
-  }
-  .block3_1 .imageBox .top-box .button .title-color-text {
-    margin-left: 10px;
-    text-align: center;
-    font: normal normal bold 22px/42px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-  }
-  .block3_1 .imageBox .top-box .chooseBox {
-    left: 0;
-    top: 100px;
-    position: absolute;
-    width: 1920px;
-    height: 262px;
-    background-color: #fff;
-    z-index: 12;
-    display: flex;
-  }
-  .block3_1 .imageBox .top-box .chooseBox .leftPart {
-    height: 159px;
-    width: 368px;
-    margin: auto 0;
-    margin-left: 322px;
-    margin-right: 127px;
-    text-align: right;
-    font: normal normal bold 40px/53px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-    cursor: default;
-  }
-  .block3_1 .imageBox .top-box .chooseBox .rightPart {
-    height: 180px;
-    margin-top: 54px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .block3_1 .imageBox .top-box .chooseBox .rightPart .choice {
-    margin-bottom: 18px;
-    margin-right: 80px;
-    /* UI Properties */
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #707070;
-    cursor: pointer;
-  }
-  .block3_1 .imageBox .top-box .hidden {
-    display: none;
-  }
-  .block3_1 .imageBox .text-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 9;
-  }
-  .block3_1 .imageBox .text-box .text {
-    width: 430px;
-    height: 103px;
-    margin-left: 40px;
-    margin-top: 40px;
-    z-index: 9;
-  }
-  .block3_1 .imageBox .text-box .text .text1 {
-    margin-top: 30px;
-  }
-  .block3_1 .imageBox .text-box .text .text1 {
-    text-align: left;
-    font: normal normal normal 16px/27px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-    opacity: 1;
-  }
-  .block3_1 .imageBox .text-box .text .icons {
-    margin-top: 30px;
-    display: flex;
-  }
-  .block3_1 .imageBox .text-box .text .icons .icon-lower {
-    width: 100px;
-    height: 24px;
-    padding-top: 12px;
-    margin-right: 10px;
-  }
-  .block3_1 .imageBox .text-box .text .icons .icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .block3_1 .imageBox .text-box .text .infos {
-    margin-top: 30px;
-  }
-  .block3_1 .imageBox .text-box .text .infos .title {
-    text-align: left;
-    font: normal normal bold 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-  }
-  .block3_1 .imageBox .text-box .text .infos .content {
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-  }
-  .block3_1 .imageBox .text-box .text .button {
-    /* UI Properties */
-    height: 40px;
-    width: fit-content;
-    text-align: left;
-    font: normal normal bold 22px/40px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-    display: flex;
-    background-color: #42145F;
-    border-radius: 27px;
-    padding: 0 30px;
-    margin-top: 30px;
-  }
-  .block3_1 .imageBox .text-box .text .button .message-icon {
-    margin-top: 10px;
-  }
-  .block3_1 .imageBox .text-box .text .button .title-color-text {
-    margin-left: 10px;
-    text-align: center;
-    font: normal normal bold 22px/42px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-  }
-  .block3_1 .imageBox .white-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    background-color: transparent;
-    border: 31px solid white;
-    box-sizing: border-box;
-    z-index: 4;
-    overflow: hidden;
-    position: absolute;
-    background-color: rgba(66, 20, 95, 0.3);
-  }
-  .block3_1 .imageBox .white-box .color-ball {
-    width: 660px;
-    height: 660px;
-    background-color: rgba(66, 20, 95, 0.7);
-    border-radius: 0 0 660px 0;
-    margin: -30px;
-  }
-  .block3_1 .imageBox .white-ball-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 7;
-  }
-  .block3_1 .imageBox .white-ball-box .white-ball {
-    width: 600px;
-    height: 600px;
-    background-color: white;
-    border-radius: 0 0 600px 0;
-  }
+.block3_1 .imageBox .arcBox {
+  height: 200px;
 }
 
 .block3_2 .title {
@@ -2477,7 +2252,7 @@
   width: 100vw;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block3_3 {
     margin-top: 50px;
     width: 100%;
@@ -2745,6 +2520,7 @@
 
 @media (min-width: 1200px) {
   .block3_4 .right {
+    width: 50%;
     min-width: 800px;
     height: 500px;
     margin-right: 0;
@@ -2755,7 +2531,7 @@
   width: 100vw;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block3_5 {
     margin-top: 100px;
     width: 100%;
@@ -2769,7 +2545,7 @@
   font: normal normal bold 25px/33px Roboto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block3_5 .title {
     text-align: center;
     font: normal normal bold 40px/53px Roboto;
@@ -2785,7 +2561,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block3_5 .picture {
     width: 1200px;
     height: 740px;
@@ -2808,7 +2584,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block3_5 .button {
     margin-top: 40px;
   }
@@ -2819,89 +2595,25 @@
 }
 
 .block4_1 .imageBox {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 781px;
-  background-color: #42145F;
+  background-image: none;
+  background-color: #42145F !important;
+  background-size: fit-content;
 }
 
-@media (min-width: 1200px) {
-  .block4_1 .imageBox {
-    margin-top: 100px;
-    padding: 0;
-    width: 100%;
-    height: 800px;
-    background-color: #42145F;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
+.block4_1 .imageBox .person {
+  overflow: hidden;
+}
+
+.block4_1 .imageBox .person .mimage {
+  width: 90%;
+  height: 100%;
+  margin-left: -10%;
+  margin-bottom: -10px;
+  padding: 0;
 }
 
 .block4_1 .imageBox .white-text-box, .block4_1 .imageBox .white-box, .block4_1 .imageBox .white-ball-box {
   display: none;
-}
-
-.block4_1 .imageBox .text-box {
-  margin: 20px 10px 0 10px;
-  height: 681px;
-  border: 10px solid #FFFFFF;
-  border-radius: 0 0 180px 0;
-  background-color: rgba(66, 20, 95, 0.7);
-  position: relative;
-  overflow: hidden;
-}
-
-.block4_1 .imageBox .text-box .mtop-box {
-  position: absolute;
-  z-index: 3;
-  top: -1px;
-  left: -1px;
-  right: 1px;
-  width: 102%;
-  height: fit-content;
-  background-color: #fff;
-}
-
-.block4_1 .imageBox .text-box .mtop-box .mtext {
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-
-.block4_1 .imageBox .text-box .mtop-box .mtext .title {
-  font: normal normal bold 30px/40px 'Roboto';
-  letter-spacing: 0px;
-  color: #562A7C;
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-.block4_1 .imageBox .text-box .mtop-box .mtext .content1, .block4_1 .imageBox .text-box .mtop-box .mtext .content2 {
-  margin-top: 10px;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0px;
-  color: #555555;
-  font-weight: 300;
-}
-
-.block4_1 .imageBox .text-box .mtop-box .mtext .text-color {
-  color: #42145F;
-  font-weight: 500;
-}
-
-.block4_1 .imageBox .text-box .mpicture {
-  width: 125%;
-  position: absolute;
-  bottom: -17%;
-  left: -17%;
 }
 
 @media (min-width: 1200px) {
@@ -2960,7 +2672,7 @@
     position: absolute;
     z-index: 9;
   }
-  .block4_1 .imageBox .text-box .mtop-box, .block4_1 .imageBox .text-box .mpicture {
+  .block4_1 .imageBox .text-box .mpicture {
     display: none;
   }
   .block4_1 .imageBox .text-box .text {
@@ -2996,6 +2708,8 @@
 
 .block4_2 .ActivitePart .left {
   padding: 0 10px;
+  max-width: 390px;
+  margin: 0 auto;
 }
 
 .block4_2 .ActivitePart .right {
@@ -3018,9 +2732,11 @@
 
 .block4_2 .ActivitePart .right .picture {
   margin-top: 20px;
+  max-width: 390px;
+  margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_2 {
     width: 100%;
     margin-top: 50px;
@@ -3037,8 +2753,8 @@
   }
   .block4_2 .ActivitePart .right {
     width: 580px;
+    height: fit-content;
     min-width: 580px;
-    height: 610px;
     margin-left: 111px;
   }
   .block4_2 .ActivitePart .right .text .title {
@@ -3068,12 +2784,13 @@
 }
 
 .block4_2 .mclientPart .picture {
+  max-width: 390px;
   width: 96%;
   margin: 0 auto;
   margin-top: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_2 .mclientPart {
     display: none;
   }
@@ -3302,7 +3019,7 @@
   background-color: #42145F;
   height: 185px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 46px;
 }
 
 .block4_3 .top .left .icon-cogedim {
@@ -3331,7 +3048,7 @@
   margin-top: 10px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_3 {
     width: 100%;
     margin-top: 100px;
@@ -3344,15 +3061,17 @@
     min-width: 580px;
     height: 246px;
     background-color: #42145F;
+    text-align: center;
+    padding-top: 64px;
   }
   .block4_3 .top .left .content {
-    padding-top: 126px;
+    padding-top: 8px;
     padding-right: 40px;
-    text-align: right;
     font: normal normal normal 40px/60px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    white-space: nowrap;
   }
   .block4_3 .top .right {
     width: 50%;
@@ -3401,7 +3120,7 @@
   color: #555555;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_3 .bottom {
     margin-top: 60px;
     display: flex;
@@ -3431,14 +3150,13 @@
     letter-spacing: 0px;
     color: #555555;
   }
+  .block4_3 .bottom .right {
+    width: 50%;
+  }
   .block4_3 .bottom .right .rightPicture {
-    width: 960px;
+    min-width: 800px;
     height: 600px;
     overflow: hidden;
-  }
-  .block4_3 .bottom .right .rightPicture .image {
-    width: 960px;
-    height: 600px;
   }
   .block4_3 .bottom .right .smallText {
     padding-top: 10px;
@@ -3516,7 +3234,7 @@
   margin-top: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_4 {
     width: 100%;
   }
@@ -3592,7 +3310,7 @@
   color: #555555;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block4_4 .pictures {
     margin-top: 80px;
     width: 100%;
@@ -3611,14 +3329,10 @@
 }
 
 .block5_1 .imageBox {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 664px;
   background-image: url(./src/image_home_1@2x.png);
   background-position: -350px 0;
   background-repeat: no-repeat;
-  background-size: 1265.6px;
+  background-size: fit-content;
 }
 
 @media (min-width: 1200px) {
@@ -3635,82 +3349,8 @@
   }
 }
 
-.block5_1 .imageBox .text-box, .block5_1 .imageBox .white-text-box, .block5_1 .imageBox .white-box, .block5_1 .imageBox .white-ball-box {
+.block5_1 .imageBox .white-text-box, .block5_1 .imageBox .white-box, .block5_1 .imageBox .white-ball-box {
   display: none;
-}
-
-.block5_1 .imageBox .mtext-box {
-  margin: 20px 10px 0 10px;
-  height: 544px;
-  border: 10px solid #FFFFFF;
-  border-radius: 0 0 180px 0;
-  background-color: rgba(66, 20, 95, 0.7);
-  position: relative;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box {
-  position: absolute;
-  z-index: 3;
-  top: -1px;
-  left: -1px;
-  right: 1px;
-  width: 102%;
-  height: fit-content;
-  background-color: #fff;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .text {
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-top: 10px;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .text .title {
-  font: normal normal bold 30px/40px 'Roboto';
-  letter-spacing: 0px;
-  color: #562A7C;
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .text .content1, .block5_1 .imageBox .mtext-box .mtop-box .text .content2 {
-  margin-top: 10px;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0px;
-  color: #555555;
-  font-weight: 300;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .text .text-color {
-  color: #42145F;
-  font-weight: 500;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .colorButton {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  width: fit-content;
-}
-
-.block5_1 .imageBox .mtext-box .mtop-box .colorButton .icon-composant {
-  font-size: 60px;
-}
-
-.block5_1 .imageBox .mtext-box .whiteText {
-  position: absolute;
-  width: 70%;
-  font-family: Roboto;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  bottom: 40px;
-  left: 10px;
 }
 
 @media (min-width: 1200px) {
@@ -3782,11 +3422,11 @@
   }
   .block5_1 .imageBox .white-text-box .white-text {
     text-align: right;
-    width: 740px;
+    width: 762px;
     height: 166px;
     z-index: 10;
     text-align: right;
-    margin-left: 430px;
+    margin-left: 408px;
     margin-top: 410px;
     font: normal normal bold 65px/80px Roboto;
     letter-spacing: 0px;
@@ -3943,6 +3583,7 @@
     border-radius: 27px;
     color: #fff;
     margin-top: 40px;
+    margin-left: 0;
     text-align: center;
     font: normal normal bold 22px/29px Roboto;
     letter-spacing: 0px;
@@ -4065,6 +3706,7 @@
     border-radius: 27px;
     color: #fff;
     margin-top: 40px;
+    margin-left: 0;
     text-align: center;
     font: normal normal bold 22px/29px Roboto;
     letter-spacing: 0px;
@@ -4072,6 +3714,7 @@
     opacity: 1;
   }
   .block5_2 .nom .right {
+    display: block;
     width: 580px;
     min-width: 580px;
     height: 500px;
@@ -4094,12 +3737,10 @@
   }
   .block5_3 .images .left {
     width: 940px;
-    min-width: 700px;
     height: 500px;
   }
   .block5_3 .images .right {
     width: 940px;
-    min-width: 700px;
     height: 500px;
     margin-left: 40px;
   }
@@ -4228,7 +3869,7 @@
   .block5_4 {
     display: block;
     width: 100%;
-    height: 1050px;
+    height: 1200px;
     margin-top: 50px;
     position: relative;
   }
@@ -4441,367 +4082,51 @@
 }
 
 .block6_1 .imageBox {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 791px;
   background-image: url(./src/page2/image_programme_1@2x.png);
   background-position: -350px 0;
   background-repeat: no-repeat;
-  background-size: 1265.6px;
+  background-size: fit-content;
 }
 
 @media (min-width: 1200px) {
   .block6_1 .imageBox {
     margin-top: 100px;
     padding: 0;
-    width: 100%;
-    height: 800px;
     background-image: url(./src/page2/image_programme_1@2x.png);
     background-position: 0 -20px;
     background-repeat: no-repeat;
-    background-size: 100% 1200px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    background-size: 100% 2000px;
   }
 }
 
-.block6_1 .imageBox .text-box, .block6_1 .imageBox .white-text-box, .block6_1 .imageBox .white-box, .block6_1 .imageBox .white-ball-box, .block6_1 .imageBox .colorItem {
-  display: none;
+.block6_1 .imageBox .arcBox .mwhiteText {
+  padding: 20px 0;
 }
 
-.block6_1 .imageBox .mcolorItem {
-  display: flex;
-  width: 100vw;
-  height: fit-content;
-  line-height: 20px;
-  color: white;
-  padding: 5px;
-}
-
-.block6_1 .imageBox .mtext-box {
-  margin: 20px 10px 0 10px;
-  height: 641px;
-  border: 10px solid #FFFFFF;
-  border-radius: 0 0 180px 0;
-  background-color: rgba(66, 20, 95, 0.7);
-  position: relative;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox {
-  position: absolute;
-  z-index: 3;
-  top: -1px;
-  left: -1px;
-  right: 1px;
-  width: 102%;
-  height: fit-content;
-  background-color: #fff;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .title {
+.block6_1 .imageBox .textTitleSmall {
   font: normal normal bold 20px/26px Roboto;
   letter-spacing: 0px;
   color: #42145F;
+  margin-bottom: 20px;
 }
 
-.block6_1 .imageBox .mtext-box .mFirstBox .title2 {
-  font: normal normal bold 30px/40px Roboto;
-  letter-spacing: 0px;
-  color: #42145F;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .text {
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-top: 10px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .text .content1 {
-  width: 95%;
-  font: normal normal normal 15px/20px Roboto;
-  letter-spacing: 0px;
-  color: #555555;
-  opacity: 1;
-  margin-top: 20px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .text .icons {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .text .icons .icon-lower {
-  padding-right: 10px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .text .icons .icon {
-  width: 100px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .buttonm {
-  /* UI Properties */
-  height: 30px;
-  text-align: left;
-  font: normal normal bold 15px/20px Roboto;
-  letter-spacing: 0px;
-  color: #fff;
-  opacity: 1;
-  display: flex;
-  background-color: #42145F;
-  border-radius: 27px;
-  padding: 0 15px;
-  margin-right: 12px;
-  width: fit-content;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 15px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .buttonm .icon-mail {
-  font-size: 16px;
-  line-height: 30px;
-}
-
-.block6_1 .imageBox .mtext-box .mFirstBox .buttonm .title-color-text {
-  margin-left: 10px;
-  text-align: center;
-  font: normal normal bold 14px/30px Roboto;
-  letter-spacing: 0px;
-  color: #fff;
-  opacity: 1;
-}
-
-.block6_1 .imageBox .mtext-box .whiteText {
-  position: absolute;
-  width: 70%;
-  font-family: Roboto;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  bottom: 20px;
-  left: 10px;
+.block6_1 .imageBox .white-text-box, .block6_1 .imageBox .white-box, .block6_1 .imageBox .white-ball-box, .block6_1 .imageBox .colorItem {
+  display: none;
 }
 
 @media (min-width: 1200px) {
-  .block6_1 .imageBox .top-box {
-    width: 100%;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  .block6_1 .imageBox .white-text-box, .block6_1 .imageBox .white-box, .block6_1 .imageBox .white-ball-box, .block6_1 .imageBox .colorItem {
+    display: block;
   }
-  .block6_1 .imageBox .top-box .square {
-    width: 100px;
-    height: 100px;
-    background-color: #42145F;
-    margin-right: 37px;
+  .block6_1 .imageBox .white-text-box .white-text {
+    width: 680px;
+    margin-left: 500px;
+    margin-top: 250px;
   }
-  .block6_1 .imageBox .top-box .title-text {
-    margin-left: 4%;
-    height: 100px;
-    text-align: center;
-    font: normal normal normal 23px/100px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-    cursor: pointer;
-  }
-  .block6_1 .imageBox .top-box .button {
-    /* UI Properties */
-    height: 40px;
-    text-align: left;
-    font: normal normal bold 22px/40px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-    display: flex;
-    background-color: #42145F;
-    margin-left: 100px;
-    border-radius: 27px;
-    padding: 0 20px;
-  }
-  .block6_1 .imageBox .top-box .button .message-icon {
-    margin-top: 10px;
-  }
-  .block6_1 .imageBox .top-box .button .title-color-text {
-    margin-left: 10px;
-    text-align: center;
-    font: normal normal bold 22px/42px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-  }
-  .block6_1 .imageBox .top-box .chooseBox {
-    left: 0;
-    top: 100px;
-    position: absolute;
-    width: 1920px;
-    height: 262px;
-    background-color: #fff;
-    z-index: 12;
-    display: flex;
-  }
-  .block6_1 .imageBox .top-box .chooseBox .leftPart {
-    height: 159px;
-    width: 368px;
-    margin: auto 0;
-    margin-left: 322px;
-    margin-right: 127px;
-    text-align: right;
-    font: normal normal bold 40px/53px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-    opacity: 1;
-    cursor: default;
-  }
-  .block6_1 .imageBox .top-box .chooseBox .rightPart {
-    height: 180px;
-    margin-top: 54px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .block6_1 .imageBox .top-box .chooseBox .rightPart .choice {
-    margin-bottom: 18px;
-    margin-right: 80px;
-    /* UI Properties */
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #707070;
-    cursor: pointer;
-  }
-  .block6_1 .imageBox .top-box .hidden {
-    display: none;
-  }
-  .block6_1 .imageBox .text-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 9;
-  }
-  .block6_1 .imageBox .text-box .text {
-    width: 430px;
-    height: 103px;
-    margin-left: 40px;
-    margin-top: 40px;
-    z-index: 9;
-  }
-  .block6_1 .imageBox .text-box .text .text1 {
-    margin-top: 30px;
-  }
-  .block6_1 .imageBox .text-box .text .text1 {
-    text-align: left;
-    font: normal normal normal 16px/27px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-    opacity: 1;
-  }
-  .block6_1 .imageBox .text-box .text .icons {
-    margin-top: 30px;
-    display: flex;
-  }
-  .block6_1 .imageBox .text-box .text .icons .icon-lower {
-    width: 100px;
-    height: 24px;
-    padding-top: 12px;
-    margin-right: 10px;
-  }
-  .block6_1 .imageBox .text-box .text .icons .icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .block6_1 .imageBox .text-box .text .infos {
-    margin-top: 30px;
-  }
-  .block6_1 .imageBox .text-box .text .infos .title {
-    text-align: left;
-    font: normal normal bold 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #42145F;
-  }
-  .block6_1 .imageBox .text-box .text .infos .content {
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #555555;
-  }
-  .block6_1 .imageBox .text-box .text .button {
-    /* UI Properties */
-    height: 40px;
-    width: fit-content;
-    text-align: left;
-    font: normal normal bold 22px/40px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-    display: flex;
-    background-color: #42145F;
-    border-radius: 27px;
-    padding: 0 30px;
-    margin-top: 30px;
-  }
-  .block6_1 .imageBox .text-box .text .button .message-icon {
-    margin-top: 10px;
-  }
-  .block6_1 .imageBox .text-box .text .button .title-color-text {
-    margin-left: 10px;
-    text-align: center;
-    font: normal normal bold 22px/42px Roboto;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 1;
-  }
-  .block6_1 .imageBox .white-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    background-color: transparent;
-    border: 31px solid white;
-    box-sizing: border-box;
-    z-index: 4;
-    overflow: hidden;
-    position: absolute;
-    background-color: rgba(66, 20, 95, 0.3);
-  }
-  .block6_1 .imageBox .white-box .color-ball {
-    width: 660px;
-    height: 660px;
-    background-color: rgba(66, 20, 95, 0.7);
-    border-radius: 0 0 660px 0;
-    margin: -30px;
-  }
-  .block6_1 .imageBox .white-ball-box {
-    width: 1200px;
-    height: 600px;
-    top: 150px;
-    transform: translate(-50%);
-    left: 50%;
-    position: absolute;
-    z-index: 7;
-  }
-  .block6_1 .imageBox .white-ball-box .white-ball {
-    width: 600px;
-    height: 600px;
-    background-color: white;
-    border-radius: 0 0 600px 0;
-  }
+}
+
+.block6_2 {
+  margin-top: 40px;
 }
 
 .block6_2 .first .left {
@@ -4816,6 +4141,7 @@
 @media (min-width: 1200px) {
   .block6_2 .first {
     display: flex;
+    justify-content: center;
     margin-top: 50px;
   }
   .block6_2 .first .left {
@@ -4824,8 +4150,10 @@
     height: 500px;
   }
   .block6_2 .first .right {
+    width: 580px;
     margin-left: 40px;
     min-width: 430px;
+    margin-top: 0;
   }
 }
 
@@ -4863,7 +4191,7 @@
   color: #555555;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block6_2 .second {
     display: flex;
     margin-top: 40px;
@@ -4912,7 +4240,7 @@
   width: 100vw;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block6_2 .third {
     display: flex;
     margin-top: 40px;
@@ -4926,8 +4254,7 @@
     background-color: #42145F;
   }
   .block6_2 .third .leftBox .left {
-    max-width: 560px;
-    min-width: 560px;
+    max-width: 60%;
     height: fit-content;
     color: #fff;
     margin-right: 3.125%;
@@ -4951,7 +4278,7 @@
   margin-top: 40px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block6_3 {
     width: 100%;
   }
@@ -4988,7 +4315,7 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block6_3 .firstParagraph {
     display: flex;
     justify-content: center;
@@ -5028,7 +4355,7 @@
   width: 100vw;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1050px) {
   .block6_3 .secondParagraph {
     display: flex;
     margin-top: 44px;
@@ -5040,8 +4367,11 @@
   }
   .block6_3 .secondParagraph .leftBox .left {
     min-width: 580px;
+    width: fit-content;
   }
   .block6_3 .secondParagraph .right {
+    width: fit-content;
+    margin-top: 0;
     margin-left: 50px;
     min-width: 940px;
   }
