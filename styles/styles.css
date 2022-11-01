@@ -1361,7 +1361,10 @@
 
 .block1_3 .right-box {
   position: relative;
+  background-image: url(./src/image_home_5@2x.png);
+  background-repeat: no-repeat;
   margin-top: 30px;
+  height: 400px;
 }
 
 .block1_3 .right-box .white-border {
@@ -1391,6 +1394,7 @@
     background-repeat: no-repeat;
     background-size: 100% 600px;
     position: relative;
+    height: 600px;
   }
   .block1_3 .right-box .white-border {
     position: absolute;
@@ -2374,7 +2378,7 @@
   justify-content: center;
   align-items: center;
   width: fit-content;
-  padding: 10px 30px;
+  padding: 10px 20px;
 }
 
 .block3_3 .inner_box .rightBox .bottom .button .icon-mail {
@@ -2873,7 +2877,7 @@
   }
   .block4_2 .ActivitePart .left {
     width: 539px;
-    min-width: 539px;
+    min-width: 500px;
     height: 543px;
   }
   .block4_2 .ActivitePart .right {
@@ -4133,7 +4137,7 @@
   }
   .block5_5 .community .right {
     width: 50%;
-    min-width: 50%;
+    min-width: 40%;
     margin-left: 40px;
   }
   .block5_5 .nom {

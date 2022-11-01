@@ -1288,7 +1288,10 @@
     }
     .right-box{
         position: relative;
+        background-image: url(./src/image_home_5@2x.png);
+        background-repeat: no-repeat;
         margin-top: 30px;
+        height: 400px;
         .white-border{
             position: absolute;
             left: -10px;
@@ -1314,6 +1317,7 @@
         background-repeat: no-repeat;
         background-size:100% 600px;
         position: relative;
+        height: 600px;
         .white-border{
             position: absolute;
             width: 615px;
@@ -2239,7 +2243,7 @@
                     justify-content: center;
                     align-items: center;
                     width: fit-content;
-                    padding: 10px 30px;
+                    padding: 10px 20px;
                     .icon-mail{
                         font-size: 20px;
                         margin-right: 10px;
@@ -2727,7 +2731,7 @@
             margin:0 auto;
             .left{
                 width: 539px;
-                min-width: 539px;
+                min-width: 500px;
                 height: 543px;
                 // margin-left: 390px;
             }
@@ -3966,7 +3970,7 @@
         }
         .right{
             width: 50%;
-            min-width: 50%;
+            min-width: 40%;
             margin-left: 40px;
         }
     }

@@ -802,7 +802,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     )
 }
 const Block1_3 = ({text1}: Block1_3Props) => {
-    let src=require(`../../styles/src/image_home_5@2x.png`).default
+    // let src=require(`../../styles/src/image_home_5@2x.png`).default
     return (
     <div className="block1_3">
         <div className="left-box">
@@ -822,7 +822,7 @@ const Block1_3 = ({text1}: Block1_3Props) => {
             <div className="white-border">
                 <div className="text">{text1[4]}</div>
             </div>
-            <Image src={src}></Image>
+            {/* <Image src={src} width={960} height={500}></Image> */}
         </div>
     </div>
     )
