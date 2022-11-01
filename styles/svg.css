@@ -28,7 +28,7 @@
 .icon-left_yellow_arrow .path1:before {
   content: "\e902";
   color: rgb(209, 171, 9);
-  opacity: 0.69;
+  opacity: 1;
 }
 .icon-left_yellow_arrow .path2:before {
   content: "\e903";
@@ -38,7 +38,7 @@
 .icon-right_yellow_arrow .path1:before {
   content: "\e904";
   color: rgb(209, 171, 9);
-  opacity: 0.7;
+  opacity: 1;
 }
 .icon-right_yellow_arrow .path2:before {
   content: "\e905";

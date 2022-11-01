@@ -1413,22 +1413,31 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
         <div className="title">{text1}</div>
         <div className="map">
             <div className="mapPicture">
-                <Image src={plan_situation} aria-label="aria-label" className="mapimg"></Image>
+                <Image src={plan_situation} aria-label="aria-label" width={2400} height={1000} className="mapimg"></Image>
             </div>
+            <div className="icon-left_yellow_arrow">
+                <span className="path1"></span>
+                <span className="path2"></span>
+            </div>
+            <div className="icon-right_yellow_arrow">
+                <span className="path1"></span>
+                <span className="path2"></span>
+            </div>
+            <div className="right_arrow"></div>
         </div>
         <div className="transparents">
             {arr.map((e,i)=>
                 <div key={i} className="transport-boxs">
                     <div className={"transport-box yellow icon-"+e.name}></div>
                     {/* {(e.name=="autoroute"?<div className="transport-box yellow icon-autoroute">
-                                                <span className="path1"></span>
-                                                <span className="path2"></span>
-                                                <span className="path3"></span>
-                                                <span className="path4"></span>
-                                                <span className="path5"></span>
-                                                <span className="path6"></span>
-                                                <span className="path7"></span>
-                                               </div>  :"")} */}
+                            <span className="path1"></span>
+                            <span className="path2"></span>
+                            <span className="path3"></span>
+                            <span className="path4"></span>
+                            <span className="path5"></span>
+                            <span className="path6"></span>
+                            <span className="path7"></span>
+                            </div>  :"")} */}
                     {/* <Image key={i} src={ e.src} alt="brand1" className="transport" /> */}
                     <div className="transport-name yellow">{text2[e.id]}</div>
                     <div className="transport-journey">{text3[e.id]}</div>
@@ -1456,13 +1465,25 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                 <div className="leftBox">
                     <div className="image" onClick={show_box}>
                         <Image src={src} alt="image_programme_2" className="image"/>
-                        <div className="icon-share"></div>
+                        <div className="icon-share">
+                            <span className="path1"></span>
+                            <span className="path2"></span>
+                            <span className="path3"></span>
+                        </div>
                     </div>
                     <div className="changeButton">
                         <div className="yellowBall"></div>
                         <div className="yellowBall"></div>
                         <div className="yellowBall"></div>
                         <div className="yellowBall"></div>
+                    </div>
+                    <div className="icon-left_yellow_arrow">
+                        <span className="path1"></span>
+                        <span className="path2"></span>
+                    </div>
+                    <div className="icon-right_yellow_arrow">
+                        <span className="path1"></span>
+                        <span className="path2"></span>
                     </div>
                 </div>
                 <div className="rightBox">

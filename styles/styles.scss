@@ -345,7 +345,7 @@
     @media (min-width:1050px){
         .title-text{
             display: block;
-            margin-left: 4%;
+            margin-left: 2%;
             height: 100px;
             text-align: center;
             font: normal normal normal 23px/100px Roboto;
@@ -353,6 +353,11 @@
             color: #42145F;
             opacity: 1;
             cursor: pointer;
+        }
+    }
+    @media (min-width:1200px){
+        .title-text{
+            margin-left: 4%;
         }
     }
     .button{
@@ -385,7 +390,10 @@
         .button{
             height: 40px;
             font: normal normal bold 22px/40px Roboto;
-            margin-left: 100px;
+            margin-left: 50px;
+            @media (min-width:1200px){
+                margin-left: 100px;
+            }
             padding: 0 30px;
             .icon-mail{
                 font-size: 22px;
@@ -619,7 +627,6 @@
                 .icon-mail{
                     margin-right: 10px;
                     line-height: 30px;
-                    
                 }
             }
         }
@@ -1158,7 +1165,7 @@
             }
         }
     }
-    @media (min-width:1050px){
+    @media (min-width:1200px){
         margin-top: 50px;
         display: flex;
         position: relative;
@@ -1820,8 +1827,10 @@
             width: fit-content;
             margin: 0 auto;
             .scroll-box{
-                width: 1400px;
-                height:780px;
+                width: 1280px;
+                height:660px;
+                margin:0 auto;
+                margin-top: 50px;
                 // overflow-y: scroll;
                 // overflow-x: hidden;
                 overflow: hidden;
@@ -1943,7 +1952,7 @@
             }
             .border-selection{
                 position: absolute;
-                bottom: -35px;
+                bottom: -50px;
                 width: fit-content;
                 left: 0;
                 right: 0;
@@ -2001,6 +2010,7 @@
     }
 }
 .block3_2{
+    margin-top: 40px;
     .title{
         text-align: center;
         font: normal normal bold 25px/33px Roboto;
@@ -2027,11 +2037,32 @@
         overflow: hidden;
         .mapPicture{
             position: absolute;
-            // left: -50%;
-            transform: translate(-23%,-10%);
-            height: -30%;
-            width: 180%;
-
+            left: calc(40% - 320px);
+            // transform: translate(-23%,0);
+            // top: -13%;
+            // width: 180%;
+            width: 700px;
+        }
+        @media (min-width: 600px){
+            .mapPicture{
+                width: 1400px;
+                left: calc(30% - 550px);
+                top: -130px;
+            }
+        }
+        .icon-left_yellow_arrow{
+            position:absolute;
+            left: 10px;
+            top: 40%;
+            font-size: 60px;
+            opacity: 0.6;
+        }
+        .icon-right_yellow_arrow {
+            position:absolute;
+            right: 10px;
+            top: 40%;
+            font-size: 60px;
+            opacity: 0.6;
         }
     }
     @media (min-width: 1200px){
@@ -2040,6 +2071,14 @@
             min-height: 550px;
             margin: 0 auto;
             margin-top: 50px;
+            .icon-left_yellow_arrow,.icon-right_yellow_arrow{
+                display: none;
+            }
+            .mapPicture{
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
         }
     }
     .transparents{
@@ -2128,11 +2167,26 @@
         width: 100vw;
         .leftBox{
             width: 100vw;
+            position: relative;
             .icon-share{
                 display: none;
             }
             .changeButton{
                 display: none;
+            }
+            .icon-left_yellow_arrow{
+                position:absolute;
+                left: 10px;
+                top: 45%;
+                font-size: 60px;
+                opacity: 0.8;
+            }
+            .icon-right_yellow_arrow {
+                position:absolute;
+                right: 10px;
+                top: 45%;
+                font-size: 60px;
+                opacity: 0.8;
             }
         }
         .rightBox{
@@ -2209,6 +2263,15 @@
                     height: 50px;
                 }
             }
+            .icon-share{
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                z-index: 8;
+                font-size: 50px;
+
+            }
             .changeButton{
                 margin-top: 20px;
                 height: 20px;
@@ -2221,6 +2284,9 @@
                     border-radius: 50%;
                     background-color:  rgba(209,171,9,0.3);
                 }
+            }
+            .icon-left_yellow_arrow, .icon-right_yellow_arrow {
+                display: none;
             }
         }
         .rightBox{
