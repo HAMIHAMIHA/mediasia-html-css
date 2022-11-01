@@ -1,6 +1,5 @@
-import {useEffect, useState} from 'react';
+import { useState} from 'react';
 import Map,{Marker} from 'react-map-gl';
-import Script from 'next/script'
 import Image from "next/image";
 import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
 import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
@@ -387,7 +386,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     const show_input=()=>{
         showInput(!showi)
     }
-    let [typeColors,changeType] =useState('dark_purple')
+    let typeColors = 'dark_purple'
     // const changeColor=(e:string)=>{
     // changeType(typeColors=e)
     // console.log(typeColors)
@@ -453,7 +452,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
@@ -567,7 +566,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <select className="select">
                         <option className="option none"></option>
                         {arr.map((e, i) =>
-                            <option className="option" key={i}>{e.selections}</option>
+                            <option key={i} className="option">{e.selections}</option>
                             )
                         }
                     </select>
@@ -575,7 +574,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                 <div className="selection" placeholder="Programme">
                     <input type="radio" name="radio" value="Acheter" className="select" checked></input>Acheter
                     <input type="radio" name="radio" value="Louer" className="select" checked></input>Louer
-                    <input type="radio" name="radio" value="Demande d'information" className="select" checked></input>Demande d'information
+                    <input type="radio" name="radio" value={"Demande d\'information"} className="select" checked></input>{'Demande d\'information'}
                 </div>
                 <div className="nompre">
                     <input type="text" name="firstname" placeholder="*Nom" className="middle nom"></input>
@@ -706,7 +705,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
             <div className="scrollBox">
                 <div className="scroll-boxm">
                     {arrm.map((e, i) =>
-                        <div className="show-box">
+                        <div key={i} className="show-box">
                             <div className="picture-title">
                                 <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                             </div>
@@ -747,7 +746,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     <div className="scroll-title">{number1} {text1}</div>
                     <div className={"scroll-box" + (open ? ' box-show' : '') }>
                         {arr.map((e, i) =>
-                            <div className="show-box">
+                            <div key={i} className="show-box">
                                 <div className="picture-title">title</div>
                                 <div className="picture-box picture-box1">
                                     <div className="bgc"> 
@@ -1020,7 +1019,7 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
@@ -1113,10 +1112,12 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     )
 }
 const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
-    const [open, setOpen] = useState(false)
-    const change_map_size=()=>{
-        setOpen(!open)
-    }
+    // const [open, setOpen] = useState(false)
+    const open = false
+
+    // const change_map_size=()=>{
+    //     setOpen(!open)
+    // }
     let arr=[]
     let arrm=[]
     let test=0
@@ -1137,12 +1138,12 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
         <div className="block2_2">
             <div className="scroll-box-outside">
                 {arrm.map((e, i) =>
-                    <div className="show-box">
+                    <div  key={i} className="show-box">
                         <div className="picture-title">
                             <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                         </div>
                         <div className="picture-box picture-box1">
-                            <div className="bgc"> 
+                            <div className="bgc">
                                 <Image key={i} src={ e.src} alt="brand1" width={1200} height={900} className="picture"/>
                                 <div className="picture-text1">{text2[0]}</div>
                                 <div className="picture-text2">{text2[3]}</div>
@@ -1175,7 +1176,7 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                 </div>
                 <div className={"scroll-box" + (open ? ' box-show' : '') }>
                     {arr.map((e, i) =>
-                        <div className="show-box">
+                        <div key={i} className="show-box">
                             <div className="picture-title">title</div>
                             <div className="picture-box picture-box1">
                                 <div className="bgc"> 
@@ -1183,7 +1184,6 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                                     <div className="picture-text1">{text2[0]}</div>
                                     <div className="picture-text2">{text2[3]}</div>
                                 </div>
-
                                 <div className="white-bottom-box">
                                     <div className="Surface-flex">
                                         <div className="surface"></div>
@@ -1311,7 +1311,7 @@ const Block3_1=({text0, text1, text2, text3, text4, text5, text6, number1}:Block
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
@@ -1498,7 +1498,7 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                         <Image src={Logo_hill_png} aria-label="aria-label" className="logoHill"></Image>
                     </div>
                     {arr.map((e,i)=>
-                        <div className="messages">
+                        <div key={i} className="messages">
                             <text className="title">{e.title} </text>
                             <text className="content">{e.content}</text>
                         </div>
@@ -1639,7 +1639,7 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
@@ -1775,7 +1775,7 @@ const Block4_2=({text1,text2,text3,text4,text5}:Block4_2Props)=>{
             <div className="clientPart">
                 <div className="left">
                     <div className="mds">3 Mds €</div>
-                    <div className="de">de chiffre d'affaires</div>
+                    <div className="de">{'de chiffre d\'affaires'}</div>
                     <div className="infos">
                         <div className="info">
                             <div className="line1">2<sup>e</sup></div>
@@ -1936,11 +1936,11 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
     let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
     let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
     let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
-    const move_down=()=>{
-        scrollTo({
-            top:800,left:0,behavior:"smooth"
-        })
-    }
+    // const move_down=()=>{
+    //     scrollTo({
+    //         top:800,left:0,behavior:"smooth"
+    //     })
+    // }
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -2015,7 +2015,7 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
@@ -2443,7 +2443,7 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
                             {text5.map((e,i)=>
-                                <div className="choice">{e}</div>
+                                <div key={i} className="choice">{e}</div>
                             )}
                         </div>
                     </div>
