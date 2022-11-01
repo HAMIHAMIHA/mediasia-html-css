@@ -7,8 +7,7 @@ import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
 // import { text } from 'stream/consumers';
 
 
-//1.拆分元素不要大块重写。
-//2.多个段落用p标签
+
 //4.改变颜色全部变化。
 
 
@@ -356,6 +355,7 @@ interface Block6_3Props{
 }
 
 //page1
+//Only block1 can click the button to display the input field
 const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block1_1Props) => {
     const block1={  'colorBar':false,
                     'textTitle':true,
@@ -631,7 +631,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     return (
         <div className="block1_2">
             <div className={"map" + (open ? ' open' : '') }>
-                <div className="mblock2-map">
+                {/* <div className="mblock2-map">
                     <div className="title">
                         {number1} {text1}
                     </div>
@@ -663,8 +663,12 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                             </div>
                         </Marker>
                     </Map>
-                </div>
+                </div> */}
                 <div className={"block2-map" + (open ? ' open' : '') } id="block2-id">
+                    <div className="title">
+                        {number1} {text1}
+                    </div>
+                    <div className="mapBox">
                     <Map
                         // {...viewport}
                         initialViewState={{
@@ -672,7 +676,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                             latitude: 47.18,
                             zoom: 6.06
                         }}
-                        style={{width: '960px', height: '1200px'}}
+                        style={{width: '100%', height: '100%'}}
                         mapStyle="mapbox://styles/mapbox/streets-v9"
                         mapboxAccessToken="pk.eyJ1IjoicGl6enVwIiwiYSI6ImNsOTNtN3FzbzA1b3Mzdm9lZXpvcG94OXQifQ.PT2kirQB9_9_8By1AT41uQ"
                         // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -693,6 +697,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                             </div>
                         </Marker>
                     </Map>
+                    </div>
                     {/* <Script id="show-scroll" strategy="lazyOnload">
                         {`console.log("1")`}
                     </Script> */}
@@ -1506,6 +1511,14 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={(show ? 'showBox' : 'hidden')}>
+                    <div className="image" onClick={show_box}>
+                        <Image src={src} alt="image_programme_2" className="image"/>
+                        <div className="icon-x"></div>
+                        <div className="icon-left"></div>
+                        <div className="icon-right"></div>
+                    </div>
             </div>
         </div>
     )
