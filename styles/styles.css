@@ -874,7 +874,7 @@
     overflow: hidden;
   }
   .block1_2 .map .block2-map .mapBox {
-    width: 960px;
+    width: 100%;
     height: 1200px;
   }
   .block1_2 .map .block2-map .number-ball {
@@ -1954,7 +1954,7 @@
     margin: 0 auto;
   }
   .block2_2 .scroll-box-outside .scroll-box {
-    width: 1224px;
+    width: calc(1224px + 2%);
     height: 660px;
     margin: 0 auto;
     margin-top: 50px;

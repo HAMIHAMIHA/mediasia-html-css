@@ -816,7 +816,8 @@
                 height: 1200px;
                 overflow: hidden;
                 .mapBox{
-                    width: 960px;
+                    // width: 960px;
+                    width: 100%;
                     height: 1200px;
                 }
                 .number-ball{
@@ -1841,7 +1842,7 @@
             width: fit-content;
             margin: 0 auto;
             .scroll-box{
-                width: 1224px;
+                width: calc(1224px + 2%);
                 height: 660px;
                 margin:0 auto;
                 margin-top: 50px;
