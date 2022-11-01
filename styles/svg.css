@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';
-  src:  url('fonts/iconfont.eot?z9fpjx');
-  src:  url('fonts/iconfont.eot?z9fpjx#iefix') format('embedded-opentype'),
-    url('fonts/iconfont.ttf?z9fpjx') format('truetype'),
-    url('fonts/iconfont.woff?z9fpjx') format('woff'),
-    url('fonts/iconfont.svg?z9fpjx#iconfont') format('svg');
+  src:  url('fonts/iconfont.eot?n9miec');
+  src:  url('fonts/iconfont.eot?n9miec#iefix') format('embedded-opentype'),
+    url('fonts/iconfont.ttf?n9miec') format('truetype'),
+    url('fonts/iconfont.woff?n9miec') format('woff'),
+    url('fonts/iconfont.svg?n9miec#iconfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-left_yellow_arrow .path1:before {
+  content: "\e902";
+  color: rgb(209, 171, 9);
+  opacity: 0.69;
+}
+.icon-left_yellow_arrow .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-right_yellow_arrow .path1:before {
+  content: "\e904";
+  color: rgb(209, 171, 9);
+  opacity: 0.7;
+}
+.icon-right_yellow_arrow .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
 .icon-logo_hill_side .path1:before {
   content: "\e93c";
   color: rgb(104, 186, 136);
@@ -213,6 +233,16 @@
   content: "\e922";
   margin-left: -1em;
   color: rgb(255, 255, 255);
+}
+.icon-left_white .path1:before {
+  content: "\e923";
+  color: rgb(255, 255, 255);
+  opacity: 0.69;
+}
+.icon-left_white .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(66, 20, 95);
 }
 .icon-right_white .path1:before {
   content: "\e925";

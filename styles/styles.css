@@ -696,42 +696,23 @@
     height: 300%;
   }
   .inputBox .relativeBox {
-    position: relative;
-    margin: 0 auto;
     margin-top: 409px;
-    background-color: #42145F;
-    border-radius: 20px;
     width: 800px;
     height: 877px;
     padding-top: 106px;
     padding-left: 50px;
   }
   .inputBox .relativeBox .circular {
-    position: absolute;
     width: 146px;
     height: 146px;
-    border-radius: 50%;
     top: -70px;
     left: calc(50% - 73px);
-    background-color: #fff;
     padding: 22px;
     font-size: 100px;
   }
   .inputBox .relativeBox .title {
+    text-align: left;
     padding-left: 256px;
-    font: normal normal bold 30px/39px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-  }
-  .inputBox .relativeBox .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 200;
-    cursor: pointer;
   }
   .inputBox .relativeBox .programme {
     margin-top: 39px;
@@ -739,6 +720,7 @@
     align-items: center;
   }
   .inputBox .relativeBox .programme .text {
+    display: block;
     text-align: right;
     font: normal normal normal 20px/26px Roboto;
     letter-spacing: 0px;
@@ -750,20 +732,13 @@
   .inputBox .relativeBox .programme .select {
     width: 368px;
     height: 40px;
-    border-radius: 20px;
     padding-left: 20px;
-    background: #EDE8F1 0% 0% no-repeat padding-box;
   }
   .inputBox .relativeBox .programme .select .none {
     display: none;
   }
   .inputBox .relativeBox .selection {
-    color: #fff;
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
+    width: fit-content;
     margin-left: 34px;
     padding-top: 32px;
     line-height: 25px;
