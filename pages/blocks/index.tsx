@@ -1,8 +1,8 @@
 import { useState} from 'react';
 import Map,{Marker} from 'react-map-gl';
 import Image from "next/image";
-import plan_situation from "../../styles/src/page2/plan_situation@2x.png"
-import Logo_hill_png from '../../styles/src/page2/logo_hill_side.png'
+import plan_situation from "../../public/styles/src/page2/plan_situation@2x.png"
+import Logo_hill_png from '../../public/styles/src/page2/logo_hill_side.png'
 // import { text } from 'stream/consumers';
 
 
@@ -365,10 +365,10 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     "button":false,
                     "whiteText":true,
                     "person":false}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -616,16 +616,16 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     let test=0
     while(test<10){
         for(let i=2;i<5;i++){
-            let obj={ 'src':require(`../../styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+            let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
             arr.push(obj)
         }
         test++
     }
     for(let i=2;i<5;i++){
-        let obj={ 'src':require(`../../styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+        let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
         arrm.push(obj)
     }
-    let obj1={'src':require(`../../styles/src/image_home_2@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+    let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
     return (
         <div className="block1_2">
@@ -801,7 +801,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     )
 }
 const Block1_3 = ({text1}: Block1_3Props) => {
-    // let src=require(`../../styles/src/image_home_5@2x.png`).default
+    // let src=require(`../../public/styles/src/image_home_5@2x.png`).default
     return (
     <div className="block1_3">
         <div className="left-box">
@@ -830,12 +830,12 @@ const Block1_4 = ({text1}: Block1_4Props)=>{
     let arr=[]
     // i<25
     for(let i=1;i<13;i++){
-        let obj={ 'src':require(`../../styles/src/brand/logo_client_${i}@2x.png`).default}
-        // let obj={ 'src':`../../styles/src/brand/logo_client_${i}@2x.png`}
+        let obj={ 'src':require(`../../public/styles/src/brand/logo_client_${i}@2x.png`).default}
+        // let obj={ 'src':`../../public/styles/src/brand/logo_client_${i}@2x.png`}
         arr.push(obj)
     }
     // const list = [{src: "!"}]
-    // let src1=require("../../styles/src/brand/logo_client_1@2x.png").default;
+    // let src1=require("../../public/styles/src/brand/logo_client_1@2x.png").default;
     return (
         <div className="block1_4">
             <div className="block4Title">{text1}</div>
@@ -922,7 +922,7 @@ const Footer=({text1,text2,text3}: Bottom_Props)=>{
 }
 //page2
 const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block2_1Props) => {
-    // let backgroundImage=require(`../../styles/src/image_home_1@2x.png`).default
+    // let backgroundImage=require(`../../public/styles/src/image_home_1@2x.png`).default
     const block1={  'colorBar':false,
         'textTitle':true,
         'logo':false,
@@ -932,10 +932,10 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
         "button":false,
         "whiteText":true,
         "person":false}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const move_down=()=>{
         scrollTo({
             top:800,left:0,behavior:"smooth"
@@ -1123,16 +1123,16 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
     let test=0
     while(test<10){
         for(let i=2;i<5;i++){
-            let obj={ 'src':require(`../../styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+            let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
             arr.push(obj)
         }
         test++
     }
     for(let i=2;i<5;i++){
-        let obj={ 'src':require(`../../styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+        let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
         arrm.push(obj)
     }
-    let obj1={'src':require(`../../styles/src/image_home_2@2x.png`).default,'icon':require(`../../styles/src/label_1@2x.png`).default}
+    let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
     return (
         <div className="block2_2">
@@ -1234,10 +1234,10 @@ const Block3_1=({text0, text1, text2, text3, text4, text5, text6, number1}:Block
         "button":true,
         "whiteText":false,
         "person":false}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -1408,8 +1408,8 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
     let arr_name=[0,1,2,3]
     let arr=[]
         for(let i of arr_name){
-            // console.log(i,`../../styles/src/image_home_${i}@2x.png`)
-            // let obj={ 'src':require(`../../styles/src/page2/icone_transport_${i}@2x.png`).default,"id":parseInt(i)-1}
+            // console.log(i,`../../public/styles/src/image_home_${i}@2x.png`)
+            // let obj={ 'src':require(`../../public/styles/src/page2/icone_transport_${i}@2x.png`).default,"id":parseInt(i)-1}
             let obj={"name":transports[i],"id":i}
             arr.push(obj)
         }
@@ -1454,7 +1454,7 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
     )
 }
 const Block3_3=({text1,text2,text3}:Block3_3Props)=>{ 
-    let src=require(`../../styles/src/page2/image_programme_2@2x.png`).default
+    let src=require(`../../public/styles/src/page2/image_programme_2@2x.png`).default
     let arr=[]
     for(let a=0;a<text1.length;a++){
         let obj={ 'title':text1[a] ,"content":text2[a]}
@@ -1524,7 +1524,7 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
     )
 }
 const Block3_4=({text1}:Block3_4Props)=>{
-    let src=require(`../../styles/src/page2/image_programme_3@2x.png`).default
+    let src=require(`../../public/styles/src/page2/image_programme_3@2x.png`).default
     return(
         <div className="block3_4">
             <div className="left">
@@ -1539,7 +1539,7 @@ const Block3_4=({text1}:Block3_4Props)=>{
     )
 }
 const Block3_5=({text1}:Block3_5Props)=>{
-    let src=require(`../../styles/src/page2/pland_de_masse@2x.png`).default
+    let src=require(`../../public/styles/src/page2/pland_de_masse@2x.png`).default
     return(
         <div className="block3_5">
             <div className="title yellow">{text1[0]}</div>
@@ -1561,10 +1561,10 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
             "button":false,
             "whiteText":false,
             "person":true}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -1582,7 +1582,7 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
         changeType(typeColors=e)
         console.log(typeColors)
     }
-    let src=require(`../../styles/src/page3/photo_alain_taravella@2x.png`).default
+    let src=require(`../../public/styles/src/page3/photo_alain_taravella@2x.png`).default
     return (
     <div className="block4_1">
         <div className="imageBox">
@@ -1728,12 +1728,12 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
     )
 }
 const Block4_2=({text1,text2,text3,text4,text5}:Block4_2Props)=>{
-    let src1=require(`../../styles/src/page3/graphique@2x.png`).default
-    let src2=require(`../../styles/src/page3/organigrame@2x.png`).default
-    let src3=require(`../../styles/src/page4/Groupe408@2x.png`).default
-    let src4=require(`../../styles/src/page4/Groupe409@2x.png`).default
-    let src5=require(`../../styles/src/page4/Groupe410@2x.png`).default
-    let src6=require(`../../styles/src/page4/Groupe411@2x.png`).default
+    let src1=require(`../../public/styles/src/page3/graphique@2x.png`).default
+    let src2=require(`../../public/styles/src/page3/organigrame@2x.png`).default
+    let src3=require(`../../public/styles/src/page4/Groupe408@2x.png`).default
+    let src4=require(`../../public/styles/src/page4/Groupe409@2x.png`).default
+    let src5=require(`../../public/styles/src/page4/Groupe410@2x.png`).default
+    let src6=require(`../../public/styles/src/page4/Groupe411@2x.png`).default
     return(
         <div className="block4_2">
             <div className="ActivitePart">
@@ -1847,7 +1847,7 @@ const Block4_2=({text1,text2,text3,text4,text5}:Block4_2Props)=>{
     )
 }
 const Block4_3=({text1,text2}:Block4_3Props)=>{
-    let src=require(`../../styles/src/page3/image_page_groupe_1@2x.png`).default
+    let src=require(`../../public/styles/src/page3/image_page_groupe_1@2x.png`).default
     return(
         <div className="block4_3">
             <div className="top">
@@ -1879,9 +1879,9 @@ const Block4_3=({text1,text2}:Block4_3Props)=>{
     )
 }
 const Block4_4=({text1,text2}:Block4_4Props)=>{
-    let src2=require(`../../styles/src/page3/image_page_groupe_2@2x.png`).default
-    let src3=require(`../../styles/src/page3/image_page_groupe_3@2x.png`).default
-    let src4=require(`../../styles/src/page3/image_page_groupe_4@2x.png`).default
+    let src2=require(`../../public/styles/src/page3/image_page_groupe_2@2x.png`).default
+    let src3=require(`../../public/styles/src/page3/image_page_groupe_3@2x.png`).default
+    let src4=require(`../../public/styles/src/page3/image_page_groupe_4@2x.png`).default
     return(
         <div className="block4_4">
             <div className="arrows">
@@ -1932,10 +1932,10 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
             "button":false,
             "whiteText":true,
             "person":false}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     // const move_down=()=>{
     //     scrollTo({
     //         top:800,left:0,behavior:"smooth"
@@ -2095,12 +2095,12 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
     )
 }
 const Block5_2=({text1,text2}:Block5_2Props)=>{
-    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
-    let src2=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
-    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let src1=require(`../../public/styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../public/styles/src/page4/image_page_reference_3@2x.png`).default
+    let brand1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     return(
         <div className="block5_2">
             <div className="community">
@@ -2192,12 +2192,12 @@ const Block5_2=({text1,text2}:Block5_2Props)=>{
     )
 }
 const Block5_3=({text1,text2}:Block5_3Props)=>{
-    let src1=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
-    let src2=require(`../../styles/src/page4/image_page_reference_5@2x.png`).default
-    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let src1=require(`../../public/styles/src/page4/image_page_reference_4@2x.png`).default
+    let src2=require(`../../public/styles/src/page4/image_page_reference_5@2x.png`).default
+    let brand1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     return(
         <div className="block5_3">
             <div className="images">
@@ -2257,11 +2257,11 @@ const Block5_3=({text1,text2}:Block5_3Props)=>{
     )
 }
 const Block5_4=({text1}:Block5_4Props)=>{
-    let src1=require(`../../styles/src/page4/image_page_reference_6@2x.png`).default
-    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let src1=require(`../../public/styles/src/page4/image_page_reference_6@2x.png`).default
+    let brand1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     return(
         <div className="block5_4">
             <div className="images">
@@ -2291,12 +2291,12 @@ const Block5_4=({text1}:Block5_4Props)=>{
     )
 }
 const Block5_5=({text1,text2}:Block5_5Props)=>{
-    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
-    let src2=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
-    let brand1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let brand2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let brand3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let brand4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let src1=require(`../../public/styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../public/styles/src/page4/image_page_reference_3@2x.png`).default
+    let brand1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let brand2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let brand3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let brand4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     return(
         <div className="block5_5">
             <div className="community">
@@ -2366,10 +2366,10 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
             "button":true,
             "whiteText":true,
             "person":false}
-    let label_1=require(`../../styles/src/page4/label_1@2x.png`).default
-    let label_2=require(`../../styles/src/page4/label_2@2x.png`).default
-    let label_3=require(`../../styles/src/page4/label_3@2x.png`).default
-    let label_4=require(`../../styles/src/page4/label_4@2x.png`).default
+    let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
+    let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
+    let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
+    let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -2526,14 +2526,14 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
 const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
     let arr=[];
     for(let i=0;i<text2.length;i++){
-        // console.log(i,`../../styles/src/image_home_${i}@2x.png`)
+        // console.log(i,`../../public/styles/src/image_home_${i}@2x.png`)
         let obj={ 'title':text2[i],"content":text3[i]}
         arr.push(obj)
     }
-    let src1=require(`../../styles/src/page4/image_page_reference_2@2x.png`).default
-    let src2=require(`../../styles/src/page4/image_page_reference_7@2x.png`).default
-    let src3=require(`../../styles/src/page4/image_page_reference_3@2x.png`).default
-    let src4=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
+    let src1=require(`../../public/styles/src/page4/image_page_reference_2@2x.png`).default
+    let src2=require(`../../public/styles/src/page4/image_page_reference_7@2x.png`).default
+    let src3=require(`../../public/styles/src/page4/image_page_reference_3@2x.png`).default
+    let src4=require(`../../public/styles/src/page4/image_page_reference_4@2x.png`).default
     return(
         <div className="block6_2">
             <div className="first">
@@ -2575,9 +2575,9 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
     )
 }
 const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
-    let src=require(`../../styles/src/page5/logo_page_projet_reference@2x.png`).default
-    let src1=require(`../../styles/src/page5/image_page_projet_reference_2@2x.png`).default
-    let src2=require(`../../styles/src/page4/image_page_reference_4@2x.png`).default
+    let src=require(`../../public/styles/src/page5/logo_page_projet_reference@2x.png`).default
+    let src1=require(`../../public/styles/src/page5/image_page_projet_reference_2@2x.png`).default
+    let src2=require(`../../public/styles/src/page4/image_page_reference_4@2x.png`).default
     return(
         <div className="block6_3">
             <div className="headline">{text1}</div>
