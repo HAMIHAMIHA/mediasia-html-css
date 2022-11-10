@@ -132,6 +132,7 @@
   width: fit-content;
   margin-top: 20px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .imageBox .text-box .button .icon-mail {
@@ -239,10 +240,12 @@
     margin-left: 40px;
   }
   .imageBox .text-box .button {
+    cursor: pointer;
     height: 40px;
     font: normal normal bold 22px/40px Roboto;
     margin-left: 40px;
     padding: 0 30px;
+    display: flex;
   }
   .imageBox .text-box .button .icon-mail {
     font-size: 22px;
@@ -405,6 +408,7 @@
   border-radius: 27px;
   padding: 0 12px;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .Header .button .icon-mail {
@@ -423,8 +427,8 @@
 
 @media (min-width: 1050px) {
   .Header .button {
-    height: 40px;
-    font: normal normal bold 22px/40px Roboto;
+    cursor: pointer;
+    height: fit-content;
     margin-left: 50px;
     padding: 0 30px;
   }
@@ -439,13 +443,12 @@
 @media (min-width: 1050px) {
   .Header .button .icon-mail {
     font-size: 22px;
-    line-height: 40px;
-    padding-right: 5px;
+    line-height: 42px;
   }
   .Header .button .title-color-text {
-    margin-left: 10px;
+    margin-left: 15px;
     text-align: center;
-    font: normal normal bold 22px/42px Roboto;
+    font: normal normal bold 22px/40px Roboto;
     letter-spacing: 0px;
     color: #fff;
     opacity: 1;
@@ -498,6 +501,7 @@
 .Header .mchooseBox .Part .rightPart .contentText {
   margin-left: 42px;
   font: normal normal bold 15px/20px Roboto;
+  font-weight: 500;
 }
 
 .Header .mchooseBox .Part .rightPart .contentText .text5 {
@@ -527,7 +531,7 @@
     height: 159px;
     width: 368px;
     margin: auto 0;
-    margin-right: 127px;
+    margin-right: 90px;
     text-align: right;
     font: normal normal bold 40px/53px Roboto;
     letter-spacing: 0px;
@@ -545,13 +549,17 @@
   }
   .Header .chooseBox .chooseBoxinner .rightPart .choice {
     margin-bottom: 18px;
-    margin-right: 80px;
+    margin-right: 60px;
     /* UI Properties */
     text-align: left;
     font: normal normal normal 20px/26px Roboto;
     letter-spacing: 0px;
     color: #707070;
     cursor: pointer;
+    box-sizing: border-box;
+  }
+  .Header .chooseBox .chooseBoxinner .rightPart .choice:hover {
+    font-weight: 700;
   }
 }
 
@@ -686,6 +694,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .inputBox .relativeBox .envoyer .email .icon-mail {
@@ -860,7 +869,7 @@
   height: 400px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .block1_2 .map {
     width: 50%;
   }
@@ -891,7 +900,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .block1_2 .open {
     width: 10%;
   }
@@ -902,9 +911,9 @@
 }
 
 .block1_2 .scrollBox .scroll-boxm .show-box {
+  margin: 0 auto;
   margin-top: 30px;
-  width: 100%;
-  display: inline-block;
+  max-width: 650px;
 }
 
 .block1_2 .scrollBox .scroll-boxm .show-box .picture-title {
@@ -1016,6 +1025,10 @@
   margin-left: 10px;
 }
 
+.block1_2 .scrollBox .scroll-boxm .show-box .Decouvrir:active {
+  background-color: #311046;
+}
+
 .block1_2 .scrollBox .scroll-boxm .voir {
   text-align: center;
   text-decoration: underline;
@@ -1025,7 +1038,7 @@
   margin-top: 30px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .block1_2 .scrollBox .scroll-boxm {
     display: none;
   }
@@ -1158,8 +1171,10 @@
     padding: 0 15px;
   }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir .icon-right {
-    line-height: 20px;
     padding-left: 10px;
+  }
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir:active {
+    background-color: #311046;
   }
   .block1_2 .scrollBox .scroll-box-outside .box-show {
     width: 1169px;
@@ -1198,6 +1213,7 @@
     text-align: center;
     border-radius: 50%;
     margin-right: 10px;
+    margin-bottom: 3px;
   }
   .block1_2 .scrollBox .scroll-box-outside .border-selection .selected {
     background-color: #42145F;
@@ -1232,7 +1248,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .block1_2 {
     margin-top: 50px;
     display: flex;
@@ -1289,7 +1305,7 @@
   color: white;
   align-items: center;
   font: normal normal bold 22px/29px Roboto;
-  padding: 7px 8%;
+  padding: 7px 20px;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -1336,26 +1352,39 @@
     letter-spacing: 0px;
     color: #555555;
   }
-  .block1_3 .left-box .text-box .text-box-button {
-    /* UI Properties */
+  .block1_3 .left-box .text-box .button {
+    text-align: left;
+    font: normal normal bold 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #fff;
+    opacity: 1;
+    display: flex;
+    background-color: #42145F;
+    border-radius: 27px;
+    margin-right: 12px;
+    cursor: pointer;
     width: fit-content;
     height: 40px;
-    background: #42145F 0% 0% no-repeat padding-box;
-    border-radius: 27px;
-    opacity: 1;
-    /* UI Properties */
-    text-align: left;
-    font: normal normal bold 22px/50px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    padding: 0 20px 0 20px;
+    cursor: pointer;
+    height: fit-content;
+    padding: 0 30px;
     margin-top: 30px;
-    display: flex;
-    align-items: center;
+    margin-left: 0;
   }
-  .block1_3 .left-box .text-box .text-box-button .letter-box {
-    margin-right: 10px;
+  .block1_3 .left-box .text-box .button .icon-mail {
+    font-size: 22px;
+    line-height: 42px;
+  }
+  .block1_3 .left-box .text-box .button .title-color-text {
+    margin-left: 15px;
+    text-align: center;
+    font: normal normal bold 22px/40px Roboto;
+    letter-spacing: 0px;
+    color: #fff;
+    opacity: 1;
+  }
+  .block1_3 .left-box .text-box .button:active {
+    background-color: #311046;
   }
 }
 
@@ -1407,11 +1436,11 @@
     /* UI Properties */
     border: 30px solid #FFFFFF;
     opacity: 1;
+    align-items: flex-end;
     background-color: rgba(66, 20, 95, 0.3);
   }
   .block1_3 .right-box .white-border .text {
     padding-left: 20px;
-    height: 190px;
     text-align: left;
     font: normal normal bold 40px/50px Roboto;
     letter-spacing: 0px;
@@ -1639,31 +1668,38 @@
   }
   .Footer .block5Middle .button {
     margin: 0;
-    /* UI Properties */
-    height: 40px;
     text-align: left;
-    width: fit-content;
-    font: normal normal bold 22px/40px Roboto;
+    font: normal normal bold 15px/20px Roboto;
     letter-spacing: 0px;
     color: #42145F;
     opacity: 1;
     display: flex;
     background-color: #fff;
+    border-radius: 27px;
+    margin-right: 12px;
+    cursor: pointer;
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    height: fit-content;
+    padding: 0 20px;
     margin-left: 100px;
     margin-right: 0;
-    border-radius: 27px;
-    padding: 0 20px;
   }
-  .Footer .block5Middle .button .message-icon {
-    margin-top: 10px;
+  .Footer .block5Middle .button .icon-mail {
+    font-size: 22px;
+    line-height: 42px;
   }
   .Footer .block5Middle .button .title-color-text {
-    margin-left: 10px;
+    margin-left: 15px;
     text-align: center;
-    font: normal normal bold 22px/42px Roboto;
+    font: normal normal bold 22px/40px Roboto;
     letter-spacing: 0px;
     color: #42145F;
     opacity: 1;
+  }
+  .Footer .block5Middle .button:active {
+    background-color: #DBD2E1;
   }
 }
 
@@ -1904,25 +1940,28 @@
 }
 
 .block2_2 .show-box .Decouvrir {
-  margin: 0 auto;
-  margin-top: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 30px;
-  background-color: #42145F;
+  align-items: center;
+  margin-left: 30px;
+  background: #42145F 0% 0% no-repeat padding-box;
   border-radius: 27px;
   opacity: 1;
+  text-align: center;
   font: normal normal bold 16px/30px Roboto;
+  letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 1;
   cursor: pointer;
+  padding: 0 15px;
 }
 
 .block2_2 .show-box .Decouvrir .icon-right {
-  font-size: 16px;
-  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.block2_2 .show-box .Decouvrir:active {
+  background-color: #311046;
 }
 
 .block2_2 .voir {
@@ -2063,6 +2102,9 @@
     color: #FFFFFF;
     opacity: 1;
     cursor: pointer;
+  }
+  .block2_2 .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir:active {
+    background-color: #311046;
   }
   .block2_2 .scroll-box-outside .box-show {
     width: 1169px;
@@ -3536,6 +3578,7 @@
     margin-top: 20px;
     margin-left: 40px;
     width: fit-content;
+    cursor: pointer;
   }
   .block5_1 .imageBox .text-box .color-button .icon-composant {
     font-size: 80px;
@@ -4507,6 +4550,18 @@
   height: 1000px;
 }
 
+.roundButton {
+  cursor: pointer;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #311046;
+}
+
 .dark_purple {
   color: #42145F !important;
 }
@@ -4697,4 +4752,48 @@
 
 .red_bgc {
   background-color: #A20202 !important;
+}
+
+.hover_dark_red:hover {
+  color: #821D34 !important;
+}
+
+.hover_purple:hover {
+  color: #42145F !important;
+}
+
+.hover_blue:hover {
+  color: #2F3082 !important;
+}
+
+.hover_light_blue:hover {
+  color: #27637D !important;
+}
+
+.hover_green:hover {
+  color: #277D4B !important;
+}
+
+.hover_dark_yellow:hover {
+  color: #605523 !important;
+}
+
+.hover_medium_yellow:hover {
+  color: #717520 !important;
+}
+
+.hover_lemon:hover {
+  color: #B8C20E !important;
+}
+
+.hover_yellow:hover {
+  color: #D1AB09 !important;
+}
+
+.hover_orange:hover {
+  color: #B2670E !important;
+}
+
+.hover_red:hover {
+  color: #A20202 !important;
 }

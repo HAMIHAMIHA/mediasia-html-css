@@ -365,6 +365,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     "button":false,
                     "whiteText":true,
                     "person":false}
+    const colorArr=["dark_red","purple","blue","light_blue","green","dark_yellow","medium_yellow","lemon","yellow","orange","red"]
     let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
     let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
     let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
@@ -386,11 +387,11 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     const show_input=()=>{
         showInput(!showi)
     }
-    let typeColors = 'dark_purple'
-    // const changeColor=(e:string)=>{
-    // changeType(typeColors=e)
-    // console.log(typeColors)
-    // }
+    let [typeColors,changeType] =useState('dark_purple')
+    const changeColor=(e:string)=>{
+        changeType(typeColors=e)
+        console.log(typeColors)
+    }
     let arr=[];
     for(let i=0;i<propramme.length;i++){
         let obj={ 'selections':propramme[i]}
@@ -426,24 +427,18 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <div className="Part">
                         <div className="leftPart"></div>
                         <div className="rightPart">
-                        <div className="titleText">{text0[0]}</div>
-                        <div className="titleText " onClick={show_box2}>{text0[1]}
-                        </div>
-                            <div className={(show2 ? 'contentText' : 'hidden')}>
-                                <div className="text5 dark_red">{text5[0]}</div>
-                                <div className="text5 purple">{text5[1]}</div>
-                                <div className="text5 blue">{text5[2]}</div>
-                                <div className="text5 light_blue">{text5[3]}</div>
-                                <div className="text5 green">{text5[4]}</div>
-                                <div className="text5 dark_yellow">{text5[5]}</div>
-                                <div className="text5 medium_yellow">{text5[6]}</div>
-                                <div className="text5 lemon">{text5[7]}</div>
-                                <div className="text5 yellow">{text5[8]}</div>
-                                <div className="text5 orange">{text5[9]}</div>
-                                <div className="text5 red">{text5[10]}</div>
+                            <div className="titleText">{text0[0]}</div>
+                            <div className="titleText " onClick={show_box2}>{text0[1]}
                             </div>
-                        <div className="titleText">{text0[2]}</div>
-                        <div className="titleText">{text0[3]}</div>
+                                <div className={(show2 ? 'contentText' : 'hidden')}>
+                                {colorArr.map((e, i) =>
+                                    <div key={i} className={"text5 " + e}>
+                                        {text5[i]}
+                                    </div>
+                                )}
+                                </div>
+                            <div className="titleText">{text0[2]}</div>
+                            <div className="titleText">{text0[3]}</div>
                         </div>
                     </div>
                 </div>
@@ -451,8 +446,13 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
+                            {/* {text5.map((e,i)=>
                                 <div key={i} className="choice">{e}</div>
+                            )} */}
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -611,6 +611,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
     const change_map_size=()=>{
         setOpen(!open)
     }
+    // scrollbox
     let arr=[]
     let arrm=[]
     let test=0
@@ -621,12 +622,46 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
         }
         test++
     }
+    let test1=0;
+    let temporary=0;
+    let arr_scroll=[];
+    let arr_scroll_box=[];
+    while(test1<Math.ceil((arr.length)/9)){
+        for(let i=0;i<8;i++){
+            if(arr[temporary]){
+                arr_scroll.push(arr[temporary])
+                temporary++
+            }
+        }
+        arr_scroll_box.push(arr_scroll)
+        test1++
+        arr_scroll=[];
+    }
+    console.log("arr_scroll_box",arr_scroll_box)
+
     for(let i=2;i<5;i++){
         let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
         arrm.push(obj)
     }
     let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
+    let [chosen, setChosen] = useState(1)
+    const changeChosen=(e:number)=>{
+        setChosen(chosen=e+1)
+    }
+    const leftChosen=()=>{
+        if(chosen!=1){
+        setChosen(chosen=chosen-1)
+        }
+        console.log(chosen)
+    }
+    const rightChosen=()=>{
+        if(chosen!=arr_scroll_box.length){
+        setChosen(chosen=chosen+1)
+        }
+        console.log(chosen)
+
+    }
     return (
         <div className="block1_2">
             <div className={"map" + (open ? ' open' : '') }>
@@ -704,7 +739,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
             </div>
             <div className="scrollBox">
                 <div className="scroll-boxm">
-                    {arrm.map((e, i) =>
+                    {arr_scroll_box[chosen-1].map((e, i) =>
                         <div key={i} className="show-box">
                             <div className="picture-title">
                                 <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
@@ -745,7 +780,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                 <div className="scroll-box-outside">
                     <div className="scroll-title">{number1} {text1}</div>
                     <div className={"scroll-box" + (open ? ' box-show' : '') }>
-                        {arr.map((e, i) =>
+                        {arr_scroll_box[chosen-1].map((e, i) =>
                             <div key={i} className="show-box">
                                 <div className="picture-title">title</div>
                                 <div className="picture-box picture-box1">
@@ -780,14 +815,19 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     <div className={"border-bottom" + (open ? ' border-bottom-click' : '') }>
                     </div>
                     <div className="border-selection">
-                        <div className="icon-left"></div>
-                        <div className="selection selected">1</div>
+                        <div className="icon-left cursorPointer" onClick={leftChosen}></div>
+                        {arr_scroll_box.map((e,i)=>
+                            <div key={i} className={"selection cursorPointer" + ((i+1)==chosen ? ' selected' : '')} onClick={()=>changeChosen(i)}>
+                                {i + 1}
+                            </div>
+                        )}
+                        {/* <div className="selection selected">1</div>
                         <div className="selection">2</div>
                         <div className="selection">3</div>
                         <div className="selection">4</div>
                         <div className="selection">5</div>
-                        <div className="selection">6</div>
-                        <div className="icon-right"></div>
+                        <div className="selection">6</div> */}
+                        <div className="icon-right cursorPointer" onClick={rightChosen}></div>
                     </div>
                     <div className={"click-move" + (open ? ' hidden' : '') } style={{}} onClick={change_map_size}>
                         <div className="icon-left"></div>
@@ -811,9 +851,9 @@ const Block1_3 = ({text1}: Block1_3Props) => {
                     <text className="text1">{text1[1]}</text>
                     <text className="text2">{text1[2]}</text>
                 </div>
-                <div className="text-box-button">
+                <div className="button cursorPointer">
                     <div className="icon-mail"></div>
-                    <div>{text1[3]}</div>
+                    <div className="title-color-text">{text1[3]}</div>
                 </div>
             </div>
         </div>
@@ -932,13 +972,14 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
         "button":false,
         "whiteText":true,
         "person":false}
+    const colorArr=["dark_red","purple","blue","light_blue","green","dark_yellow","medium_yellow","lemon","yellow","orange","red"]
     let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
     let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
     let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
     let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
     const move_down=()=>{
         scrollTo({
-            top:800,left:0,behavior:"smooth"
+            top:4800,left:0,behavior:"smooth"
         })
     }
     const [show, setShow] = useState(false)
@@ -997,17 +1038,11 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                         <div className="titleText " onClick={show_box2}>{text0[1]}
                         </div>
                             <div className={(show2 ? 'contentText' : 'hidden')}>
-                                <div className="text5 dark_red"      onClick={(e)=>changeColor("dark_red")}>{text5[0]}</div>
-                                <div className="text5 purple"        onClick={(e)=>changeColor("purple")}>{text5[1]}</div>
-                                <div className="text5 blue"          onClick={(e)=>changeColor("blue")}>{text5[2]}</div>
-                                <div className="text5 light_blue"    onClick={(e)=>changeColor("light_blue")}>{text5[3]}</div>
-                                <div className="text5 green"         onClick={(e)=>changeColor("green")}>{text5[4]}</div>
-                                <div className="text5 dark_yellow"   onClick={(e)=>changeColor("dark_yellow")}>{text5[5]}</div>
-                                <div className="text5 medium_yellow" onClick={(e)=>changeColor("medium_yellow")}>{text5[6]}</div>
-                                <div className="text5 lemon"         onClick={(e)=>changeColor("lemon")}>{text5[7]}</div>
-                                <div className="text5 yellow"        onClick={(e)=>changeColor("yellow")}>{text5[8]}</div>
-                                <div className="text5 orange"        onClick={(e)=>changeColor("orange")}>{text5[9]}</div>
-                                <div className="text5 red"           onClick={(e)=>changeColor("red")}>{text5[10]}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
+                            )}
                             </div>
                         <div className="titleText">{text0[2]}</div>
                         <div className="titleText">{text0[3]}</div>
