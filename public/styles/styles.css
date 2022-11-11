@@ -2163,6 +2163,7 @@
 
 .block3_2 .map .mapPicture {
   position: absolute;
+  left: calc(40% - 320px);
   width: 700px;
 }
 
@@ -3633,6 +3634,8 @@
 
 .block5_2 .community .left {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .block5_2 .community .right {
@@ -3756,6 +3759,8 @@
 .block5_2 .nom .mright, .block5_2 .mnom .mright {
   margin-top: 20px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .block5_2 .nom .left, .block5_2 .mnom .left {
@@ -4281,6 +4286,7 @@
 
 .block6_1 .imageBox .arcBox .mwhiteText {
   padding: 20px 0;
+  padding-left: 10px;
 }
 
 .block6_1 .imageBox .textTitleSmall {
@@ -4321,7 +4327,7 @@
   width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .block6_2 .first {
     display: flex;
     justify-content: center;
@@ -4378,11 +4384,16 @@
   .block6_2 .second {
     display: flex;
     margin-top: 40px;
+    justify-content: center;
   }
   .block6_2 .second .leftBox {
     display: flex;
     justify-content: right;
-    width: 50%;
+    width: 900px;
+  }
+  .block6_2 .second .leftBox .left {
+    width: 580px;
+    height: 500px;
   }
   .block6_2 .second .right {
     width: 560px;
@@ -4539,7 +4550,7 @@
   width: 100%;
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1200px) {
   .block6_3 .secondParagraph {
     display: flex;
     margin-top: 44px;
@@ -4550,10 +4561,13 @@
     justify-content: right;
   }
   .block6_3 .secondParagraph .leftBox .left {
-    width: fit-content;
+    width: 580px;
+    height: 500px;
   }
   .block6_3 .secondParagraph .right {
-    width: fit-content;
+    width: 940px;
+    min-width: 940px;
+    height: 500px;
     margin-top: 0;
     margin-left: 50px;
   }

@@ -1589,16 +1589,16 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
         let obj={"name":transports[i],"id":i}
         arr.push(obj)
     }
-    let [leftposition,changePosition] =useState('calc(40% - 320px);')
-    let move=320;
-    const moveleft=()=>{
-        move=move+20
-        changePosition(leftposition='calc(40% - ' + move + 'px);')
-    }
-    const moveright=()=>{
-        move=move-20
-        changePosition(leftposition='calc(40% - ' + move + 'px);')
-    }
+    // let [leftposition,changePosition] =useState('calc(40% - 320px);')
+    // let move=320;
+    // const moveleft=()=>{
+    //     move=move+20
+    //     changePosition(leftposition='calc(40% - ' + move + 'px);')
+    // }
+    // const moveright=()=>{
+    //     move=move-20
+    //     changePosition(leftposition='calc(40% - ' + move + 'px);')
+    // }
     return(
     <div className="block3_2">
         <div className="title">{text1}</div>
@@ -1607,11 +1607,11 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
             <div className="mapPicture">
                 <Image src={plan_situation} aria-label="aria-label" width={2400} height={1000} className="mapimg"></Image>
             </div>
-            <div className="icon-left_yellow_arrow" onClick={()=>moveleft()}>
+            <div className="icon-left_yellow_arrow">
                 <span className="path1"></span>
                 <span className="path2"></span>
             </div>
-            <div className="icon-right_yellow_arrow" onClick={()=>moveright()}>
+            <div className="icon-right_yellow_arrow">
                 <span className="path1"></span>
                 <span className="path2"></span>
             </div>
@@ -2751,16 +2751,16 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
         <div className="block6_2">
             <div className="first">
                 <div className="left">
-                    <Image  src={src1} alt="brand1" width={940} height={500} className="brand1"/>
+                    <Image  src={src1} alt="brand1" width={1200} height={640} className="brand1"/>
                 </div>
                 <div className="right">
-                    <Image  src={src2} alt="brand1" width={580} height={500} className="brand1"/>
+                    <Image  src={src2} alt="brand1" width={1200} height={1035} className="brand1"/>
                 </div>
             </div>
             <div className="second">
                 <div className="leftBox">
                     <div className="left">
-                        <Image  src={src3} alt="brand1" width={580} height={500} className="brand1"/>
+                        <Image  src={src3} alt="brand1" width={1200} height={1035} className="brand1"/>
                     </div>
                 </div>
                 <div className="right">
@@ -2781,7 +2781,7 @@ const Block6_2=({text1,text2,text3,text4}:Block6_2Props)=>{
                     </div>
                 </div>
                 <div className="right">
-                    <Image  src={src4} alt="brand1" width={940} height={500} className="brand1"/>
+                    <Image  src={src4} alt="brand1" width={1200} height={640} className="brand1"/>
                 </div>
             </div>
         </div>
@@ -2814,11 +2814,11 @@ const Block6_3=({text1,text2,text3}:Block6_3Props)=>{
             <div className="secondParagraph">
                 <div className="leftBox">                
                     <div className="left">
-                        <Image  src={src1} alt="brand1" className="image" width={580} height={500}/>
+                        <Image  src={src1} alt="brand1" className="image" width={1200} height={1035}/>
                     </div>
                 </div>
                 <div className="right">
-                    <Image  src={src2} alt="brand1" className="image" width={940} height={500}/>
+                    <Image  src={src2} alt="brand1" className="image" width={1200} height={640}/>
                 </div>
             </div>
 

@@ -2326,7 +2326,7 @@
         overflow: hidden;
         .mapPicture{
             position: absolute;
-            // left: calc(40% - 320px);
+            left: calc(40% - 320px);
             // transform: translate(-23%,0);
             // top: -13%;
             // width: 180%;
@@ -3761,6 +3761,8 @@
     .community{
         .left{
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
         .right{
             padding: 10px;
@@ -3808,6 +3810,7 @@
             .left{
                 width: 50%;
                 height: 500px;
+
             }
             .right{
                 width: 50%;
@@ -3875,9 +3878,12 @@
         .mright{
             margin-top: 20px;
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
         .left{
             padding: 10px;
+            
             .title{
                 text-align: center;
                 font: normal normal bold 25px/33px Roboto;
@@ -3932,6 +3938,7 @@
                 .left{
                     width: 580px;
                     min-width: 580px;
+                    
                     .title{
                         padding-top: 20px;
                         text-align: left;
@@ -4382,6 +4389,7 @@
         .arcBox{
             .mwhiteText{
                 padding: 20px 0;
+                padding-left: 10px;
             }
         }
         .textTitleSmall{
@@ -4541,7 +4549,7 @@
             width: 100%;
         }
     }
-    @media (min-width: 1200px){
+    @media (min-width: 1000px){
         .first{
             display: flex;
             justify-content: center;
@@ -4597,10 +4605,15 @@
         .second{
             display: flex;
             margin-top: 40px;
+            justify-content: center;
             .leftBox{
                 display: flex;
                 justify-content: right;
-                width: 50%;
+                width: 900px;
+                .left{
+                    width: 580px;
+                    height: 500px;
+                }
             }
             .right{
                 width: 560px;
@@ -4644,6 +4657,7 @@
             }
         }
         .right{
+            
             width: 100%;
         }
     }
@@ -4753,20 +4767,24 @@
             width: 100%;
         }
     }
-    @media (min-width:1050px){
+    @media (min-width:1200px){
         .secondParagraph{
             display: flex;
             margin-top: 44px;
             justify-content: right;
+
             .leftBox{
                 display: flex;
                 justify-content: right;
                 .left{
-                    width: fit-content;
-            }
+                    width: 580px;
+                    height: 500px;
+                }
             }
             .right{
-                width: fit-content;
+                width: 940px;
+                min-width: 940px;
+                height: 500px;
                 margin-top: 0;
                 margin-left: 50px;
             }
