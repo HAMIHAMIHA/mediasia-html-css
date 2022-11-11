@@ -149,6 +149,10 @@
   opacity: 1;
 }
 
+.imageBox .text-box .button:hover {
+  background-color: #311046;
+}
+
 .imageBox .arcBox {
   margin: 0px 10px 0 10px;
   border: 10px solid #fff;
@@ -918,8 +922,10 @@
 }
 
 .block1_2 .scrollBox .scroll-boxm .show-box .picture-title {
-  text-align: right;
+  padding: 0 0 10px 30px;
   font-size: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .block1_2 .scrollBox .scroll-boxm .show-box .picture-box {
@@ -1022,6 +1028,7 @@
 }
 
 .block1_2 .scrollBox .scroll-boxm .show-box .Decouvrir .icon-right {
+  line-height: 30px;
   font-size: 16px;
   margin-left: 10px;
 }
@@ -1068,7 +1075,7 @@
     margin-top: 10px;
   }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box {
-    width: 490px;
+    width: 533px;
     margin-top: 20px;
     display: inline-block;
     margin-left: 5px;
@@ -1085,8 +1092,10 @@
 
 @media (min-width: 1200px) {
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-title {
-    text-align: right;
+    padding: 0 0 10px 30px;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
   }
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box {
     width: 533px;
@@ -1188,6 +1197,18 @@
   .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box .picture-box .Decouvrir:hover {
     background-color: #311046;
   }
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box-width {
+    width: 490px;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1300px) {
+  .block1_2 .scrollBox .scroll-box-outside .scroll-box .show-box-width {
+    width: 533px;
+  }
+}
+
+@media (min-width: 1200px) {
   .block1_2 .scrollBox .scroll-box-outside .box-show {
     width: 1020px;
   }
@@ -1871,8 +1892,10 @@
 }
 
 .block2_2 .scrollBox .scroll-boxm .show-box .picture-title {
-  text-align: right;
+  padding: 0 0 10px 30px;
   font-size: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .block2_2 .scrollBox .scroll-boxm .show-box .picture-box {
@@ -1957,6 +1980,10 @@
   white-space: nowrap;
 }
 
+.block2_2 .scrollBox .scroll-boxm .show-box .Decouvrirm {
+  display: none;
+}
+
 .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrir {
   margin: 0 auto;
   margin-top: 20px;
@@ -1975,6 +2002,7 @@
 }
 
 .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrir .icon-right {
+  line-height: 30px;
   font-size: 16px;
   margin-left: 10px;
 }
@@ -1990,6 +2018,85 @@
   letter-spacing: 0px;
   color: #42145F;
   margin-top: 30px;
+}
+
+.block2_2 .scrollBox .scroll-boxm .voir:hover {
+  cursor: pointer;
+}
+
+.block2_2 .scrollBox .border-selection {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .block2_2 .scrollBox .scroll-boxm {
+    text-align: center;
+    margin-top: 20px;
+    height: 750px;
+  }
+  .block2_2 .scrollBox .scroll-boxm .show-box {
+    display: inline-block;
+    width: 533px;
+    margin: 0 calc(-150px + 15%);
+    margin-top: 20px;
+  }
+  .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrir {
+    display: none;
+  }
+  .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrirm {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    background-color: #42145F;
+    border-radius: 27px;
+    opacity: 1;
+    font: normal normal bold 16px/30px Roboto;
+    color: #FFFFFF;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrirm .icon-right {
+    line-height: 30px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .block2_2 .scrollBox .scroll-boxm .show-box .Decouvrirm:hover {
+    background-color: #311046;
+  }
+  .block2_2 .scrollBox .scroll-boxm .voir {
+    display: none;
+  }
+  .block2_2 .scrollBox .border-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .block2_2 .scrollBox .border-selection .selection {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #42145F;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 3px;
+  }
+  .block2_2 .scrollBox .border-selection .selected {
+    background-color: #42145F;
+    color: #fff;
+  }
+  .block2_2 .scrollBox .border-selection .icon-left, .block2_2 .scrollBox .border-selection .icon-right {
+    font-size: 20px;
+    color: #42145F;
+  }
+  .block2_2 .scrollBox .border-selection .icon-left {
+    padding-right: 15px;
+  }
 }
 
 .block3_1 {
@@ -2056,7 +2163,6 @@
 
 .block3_2 .map .mapPicture {
   position: absolute;
-  left: calc(40% - 320px);
   width: 700px;
 }
 
@@ -2297,13 +2403,6 @@
     height: 500px;
     position: relative;
   }
-  .block3_3 .inner_box .leftBox .image .share {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
-  }
   .block3_3 .inner_box .leftBox .icon-share {
     display: block;
     position: absolute;
@@ -2324,6 +2423,9 @@
     height: 20px;
     border-radius: 50%;
     background-color: rgba(209, 171, 9, 0.3);
+  }
+  .block3_3 .inner_box .leftBox .changeButton .selected {
+    background-color: #d1ab09;
   }
   .block3_3 .inner_box .leftBox .icon-left_yellow_arrow, .block3_3 .inner_box .leftBox .icon-right_yellow_arrow {
     display: none;
@@ -2356,6 +2458,7 @@
     margin-top: 30px;
   }
   .block3_3 .inner_box .rightBox .bottom .question {
+    margin-top: 20px;
     text-align: left;
     font: normal normal bold 20px/26px Roboto;
     letter-spacing: 0px;
@@ -2642,6 +2745,24 @@
   margin-left: -10%;
   margin-bottom: -10px;
   padding: 0;
+}
+
+@media (min-width: 390px) {
+  .block4_1 .imageBox .person .mimage {
+    height: 350px;
+  }
+}
+
+@media (min-width: 500px) {
+  .block4_1 .imageBox .person .mimage {
+    height: 500px;
+  }
+}
+
+@media (min-width: 750px) {
+  .block4_1 .imageBox .person .mimage {
+    height: 700px;
+  }
 }
 
 .block4_1 .imageBox .white-text-box, .block4_1 .imageBox .white-box, .block4_1 .imageBox .white-ball-box {

@@ -352,6 +352,7 @@ interface Block6_3Props{
     text2: string[]
     text3: string[]
 }
+const colorArr=["dark_red","purple","blue","light_blue","green","dark_yellow","medium_yellow","lemon","yellow","orange","red"]
 
 //page1
 //Only block1 can click the button to display the input field
@@ -365,7 +366,6 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     "button":false,
                     "whiteText":true,
                     "person":false}
-    const colorArr=["dark_red","purple","blue","light_blue","green","dark_yellow","medium_yellow","lemon","yellow","orange","red"]
     let label_1=require(`../../public/styles/src/page4/label_1@2x.png`).default
     let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
     let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
@@ -446,9 +446,6 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {/* {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
-                            )} */}
                             {colorArr.map((e, i) =>
                                 <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
                                     {text5[i]}
@@ -739,9 +736,10 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
             </div>
             <div className="scrollBox">
                 <div className="scroll-boxm">
-                    {arr_scroll_box[chosen-1].map((e, i) =>
+                    {arr_scroll_box[chosen-1].map((e,i) =>
                         <div key={i} className="show-box">
                             <div className="picture-title">
+                                <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                                 <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                             </div>
                             <div className="picture-box picture-box1">
@@ -781,8 +779,11 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
                     <div className="scroll-title">{number1} {text1}</div>
                     <div className={"scroll-box" + (open ? ' box-show' : '') }>
                         {arr_scroll_box[chosen-1].map((e, i) =>
-                            <div key={i} className="show-box">
-                                <div className="picture-title">title</div>
+                            <div key={i} className={"show-box" + (open ? ' show-box-width' : '')}>
+                                <div className="picture-title">
+                                    <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
+                                    <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
+                                </div>
                                 <div className="picture-box picture-box1">
                                     <div className="bgc"> 
                                         <Image key={i} src={ e.src} alt="brand1" width={1200} height={900} className="picture"/>
@@ -885,7 +886,7 @@ const Block1_4 = ({text1}: Block1_4Props)=>{
     let arr_scroll_box=[];
     while(test1<Math.ceil((arr.length)/24)){
         for(let i=0;i<23;i++){
-            console.log(arr[temporary])
+            // console.log(arr[temporary])
             if(arr[temporary]){
                 arr_scroll.push(arr[temporary])
                 temporary++
@@ -1098,8 +1099,10 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -1207,8 +1210,8 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
     let temporary=0;
     let arr_scroll=[];
     let arr_scroll_box=[];
-    while(test1<Math.ceil((arr.length)/9)){
-        for(let i=0;i<8;i++){
+    while(test1<Math.ceil((arr.length)/4)){
+        for(let i=0;i<4;i++){
             if(arr[temporary]){
                 arr_scroll.push(arr[temporary])
                 temporary++
@@ -1226,22 +1229,30 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
     }
     let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
-    let chosen=1
-    // let [chosen, setChosen] = useState(1)
-    // const changeChosen=(e:number)=>{
-    //     setChosen(chosen=e+1)
+    let [chosen, setChosen] = useState(1)
+    const changeChosen=(e:number)=>{
+        setChosen(chosen=e+1)
+    }
+    const leftChosen=()=>{
+        if(chosen!=1){
+        setChosen(chosen=chosen-1)
+        }
+        // console.log(chosen)
+    }
+    const rightChosen=()=>{
+        if(chosen!=arr_scroll_box.length){
+        setChosen(chosen=chosen+1)
+        }
+        // console.log(chosen)
+    }
+    // let [chosenArr, plus] = useState([{}])
+    // chosenArr.push(arr[0])
+    // for(let a=0;a<4;a++){
+    //     chosenArr.push(arr[a])
     // }
-    // const leftChosen=()=>{
-    //     if(chosen!=1){
-    //     setChosen(chosen=chosen-1)
-    //     }
-    //     // console.log(chosen)
-    // }
-    // const rightChosen=()=>{
-    //     if(chosen!=arr_scroll_box.length){
-    //     setChosen(chosen=chosen+1)
-    //     }
-    //     // console.log(chosen)
+    // let index=4
+    // const moreChosen=()=>{
+    //     plus(chosenArr.push(arr[index]))
     // }
     return (
         <div className="block2_2">
@@ -1250,6 +1261,7 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                     {arr_scroll_box[chosen-1].map((e, i) =>
                         <div key={i} className="show-box">
                             <div className="picture-title">
+                                <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                                 <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
                             </div>
                             <div className="picture-box picture-box1">
@@ -1273,6 +1285,10 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                                             <div className="Surface-info">{text3[3]}</div>
                                         </div>
                                     </div>
+                                    <div className="Decouvrirm">
+                                        <div>Découvrir</div>  
+                                        <div className="icon-right"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="Decouvrir">
@@ -1281,9 +1297,19 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                             </div>
                         </div>
                     )}
-                    <div className="voir">
+                    {/* onClick={moreChosen} */}
+                    <div className="voir" >
                         Voir plus de projets
                     </div>
+                </div>
+                <div className="border-selection">
+                    <div className="icon-left cursorPointer" onClick={leftChosen}></div>
+                    {arr_scroll_box.map((e,i)=>
+                        <div key={i} className={"selection cursorPointer" + ((i+1)==chosen ? ' selected' : '')} onClick={()=>changeChosen(i)}>
+                            {i + 1}
+                        </div>
+                    )}
+                    <div className="icon-right cursorPointer" onClick={rightChosen}></div>
                 </div>
                 {/* {arrm.map((e, i) =>
                     <div  key={i} className="show-box">
@@ -1458,8 +1484,10 @@ const Block3_1=({text0, text1, text2, text3, text4, text5, text6, number1}:Block
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -1555,24 +1583,35 @@ const Block3_1=({text0, text1, text2, text3, text4, text5, text6, number1}:Block
 const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
     let arr_name=[0,1,2,3]
     let arr=[]
-        for(let i of arr_name){
-            // console.log(i,`../../public/styles/src/image_home_${i}@2x.png`)
-            // let obj={ 'src':require(`../../public/styles/src/page2/icone_transport_${i}@2x.png`).default,"id":parseInt(i)-1}
-            let obj={"name":transports[i],"id":i}
-            arr.push(obj)
-        }
+    for(let i of arr_name){
+        // console.log(i,`../../public/styles/src/image_home_${i}@2x.png`)
+        // let obj={ 'src':require(`../../public/styles/src/page2/icone_transport_${i}@2x.png`).default,"id":parseInt(i)-1}
+        let obj={"name":transports[i],"id":i}
+        arr.push(obj)
+    }
+    let [leftposition,changePosition] =useState('calc(40% - 320px);')
+    let move=320;
+    const moveleft=()=>{
+        move=move+20
+        changePosition(leftposition='calc(40% - ' + move + 'px);')
+    }
+    const moveright=()=>{
+        move=move-20
+        changePosition(leftposition='calc(40% - ' + move + 'px);')
+    }
     return(
     <div className="block3_2">
         <div className="title">{text1}</div>
         <div className="map">
+            {/*  style={{left: leftposition}} */}
             <div className="mapPicture">
                 <Image src={plan_situation} aria-label="aria-label" width={2400} height={1000} className="mapimg"></Image>
             </div>
-            <div className="icon-left_yellow_arrow">
+            <div className="icon-left_yellow_arrow" onClick={()=>moveleft()}>
                 <span className="path1"></span>
                 <span className="path2"></span>
             </div>
-            <div className="icon-right_yellow_arrow">
+            <div className="icon-right_yellow_arrow" onClick={()=>moveright()}>
                 <span className="path1"></span>
                 <span className="path2"></span>
             </div>
@@ -1602,7 +1641,6 @@ const Block3_2=({text1,text2,text3,transports}:Block3_2Props)=>{
     )
 }
 const Block3_3=({text1,text2,text3}:Block3_3Props)=>{ 
-    let src=require(`../../public/styles/src/page2/image_programme_2@2x.png`).default
     let arr=[]
     for(let a=0;a<text1.length;a++){
         let obj={ 'title':text1[a] ,"content":text2[a]}
@@ -1612,12 +1650,33 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
     const show_box=()=>{
         setShow(!show)
     }
+    let imageArr=[];
+    imageArr.push({'src':require(`../../public/styles/src/page2/image_programme_2@2x.png`).default})
+    imageArr.push({'src':require(`../../public/styles/src/page2/image_programme_1@2x.png`).default})
+    imageArr.push({'src':require(`../../public/styles/src/page2/image_programme_3@2x.png`).default})
+    let [index,change] = useState(0)
+    const changeImage=(e:number)=>{
+        change(index=e)
+    }
+    const leftChosen=()=>{
+        // console.log(index)
+        if(index!=0){
+            change(index=index-1)
+        }
+    }
+    const rightChosen=()=>{
+        // console.log(index)
+
+        if(index!=(imageArr.length-1)){
+            change(index=index+1)
+        }
+    }
     return(
         <div className="block3_3">
             <div className="inner_box">
                 <div className="leftBox">
                     <div className="image" onClick={show_box}>
-                        <Image src={src} alt="image_programme_2" className="image"/>
+                        <Image src={imageArr[index].src}  alt="image_programme_2" className="picture"/>
                         <div className="icon-share">
                             <span className="path1"></span>
                             <span className="path2"></span>
@@ -1625,16 +1684,16 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                         </div>
                     </div>
                     <div className="changeButton">
-                        <div className="yellowBall"></div>
-                        <div className="yellowBall"></div>
-                        <div className="yellowBall"></div>
-                        <div className="yellowBall"></div>
+                        {imageArr.map((e, i) =>
+                            <div key={i} className={"yellowBall cursorPointer" + ((i)==index ? ' selected' : '')} onClick={()=>changeImage(i)}>
+                            </div>
+                        )}
                     </div>
-                    <div className="icon-left_yellow_arrow">
+                    <div className="icon-left_yellow_arrow" onClick={leftChosen}>
                         <span className="path1"></span>
                         <span className="path2"></span>
                     </div>
-                    <div className="icon-right_yellow_arrow">
+                    <div className="icon-right_yellow_arrow" onClick={rightChosen}>
                         <span className="path1"></span>
                         <span className="path2"></span>
                     </div>
@@ -1661,11 +1720,11 @@ const Block3_3=({text1,text2,text3}:Block3_3Props)=>{
                 </div>
             </div>
             <div className={(show ? 'showBox' : 'hidden')}>
-                    <div className="image" onClick={show_box}>
-                        <Image src={src} alt="image_programme_2" className="image"/>
-                        <div className="icon-x"></div>
-                        <div className="icon-left"></div>
-                        <div className="icon-right"></div>
+                    <div className="image" >
+                        <Image src={imageArr[index].src} alt="image_programme_2" className="image"/>
+                        <div className="icon-x" onClick={show_box}></div>
+                        <div className="icon-left" onClick={leftChosen}></div>
+                        <div className="icon-right" onClick={rightChosen}></div>
                     </div>
             </div>
         </div>
@@ -1786,8 +1845,10 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -2162,8 +2223,10 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -2590,8 +2653,10 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
                     <div className="chooseBoxinner">
                         <div className="leftPart">{text4}</div>
                         <div className="rightPart">
-                            {text5.map((e,i)=>
-                                <div key={i} className="choice">{e}</div>
+                            {colorArr.map((e, i) =>
+                                <div key={i} className={"choice " + "hover_" + e} onClick={()=>changeColor(e)}>
+                                    {text5[i]}
+                                </div>
                             )}
                         </div>
                     </div>
