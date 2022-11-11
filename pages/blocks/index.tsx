@@ -390,7 +390,7 @@ const Block1_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     let [typeColors,changeType] =useState('dark_purple')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     let arr=[];
     for(let i=0;i<propramme.length;i++){
@@ -637,7 +637,7 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
         test1++
         arr_scroll=[];
     }
-    console.log("arr_scroll_box",arr_scroll_box)
+    // console.log("arr_scroll_box",arr_scroll_box)
 
     for(let i=2;i<5;i++){
         let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
@@ -653,13 +653,13 @@ const Block1_2 = ({number1, text1, text2, text3}: Block1_2Props) => {
         if(chosen!=1){
         setChosen(chosen=chosen-1)
         }
-        console.log(chosen)
+        // console.log(chosen)
     }
     const rightChosen=()=>{
         if(chosen!=arr_scroll_box.length){
         setChosen(chosen=chosen+1)
         }
-        console.log(chosen)
+        // console.log(chosen)
 
     }
     return (
@@ -868,19 +868,57 @@ const Block1_3 = ({text1}: Block1_3Props) => {
 }
 const Block1_4 = ({text1}: Block1_4Props)=>{
     let arr=[]
-    // i<25
-    for(let i=1;i<13;i++){
-        let obj={ 'src':require(`../../public/styles/src/brand/logo_client_${i}@2x.png`).default}
-        // let obj={ 'src':`../../public/styles/src/brand/logo_client_${i}@2x.png`}
-        arr.push(obj)
+    //brandContainer
+    let n=0;
+    while(n<3){
+        for(let i=1;i<25;i++){
+            let obj={ 'src':require(`../../public/styles/src/brand/logo_client_${i}@2x.png`).default}
+            // let obj={ 'src':`../../public/styles/src/brand/logo_client_${i}@2x.png`}
+            arr.push(obj)
+        }
+        n++
+    }
+    // scrollbox
+    let test1=0;
+    let temporary=0;
+    let arr_scroll=[];
+    let arr_scroll_box=[];
+    while(test1<Math.ceil((arr.length)/24)){
+        for(let i=0;i<23;i++){
+            console.log(arr[temporary])
+            if(arr[temporary]){
+                arr_scroll.push(arr[temporary])
+                temporary++
+            }
+        }
+        arr_scroll_box.push(arr_scroll)
+        test1++
+        arr_scroll=[];
     }
     // const list = [{src: "!"}]
     // let src1=require("../../public/styles/src/brand/logo_client_1@2x.png").default;
+    let [chosen, setChosen] = useState(1)
+    const changeChosen=(e:number)=>{
+        setChosen(chosen=e+1)
+    }
+    const leftChosen=()=>{
+        if(chosen!=1){
+        setChosen(chosen=chosen-1)
+        }
+        // console.log(chosen)
+    }
+    const rightChosen=()=>{
+        if(chosen!=arr_scroll_box.length){
+        setChosen(chosen=chosen+1)
+        }
+        // console.log(chosen)
+
+    }
     return (
         <div className="block1_4">
             <div className="block4Title">{text1}</div>
             <div className="brandContainer">
-                {arr.map((e, i) =>
+                {arr_scroll_box[chosen-1].map((e, i) =>
                     // <div key={i}>{e.src}</div>
                     <div key={i} className="brandBox">
                         <Image key={i} src={ e.src} alt="brand1" className="brand"/>
@@ -888,11 +926,18 @@ const Block1_4 = ({text1}: Block1_4Props)=>{
                 )}
             </div>
             <div className="borderSelection">
-                <div className="icon-left"></div>
+                <div className="icon-left cursorPointer" onClick={leftChosen}></div>
+                {arr_scroll_box.map((e,i)=>
+                    <div key={i} className={"selection cursorPointer" + ((i+1)==chosen ? ' selected' : '')} onClick={()=>changeChosen(i)}>
+                        {i + 1}
+                    </div>
+                )}
+                <div className="icon-right cursorPointer" onClick={rightChosen}></div>
+                {/* <div className="icon-left"></div>
                 <div className="selection selected">1</div>
                 <div className="selection">2</div>
                 <div className="selection">3</div>
-                <div className="icon-right"></div>
+                <div className="icon-right"></div> */}
             </div>
         </div> 
     )
@@ -997,7 +1042,7 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     let [typeColors,changeType] =useState('yellow')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     let arr=[];
     for(let i=0;i<propramme.length;i++){
@@ -1147,12 +1192,7 @@ const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce
     )
 }
 const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
-    // const [open, setOpen] = useState(false)
-    const open = false
-
-    // const change_map_size=()=>{
-    //     setOpen(!open)
-    // }
+    // scrollbox
     let arr=[]
     let arrm=[]
     let test=0
@@ -1163,16 +1203,89 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
         }
         test++
     }
+    let test1=0;
+    let temporary=0;
+    let arr_scroll=[];
+    let arr_scroll_box=[];
+    while(test1<Math.ceil((arr.length)/9)){
+        for(let i=0;i<8;i++){
+            if(arr[temporary]){
+                arr_scroll.push(arr[temporary])
+                temporary++
+            }
+        }
+        arr_scroll_box.push(arr_scroll)
+        test1++
+        arr_scroll=[];
+    }
+    // console.log("arr_scroll_box",arr_scroll_box)
+
     for(let i=2;i<5;i++){
         let obj={ 'src':require(`../../public/styles/src/image_home_${i}@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
         arrm.push(obj)
     }
     let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
+    let [chosen, setChosen] = useState(1)
+    const changeChosen=(e:number)=>{
+        setChosen(chosen=e+1)
+    }
+    const leftChosen=()=>{
+        if(chosen!=1){
+        setChosen(chosen=chosen-1)
+        }
+        // console.log(chosen)
+    }
+    const rightChosen=()=>{
+        if(chosen!=arr_scroll_box.length){
+        setChosen(chosen=chosen+1)
+        }
+        // console.log(chosen)
+
+    }
     return (
         <div className="block2_2">
-            <div className="scroll-box-outside">
-                {arrm.map((e, i) =>
+            <div className="scrollBox">
+                <div className="scroll-boxm">
+                    {arr_scroll_box[chosen-1].map((e, i) =>
+                        <div key={i} className="show-box">
+                            <div className="picture-title">
+                                <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
+                            </div>
+                            <div className="picture-box picture-box1">
+                                <div className="bgc"> 
+                                    <Image key={i} src={ e.src} alt="brand1" width={1200} height={900} className="picture"/>
+                                    <div className="picture-text1">{text2[0]}</div>
+                                    <div className="picture-text2">{text2[3]}</div>
+                                </div>
+                                <div className="white-bottom-box">
+                                    <div className="Surface-flex">
+                                        <div className="icon-calendrier"></div>
+                                        <div className="Surface-name">
+                                            <div className="Surface-Surface">{text3[0]}</div>
+                                            <div className="Surface-info">{text3[1]}</div>
+                                        </div>
+                                    </div>
+                                    <div className="Surface-flex">
+                                        <div className="icon-surface"></div>
+                                        <div className="Livraison-name">
+                                            <div className="Surface-Surface">{text3[2]}</div>
+                                            <div className="Surface-info">{text3[3]}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="Decouvrir">
+                                <div>Découvrir</div>  
+                                <div className="icon-right"></div>
+                            </div>
+                        </div>
+                    )}
+                    <div className="voir">
+                        Voir plus de projets
+                    </div>
+                </div>
+                {/* {arrm.map((e, i) =>
                     <div  key={i} className="show-box">
                         <div className="picture-title">
                             <Image key={i} src={ e.icon} alt="brand1" width={83} height={20}  className="picture"/>
@@ -1253,7 +1366,7 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
                     <div className="selection">5</div>
                     <div className="selection">6</div>
                     <div className="icon-right"></div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
@@ -1288,7 +1401,7 @@ const Block3_1=({text0, text1, text2, text3, text4, text5, text6, number1}:Block
     let [typeColors,changeType] =useState('yellow')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     return (
     <div className="block3_1">
@@ -1615,7 +1728,7 @@ const Block4_1=({text0,text1,text4,text5}:Block4_1Props)=>{
     let [typeColors,changeType] =useState('dark_purple')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     let src=require(`../../public/styles/src/page3/photo_alain_taravella@2x.png`).default
     return (
@@ -1971,11 +2084,11 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
     let label_2=require(`../../public/styles/src/page4/label_2@2x.png`).default
     let label_3=require(`../../public/styles/src/page4/label_3@2x.png`).default
     let label_4=require(`../../public/styles/src/page4/label_4@2x.png`).default
-    // const move_down=()=>{
-    //     scrollTo({
-    //         top:800,left:0,behavior:"smooth"
-    //     })
-    // }
+    const move_down=()=>{
+        scrollTo({
+            top:16290,left:0,behavior:"smooth"
+        })
+    }
     const [show, setShow] = useState(false)
     const show_box=()=>{
         setShow(!show)
@@ -1991,7 +2104,7 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
     let [typeColors,changeType] =useState('dark_purple')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     return (
 
@@ -2078,7 +2191,7 @@ const Block5_1 = ({text0, text1, text2, text3, text4, text5}: Block5_1Props) => 
                     </div>
                     <p className="content">{text2[0]}</p>          
                 </div>
-                <div className={(block1.roundButton ? 'roundButton' : 'hidden')}>
+                <div className={(block1.roundButton ? 'roundButton' : 'hidden')} onClick={move_down}>
                     <div className="icon-composant">
                         <span className="path1"></span>
                         <span className="path2"></span>
@@ -2420,7 +2533,7 @@ const Block6_1 = ({text0, text1, text3, text4, text5}: Block6_1Props) => {
     let [typeColors,changeType] =useState('dark_purple')
     const changeColor=(e:string)=>{
         changeType(typeColors=e)
-        console.log(typeColors)
+        // console.log(typeColors)
     }
     return (
     <div className="block6_1">
