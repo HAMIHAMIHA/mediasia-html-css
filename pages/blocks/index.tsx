@@ -1226,23 +1226,23 @@ const Block2_2 = ({number1, text1, text2, text3}: Block2_2Props) => {
     }
     let obj1={'src':require(`../../public/styles/src/image_home_2@2x.png`).default,'icon':require(`../../public/styles/src/label_1@2x.png`).default}
     arrm.push(obj1)
-    let [chosen, setChosen] = useState(1)
-    const changeChosen=(e:number)=>{
-        setChosen(chosen=e+1)
-    }
-    const leftChosen=()=>{
-        if(chosen!=1){
-        setChosen(chosen=chosen-1)
-        }
-        // console.log(chosen)
-    }
-    const rightChosen=()=>{
-        if(chosen!=arr_scroll_box.length){
-        setChosen(chosen=chosen+1)
-        }
-        // console.log(chosen)
-
-    }
+    let chosen=1
+    // let [chosen, setChosen] = useState(1)
+    // const changeChosen=(e:number)=>{
+    //     setChosen(chosen=e+1)
+    // }
+    // const leftChosen=()=>{
+    //     if(chosen!=1){
+    //     setChosen(chosen=chosen-1)
+    //     }
+    //     // console.log(chosen)
+    // }
+    // const rightChosen=()=>{
+    //     if(chosen!=arr_scroll_box.length){
+    //     setChosen(chosen=chosen+1)
+    //     }
+    //     // console.log(chosen)
+    // }
     return (
         <div className="block2_2">
             <div className="scrollBox">
