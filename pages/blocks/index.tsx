@@ -1006,6 +1006,7 @@ const Footer=({text1,text2,text3}: Bottom_Props)=>{
         </div>
     )
 }
+
 //page2
 const Block2_1 = ({text0, text1, text2, text3, text4, text5, propramme,introduce}: Block2_1Props) => {
     // let backgroundImage=require(`../../public/styles/src/image_home_1@2x.png`).default
